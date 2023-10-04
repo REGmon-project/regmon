@@ -79,20 +79,6 @@ font-weight:100;margin:0 0 24px}
 	
 	<?php require('php/inc.nav_lang.php');?>
 
-	<div style="text-align:center; margin:-20px 0 10px 0;">
-		<div class="img_line" style="background:none;">
-			<div class="header_img" style="text-align:right; width:39%;">
-				<img class="hr_img2" src="img/Mainz.png" alt="Instituts für Sportwissenschaft -> https://www.theorie-praxis.sport.uni-mainz.de/">
-			</div>
-			<div class="header_img" style="text-align:center; width:28%;">
-				<img class="hr_img2" src="img/Ruhr-Uni-Bochum.png" alt="Ruhr-Universität Bochum -> http://www.spowiss.rub.de/"></a>
-			</div>
-			<div class="header_img" style="text-align:left; width:28%;">
-				<img class="hr_img2" src="img/Sportmedizin.png" alt="Institut für Sport- und Präventivmedizin -> http://sportmedizin-saarbruecken.de/"></a>
-			</div>
-		</div>
-	</div>
-
 	<div class="container">	
 		<header style="padding:2em 2em 1em;">
 			<h1><b><?=$LANG->APP_NAME;?></b><span><?=$LANG->APP_INFO;?></span></h1>	
