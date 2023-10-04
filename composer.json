@@ -1,15 +1,25 @@
 {
     "private": true,
-    "version": "4.0.0",
-    "name": "regmon/regmon",
-    "description": "Regenerationsmanagement durch Athletenmonitoring",
-    "keywords": ["Regenerationsmanagement", "Athletenmonitoring", "regeneration", "management", "athlete", "monitoring"],
-    "homepage": "http://regman.org",
+    "version": "1.0.0",
+    "name": "regmon-project/regmon",
+    "description": "Athlete monitoring for practice and research",
+    "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
+    "homepage": "https://github.com/REGmon-project/regmon",
     "license": "MIT",
     "authors": [
         {
             "name": "madnetdev",
             "email": "madnetdev@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "ChristianStrotkoetter",
+            "email": "christian.strotkoetter@uni-mainz.de",
+            "role": "Developer"
+        },
+        {
+            "name": "kencreek",
+            "email": "gustavo.estero@gmail.com",
             "role": "Developer"
         }
     ],

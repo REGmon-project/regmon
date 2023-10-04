@@ -1,7 +1,7 @@
 {
   "name": "REGmon",
   "short_name": "REGmon",
-  "description": "REGENERATIONMANAGEMENT IM SPORT",
+  "description": "Athlete monitoring for practice and research",
   "start_url": "index.php",
   "display": "standalone",
   "background_color": "#fdfdfd",
