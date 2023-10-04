@@ -1,0 +1,419 @@
+/*loading*/
+.ajaxOverlay {z-index:10000; border:none; margin:0px; padding:0px; width:100%; height:100%; top:0px; left:0px; opacity:0.6; cursor:wait; position:fixed; background-color:rgb(0, 0, 0);}
+.ajaxMessage {z-index:10011; position:fixed; padding:0px; margin:0px; width:30%; top:40%; left:35%; text-align:center; color:rgb(255, 255, 0); border:0px; cursor:wait; text-shadow:red 1px 1px; font-size:18px; background-color:transparent;}
+.div_full { width:100%; height:100%; }
+.div_height {
+	height: 300px;
+	/*margin-left: -40px;
+	margin-right: -20px;*/
+}
+.tooltip-inner {
+    max-width: 450px;
+	white-space: pre-line;
+	font-size:13px;
+    text-align: left;
+}
+.help_question {
+	cursor: pointer;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: #89A4CC;
+	line-height: 16px;
+	color: White;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 8px;
+	text-align: center;
+	position: relative;
+}
+.help_colors, .help_lines, .help_formula {
+	cursor:pointer;
+}
+
+.img_colors { 
+	width:64px;
+	height:186px;
+} 
+.img_lines { 
+	width:200px;
+	height:290px;
+} 
+
+.info_lines_color_formula {text-align:right; padding:0 15px; }
+
+fieldset { padding:5px; margin-top:0px; margin-bottom:20px; min-width:0; width:100%; }
+legend { margin-bottom:1px; width:auto;	font-size:13px;	border:0; }
+@-moz-document url-prefix() {
+    fieldset { display:table-cell; }
+}
+.fieldset1.coolfieldset { 
+	border:5px dashed #ccc; 
+	-webkit-transition: border 0.5s ease;
+	-moz-transition: border 0.5s ease;
+	-ms-transition: border 0.5s ease;
+	-o-transition: border 0.5s ease;
+	transition: border 0.5s ease;
+}
+.fieldset1.coolfieldset.collapsed { border:0px dashed #aaa; border-top:5px dashed #aaa;}
+.fieldset2.coolfieldset { 
+	border:4px ridge #eee; 
+	-webkit-transition: border 0.5s ease;
+	-moz-transition: border 0.5s ease;
+	-ms-transition: border 0.5s ease;
+	-o-transition: border 0.5s ease;
+	transition: border 0.5s ease;
+}
+.fieldset2.coolfieldset.collapsed { border:0px ridge #aaa; border-top:4px ridge #aaa;}
+.fieldset3.coolfieldset { 
+	border:5px dotted #ccc; 
+	-webkit-transition: border 0.5s ease;
+	-moz-transition: border 0.5s ease;
+	-ms-transition: border 0.5s ease;
+	-o-transition: border 0.5s ease;
+	transition: border 0.5s ease;
+}
+.fieldset3.coolfieldset.collapsed { border:0px dotted #aaa; border-top:5px dotted #aaa;}
+
+.ft.coolfieldset { 
+	border:5px ridge #aaa; 
+	-webkit-transition: border 0.5s ease;
+	-moz-transition: border 0.5s ease;
+	-ms-transition: border 0.5s ease;
+	-o-transition: border 0.5s ease;
+	transition: border 0.5s ease;
+}
+.ft.coolfieldset.collapsed { border:0px ridge #aaa; border-top:5px ridge #aaa;}
+
+.coolfieldset, .coolfieldset.expanded { border: 2px solid #aaa; border-radius: 5px; }
+.coolfieldset.collapsed { margin-bottom:-8px; border-radius: 0;}
+
+.chosen-container {text-transform:none;}
+#Select__Groups_chosen.chosen-container { font-size:16px; max-width:350px; text-align:left; box-shadow:0 0 5px #777;}
+#Select__Groups_chosen.chosen-container .chosen-single {border-radius:0;}
+#Select__Groups_chosen.chosen-container .chosen-single span {font-size:16px; font-weight:bold;}
+
+#Select__Athletes_chosen.chosen-container { font-size:14px; max-width:298px; margin-top:3px; text-align:left; box-shadow:0 0 5px #777;}
+#Select__Athletes_chosen.chosen-container .chosen-single {border-radius:0;}
+#Select__Athletes_chosen.chosen-container .chosen-single span {font-size:14px; font-weight:bold;}
+
+#ATH_select_TRN_chosen.chosen-container { font-size:14px; max-width:260px; margin-top:3px; text-align:left; box-shadow:0 0 5px #777;}
+#ATH_select_TRN_chosen.chosen-container .chosen-single {border-radius:0;}
+#ATH_select_TRN_chosen.chosen-container .chosen-single span {font-size:14px; font-weight:bold;}
+
+#Select__Athlete_chosen.chosen-container { font-size:14px; max-width:250px; margin-top:3px; text-align:left; box-shadow:0 0 5px #777;}
+#Select__Athlete_chosen.chosen-container .chosen-single {border-radius:0;}
+#Select__Athlete_chosen.chosen-container .chosen-single span {font-size:14px; font-weight:bold;}
+
+#Select__Athlete__Submit { padding:10px 15px; width:30px !important; height:20px !important; border-radius:10px; }
+#Select__Athlete__Submit:before { right:7px !important; top:1px !important; font-size:15px !important; }
+
+#Button__DATE__Submit, #Button__Select__Groups__Submit, #Button__Select__Athletes__Submit, #Button__Select__Forms__Submit, #Button__Select__Forms_Fields__Submit { 
+	padding:10px 15px;
+	width:30px !important;
+	height:20px !important;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+#Button__DATE__Submit:before, #Button__Select__Groups__Submit:before, #Button__Select__Athletes__Submit:before, #Button__Select__Forms__Submit:before, #Button__Select__Forms_Fields__Submit:before {
+	right:7px !important;
+	top:1px !important;
+	font-size:15px !important; 
+}
+#Select__Groups__Box, #Select__Athletes__Box, #Select__Forms__Box, #Select__Forms_Fields__Box { max-width:300px; }
+
+
+#Select__Groups__Row__Span,
+#Select__Athletes__Row__Span,
+#Select__Forms__Row__Span,
+#Select__Forms_Fields__Row__Span {
+	display:inline-block;
+	text-align:right;
+	width:100%;
+	max-width:550px;
+	margin-left: -35px;
+}
+@media (max-width: 600px) {
+	#Select__Groups__Row__Span,
+	#Select__Athletes__Row__Span,
+	#Select__Forms__Row__Span,
+	#Select__Forms_Fields__Row__Span {
+		text-align:left;
+		margin-left: 0;
+	}
+}
+
+.open_all, .close_all {
+	font-size:20px;
+	vertical-align:middle;
+	float:right;
+	margin-right: -4px;
+	cursor:pointer;
+}
+.open_all {	margin-right:-16px; }
+.remove_form, .close_data, .close_axis { margin:-5px -11px -30px 0; color: #ccc; }
+.remove_form_field { margin:-5px -9px -30px 0; color: #ccc; }
+
+/*.remove_form.first_item, .remove_form_field.first_item, .close_data.first_item, .close_axis.first_item { margin:5px -11px -30px 0; }*/
+.Button__Fieldset_Athlete__Remove, .Button__Fieldset__Interval__Remove { margin:-4px -13px -30px 0; color: #ccc; }
+.Button__Fieldset_Athlete__Remove.close_item:before, 
+.Button__Fieldset__Interval__Remove.close_item:before { font-size: 22px; }
+.Fieldsets__Expand_Collapse { float:left; margin:3px 0 -3px 2px; }
+
+.h_title { font-size:16px; padding:2em 1em 3em; color: #89867e; }
+.h_title .main-title { font-size:2.625em; line-height:1.3; margin:0; font-weight:300; }
+.h_title span { display:block; font-size:60%; color:#ceccc6; }
+.main-title h1 { margin-top:0; }
+
+.wiz-title { 
+	font-size:17px; 
+	vertical-align:middle; 
+	font-weight:600; 
+	text-transform:none; 
+}
+.group_pad { padding-right:49px; }
+
+@media (max-width: 1199px) {
+	#C_Athletes_Data .Select_Axis, #C_Intervals_Data .Select_Axis { width: 150px; }
+}
+@media (max-width: 501px) {
+	.h_title { font-size:13px; padding:1em 0em 3em; }
+}
+@media (max-width: 435px) {
+	.group_pad { padding-right:6px; }
+}
+
+#main { padding-bottom: 0px;}
+
+
+
+
+
+/*bootstrap*/
+input.form-control {
+    height: 30px;
+}
+/*input.form-control, select.form-control {
+	font-weight: bold;
+}*/
+.form-control {
+    height: 30px;
+    padding: 3px 6px;
+    font-size: 13px;
+	width:auto;
+}
+.form-group {
+	display:inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+.form-group label {
+    margin-bottom:0;
+	font-weight: normal;
+}
+
+.multiselect-clear-filter { padding: 4px 12px; }
+.multiselect-container.dropdown-menu>.disabled>a,
+.dropdown-menu>.disabled>a:focus,
+.dropdown-menu>.disabled>a:hover { 
+	color: #ccc; 
+}
+
+
+label.error{
+	font-size:11px;
+	position: absolute;
+	top:0;
+	left:50px;
+	z-index:99;
+	height:14px; /*25*/
+	line-height:14px; /*25*/
+	background-color:#e34f4f;
+	color:#fff;
+	font-weight:normal;
+	padding:0 6px;
+} 
+label.error:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 6px 6px 0;
+	border-color: transparent #e34f4f;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -6px;
+	left: 20%;
+}
+.save_template label.error{
+    top: -22px;
+    left: 10px;
+}
+
+#Form__Results_Template label.error{
+    top: -20px;
+}
+
+
+/*bootstrap accordion*/
+.panel {
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.05);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.05);
+}
+.panel-title a {
+    display: block;
+    padding: 10px 15px;
+    margin: -10px -15px;
+    cursor: pointer;
+    text-align:center;
+    font-weight: 600;
+}
+.panel-title a:hover, .panel-title a:focus {
+    color: #23527c;
+    text-decoration: none;
+    font-weight: bold;
+}
+.confirmation a { margin: 0 5px;}
+.confirmation .popover-content { min-width: 165px; text-align: center; }
+.popover-content { min-width: 165px; text-align: center; }
+.highcharts-contextmenu hr { margin:10px 0; }
+
+
+table.data_table { border-collapse:collapse; border-spacing:0; border:2px solid #CCCCCC; }
+.data_table th { background-color:#EEEEEE; border:1px solid #CCCCCC; text-align:center; padding:0 5px; /*color:#555555;*/ }
+.data_table td { border:1px solid #CCCCCC; vertical-align:middle; padding:0 5px; }
+.data_table .th_date, .data_table .th_time { white-space: nowrap; }
+.data_table td.num { text-align: right; }
+.data_table td.hidden_rowspan { display: none!important; }
+
+.data_table .brw3:not(:last-child) { border-right-width: 3px; }
+.data_table .brw6:not(:last-child) { border-right-width: 6px; }
+
+.form-inline-formula .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.hidden_Grey, .hidden_Grey2 {
+    /*display: none!important;*/
+	color: #aaaaaa;
+	background: #f5f5f5;
+	font-size: 11px;
+    line-height: 15px;
+}
+.start_After_Cell {
+    background: aliceblue;
+}
+.dz_hidden {
+    display: none!important;
+}
+
+#Select__Results_Templates, #Results_Template__Name {	
+	max-width:245px; width:100%; display:inline-block; vertical-align:middle; height:30px; 
+}
+#saved_select { /*width:100%; margin-bottom:5px;*/ max-width:245px; display:inline-block; }
+.saved_select { max-width:245px; display:inline-block; vertical-align:middle; height:26px; }
+#Select_Axis_container .Select_Axis { 
+	width:100%; 
+	max-width:245px; 
+	margin-bottom:5px; 
+	display:inline-block; 
+}
+input.save_name { max-width:245px; display:inline-block; vertical-align:middle; height:26px; }
+
+.axis_color {
+	max-width: 75px;
+	color: white;
+	text-shadow:black 1px 1px;
+}
+#axis_table.data_table {
+	word-break:break-word;
+	word-wrap:break-word;
+	white-space:pre-wrap;
+}
+@media (max-width: 710px) {
+	#axis_table.data_table { font-size:11px; padding:0 2px; line-height:13px; }
+}
+.graph_fullscreen {
+	position:absolute;
+	right:50px;
+	top:8px;
+	z-index:99;
+}
+
+.graph_fullscreen .expand, .graph_fullscreen .collapse,
+.table_fullscreen .expand, .table_fullscreen .collapse,
+.table_expand_collapse .expand, .table_expand_collapse .collapse {
+	font-size:16px;
+	line-height:26px;
+	height:26px;
+	width:26px;
+	text-align:center;
+	cursor:pointer;
+
+}
+.table_expand_collapse .expand i, .table_expand_collapse .collapse i {
+	font-weight: bold;
+}
+.graph_fullscreen .expand:hover, .graph_fullscreen .collapse:hover,
+.table_fullscreen .expand:hover, .table_fullscreen .collapse:hover,
+.table_expand_collapse .expand:hover, .table_expand_collapse .collapse:hover {
+	background: #cccccc;
+}
+
+
+/* //not needed --not load highcharts.css any more
+.highcharts-xaxis-grid .highcharts-grid-line { 
+	stroke-width: 1px;
+	stroke: #dddddd;
+}*/
+/*.highcharts-series-group .highcharts-point {
+	opacity: 0.5;
+}*/
+
+.multiselect-container>li.multiselect-all { margin-left: -10px; }
+.multiselect-container>li.multiselect-group { margin-left: -5px; }
+
+.Error_No_Data { text-align:center; font-size:20px; margin-left:135px; margin-top:10px; color:red;}
+@media (max-width: 530px) {
+	.Error_No_Data { margin-left:0; }
+}
+
+.Error_Template_Changed { float:right; text-align:right; font-size:15px; margin:-10px 0 5px 0; color:red; font-weight:bold; }
+.Error_Form_Not_Found { color:red; font-weight:normal; }
+
+
+.panel-group { margin-bottom: 10px; }
+.Error_No_Data { margin-left: 0; }
+
+/*results group*/
+.super_int { position:absolute;	font-family:tahoma; font-size:10px;	margin-left:15px; margin-top:-1px; }
+#resetSelect_div { position:absolute; right:0; top:0; }
+#resetSelect { padding:5px; cursor:pointer; color:orange; font-size:25px; }
+#resetSelect:hover { color:red; }
+
+
+#middle-wizard { padding:10px 10px 0; }
+@media (min-width: 1400px) {
+	.container { width: 1370px; }
+}
+@media (min-width: 1600px) {
+	.container { width: 1570px; }
+}
+@media (min-width: 1800px) {
+	.container { width: 1770px; }
+}
+@media (min-width: 2000px) {
+	.container { width: 1970px; }
+}
+@media (min-width: 2200px) {
+	.container { width: 2170px; }
+}
+@media (min-width: 2400px) {
+	.container { width: 2370px; }
+}
+@media (min-width: 2600px) {
+	.container { width: 2570px; }
+}
+

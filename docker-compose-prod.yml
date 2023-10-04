@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/web/production/Dockerfile
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_DATABASE=regmondb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    networks:
+      - internal
+    user: apacheuser
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "6603:3306"
+    environment:
+      - MYSQL_DATABASE=regmondb
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - internal
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge

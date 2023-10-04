@@ -1,0 +1,7 @@
+# Disable index view
+Options -Indexes
+
+# Hide a specific file
+<Files .env>
+    Require all denied
+</Files>

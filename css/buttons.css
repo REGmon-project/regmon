@@ -1,0 +1,237 @@
+/** Buttons **/
+
+/** Wizard Buttons **/
+.bttn, .bttnR, .backward, .forward, .home, .home_parent, .preview, .edit, .delete, .save, .saveSubmit, .newPage, .newRow, .accPanel-add, .newItemValue, .newCustomItem, #toTop {
+	border:none;
+	color:#fff;
+	padding:7px 20px;
+	text-decoration:none; 
+	background:#446f91;
+	background-position: center; /*ripple efe*/
+	transition: background .5s ease, opacity .5s ease; 
+	-moz-transition: background .5s ease, opacity .5s ease; 
+	-webkit-transition: background .5s ease, opacity .5s ease; 
+	-o-transition: background .5s ease, opacity .5s ease; 
+	display:inline-block;
+	cursor:pointer;
+	font-weight:600;
+	text-transform:uppercase;
+	outline:none;
+	position:relative;
+} 
+.bttnR { 
+	background:red; 
+	background-position: center; /*ripple efe*/
+}
+.bttn, .bttnR, .newPage, .newRow, .accPanel-add, .newItemValue, .newCustomItem {font-size: 13px;} 
+.backward, .home, .home_parent, .newPage, .newRow, .accPanel-add, .newItemValue, .newCustomItem {padding:7px 20px 7px 30px;} 
+.forward, .edit, .delete, .save, .saveSubmit, .preview, #toTop {padding:7px 30px 7px 20px;}  
+#toTop {width:30px; padding:5px 7px; position:fixed; bottom:10px; right:10px; display:none; z-index:999;}
+.saveSubmit {background:green;}
+
+button[disabled].bttn, button[disabled].bttnR, button[disabled].backward, button[disabled].forward, button[disabled].home, button[disabled].home_parent, button[disabled].preview, button[disabled].edit, button[disabled].delete, button[disabled].save, button[disabled].saveSubmit, button[disabled].newPage, button[disabled].newRow, button[disabled].accPanel-add, button[disabled].newItemValue, button[disabled].newCustomItem, button[disabled]#toTop {
+	border:none;
+	background:#ccc;
+	outline:none;
+}
+
+.home:before, .home_parent:before, .backward:before, .forward:before, .preview:before, .edit:before, .delete:before, .save:before, .saveSubmit:before, .newPage:before, .newRow:before, .accPanel-add:before, .newItemValue:before, .newCustomItem:before, #toTop:before, .close_page:before, .close_item:before, .get_item:before {
+    font-family: FontAwesome;
+    text-decoration: inherit;
+    position: absolute;
+	font-weight:normal;
+    top: 8px;
+	text-transform:none;
+	font-size:9px
+}
+.home:before, .home_parent:before {
+	content: "\f060";
+    left: 20px;
+}
+.newPage:before {
+	content: "\f067\A0\f016";
+    left: 8px;
+	font-size:12px;
+}
+.newRow:before {
+	content: "\f067\A0\f0ca"; /*f0cb f0c9 f03b*/
+    left: 8px;
+	font-size:12px;
+}
+.accPanel-add:before {
+	content: "\f067\A0\f022";
+    left: 8px;
+	font-size:12px;
+}
+.newItemValue:before {
+	content: "\f067\A0\f141"; /*f068*/
+    left: 9px;
+	font-size:12px;
+}
+.newCustomItem:before {
+	content: "\f067\A0\f141"; /*f068*/
+    left: 9px;
+	font-size:12px;
+}
+.backward:before {
+	content: "\f053";
+    left: 20px;
+}
+.forward:before {
+	content: "\f054";
+	right: 20px;
+} 
+.preview:before {
+	content: "\f0f6";
+	right: 17px;
+	font-size:13px;
+} 
+.edit:before {
+	content: "\f044";
+	top: 6px;
+	right: 10px;
+	font-size:15px;
+} 
+.delete:before {
+	content: "\f00d";
+	top: 6px;
+	right: 10px;
+	font-size:15px;
+} 
+.save:before, .saveSubmit:before {
+	content: "\f0c7";
+	right: 17px;
+	font-size:15px;
+} 
+#toTop:before {
+	content: "\f077";
+	top:5px;
+	font-size:16px;
+} 
+
+ .ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+.bttn:hover, .bttnR:hover, .home:hover, .home_parent:hover, .backward:hover, .forward:hover , .preview:hover, .edit:hover, .save:hover, .saveSubmit:hover, .newPage:hover, .newRow:hover, .accPanel-add:hover, .newItemValue:hover, .newCustomItem:hover, #toTop:hover  {
+	background: #00aeef radial-gradient(circle, transparent 1%, #00aeef 1%) center/15000%; /*ripple efe*/ /*background:#00aeef;*/
+	color:#fff;
+}
+.bttnR:hover { background: #990000 radial-gradient(circle, transparent 1%, #990000 1%) center/15000%; }
+.bttn:active, .bttnR:active, .home:active, .home_parent:active, .backward:active, .forward:active , .preview:active, .edit:active, .save:active, .saveSubmit:active, .newPage:active, .newRow:active, .accPanel-add:active, .newItemValue:active, .newCustomItem:active, #toTop:active  {
+  background-color: #00baff;
+  background-size: 100%;
+  transition: background 0s;
+}
+.bttnR:active { background-color: #fd6464; transition: background 0s;}
+
+
+.delete:hover {
+	background: red radial-gradient(circle, transparent 1%, red 1%) center/15000%; /*ripple efe*/ /*background:red;*/ 
+	color:#fff;
+}
+.delete:active {
+  background-color: #ff5555;
+  background-size: 100%;
+  transition: background 0s;
+}
+.saveSubmit:hover {
+	background: lime radial-gradient(circle, transparent 1%, lime 1%) center/15000%; /*ripple efe*/ /*background:lime;*/
+}
+.saveSubmit:active {
+  background-color: #66ff66;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+.close_page, .close_item, .get_item {
+	padding:5px 5px 5px 5px;
+	cursor:pointer;
+	float: right;
+	margin-top: -26px;
+    margin-right: -31px;
+	color:orange;
+}
+.get_item { color:#fff; }
+	.close_page:hover, .close_item:hover { color:red; }
+.close_page:before, .close_item:before {
+    position: relative;
+	content: "\f057";
+	top: 0px;
+	font-size:20px;
+} 
+
+.get_item:hover { color:blue; }
+.get_item:before {
+    position: relative;
+	content: "\f00c";
+	top: 0px;
+	font-size:20px;
+} 
+
+
+
+
+/* Mobile Landscape */
+@media (max-width: 480px) {
+	.home, .home_parent, .backward, .forward, .preview, /*.save,*/ .saveSubmit, .newPage, .newRow, .accPanel-add, .newItemValue, .newCustomItem, button[disabled].home, button[disabled].home_parent, button[disabled].backward, button[disabled].forward, button[disabled].preview, /*button[disabled].save,*/ button[disabled].saveSubmit, button[disabled].newPage, button[disabled].newRow, button[disabled].accPanel-add, button[disabled].newItemValue, button[disabled].newCustomItem  {
+		text-indent:-9999px;
+		width:50px;
+		padding:0;
+		height:40px;
+	} 
+	.home:before, .home_parent:before, .backward:before, .forward:before, .preview:before, /*.save:before,*/ .saveSubmit:before, .newPage:before, .newRow:before, .accPanel-add:before, .newItemValue:before, .newCustomItem:before, button[disabled].home:before, button[disabled].home_parent:before, button[disabled].backward:before, button[disabled].forward:before, button[disabled].preview:before, /*button[disabled].save:before,*/ button[disabled].saveSubmit:before, button[disabled].newPage:before, button[disabled].newRow:before, button[disabled].accPanel-add:before, button[disabled].newItemValue:before, button[disabled].newCustomItem:before {
+		text-indent:0;
+		top:12px;
+		font-size:16px;
+	} 
+}
+
+
+.btn-black {
+    color: #fff !important;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-black:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+/*
+/* Ripple effect * /
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+/* Button style * /
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+*/

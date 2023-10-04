@@ -1,0 +1,85 @@
+# ignore all files starting with . or ~ or __
+.*
+~*
+__*
+
+# ignore log files
+*.log
+logs/
+extra/__docker_error.log
+
+# ignore dependency directories
+node_modules/
+dist/
+package-lock.json
+composer.lock
+
+# ignore composer vendor directory
+/vendor
+vendor/
+
+# ignore components loaded via Bower
+/bower_components
+bower_components/
+
+# ignore mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.code-workspace
+
+# ignore databases
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore private/secret files
+*.der
+*.key
+*.pem
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.dockerignore
+!.stylelintrc.json
+!.browserslistrc
+!.eslintrc.js
+!.prettierrc.js
+!.sass-lint.yml
+!.htaccess
+
+!_vendor.zip
+!_node_modules.zip
+!_regmondb_*.sql
+!.env.sample
+!.github

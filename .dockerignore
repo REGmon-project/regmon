@@ -1,0 +1,11 @@
+docker/
+docker-compose.yml
+docker-compose-dev.yml
+.dockerignore
+extra/
+.devcontainer/
+.vscode/
+.gitignore
+.git/
+node_modules/
+vendor/

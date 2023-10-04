@@ -1,0 +1,79 @@
+/* FullCalendar - Overrides */
+/*--------------------------*/
+/* This should go to index inline style, so it can get the LANG for the message */
+.no_calendar_data .fc-scroller {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100%" width="100%"><text x="50%" y="30%" fill="grey" font-size="40" opacity="0.75" dominant-baseline="middle" text-anchor="middle"><tspan x="50%">Zum Eintragen von Daten</tspan><tspan x="50%" dy="75">bitte in den Kalender klicken.</tspan></text></svg>');
+}
+.fc-unthemed td.fc-today {
+ 	/*background: #fcf8e3; --we give transparency so the watermark 'no entries' can be visible */
+  	background: rgba(252, 248, 227, 0.75);
+}
+
+
+#calendar {
+	/*max-width: 900px;*/
+	margin: 10px auto;
+	padding: 0 10px;
+}
+.fc-time-grid-event.fc-short .fc-title { /*for events of few minutes so not became so small*/
+    font-size: inherit;
+    padding: 0 1px;
+}
+#calendar .popover-content { padding: 10px 5px; }
+#calendar .popover { margin-left: 3%; /*to center on item*/ }
+#calendar .popover.top { margin-top: 15px; }
+#calendar .fc-agenda-view .fc-day-grid .fc-row { min-height: 2em; }
+#calendar .fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton { padding-bottom: 1px; }
+#calendar .fc-widget-header a:hover, #calendar a.fc-day-number:hover { color: blue; }
+#calendar .fc-center h2 {
+	font-size: 17px;
+	font-weight: bold;
+	color: black;
+}
+a.fc-event { cursor: pointer; }
+.event_deactivated { border:1px dashed white !important; opacity:0.8; }
+/*.ui-jqgrid-showHideColumnMenu { z-index: 20; }*/
+
+
+.red { color: red; }
+.green { color: green; }
+.orange { color: orange; }
+
+#gbox_categories.ui-jqgrid tr.jqgrow>td[aria-describedby="categories_name"] {
+  white-space: nowrap; /*for not break categories name with icon*/
+}
+#gbox_categories .tree-wrap>.treeclick {
+    line-height: 1.2;
+}
+/*
+.fa-sort-desc:before {
+    content: "\f0dd\00a0\f07b";
+}
+.fa-caret-right:before {
+    content: "\f0da\00a0\f07c";
+}
+*/
+.iti--allow-dropdown { width:100%; }
+.iti__country-list {
+    max-width:390px;
+    max-height:250px;
+    z-index: 3;
+}
+
+.swal2-container { z-index:10000; }
+
+.bootstrap-datetimepicker-widget table {
+    table-layout: auto;
+}
+.bootstrap-datetimepicker-widget th, .bootstrap-datetimepicker-widget td {
+    border: 0;
+}
+.bootstrap-datetimepicker-widget { color: #333; }
+.bootstrap-datetimepicker-widget a { color: #00aeef; }
+.bootstrap-datetimepicker-widget a:hover { color: #555; }
+.swal2-popup { font-size:12px; }
+.colorpicker.dashboard_color { z-index:9999; }
+/*.fancybox-back { top:30px; }*/
+.popover .popover { min-width: 230px; }
+#calendar .popover .popover.top { margin-top: 0; }
+#calendar .fc-center > h2 { width: 100%; }

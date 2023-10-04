@@ -1,0 +1,81 @@
+/* SSB UI Style */
+#ssb-container {
+    position: fixed;
+    top: 30%;
+	z-index: 1;
+}
+
+.ssb-btns-right {
+    right: 0;
+}
+
+.ssb-btns-left {
+    left: 0;
+}
+
+#ssb-container ul {
+    padding: 0;
+    margin: 0;
+}
+
+#ssb-container ul li {
+    list-style: none;
+    margin: 0;
+}
+
+#ssb-container ul li {
+    line-height: 35px;
+}
+
+#ssb-container ul li p {
+    margin: 0;
+}
+
+#ssb-container ul li a {
+    padding: 0 15px 0 0;
+    display: block;
+    line-height: 35px;
+    text-align: left;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#ssb-container ul li span {
+    line-height: 35px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+	font-size: 20px;
+}
+
+#ssb-container.ssb-btns-left ul li a {
+    text-align: right;
+    padding: 0 0 0 15px;
+}
+
+#ssb-container.ssb-btns-left ul li span {
+    float: right;
+}
+
+#ssb-container ul li a:hover {
+    text-decoration: none;
+}
+
+
+#ssb-btn-1{background: rgb(52, 83, 162); color: #ffffff; cursor:pointer; border-radius: 5px 0 0 0;}
+#ssb-btn-1:hover{background:rgba(52, 83, 162, 0.9);}
+
+#ssb-btn-2{background: rgb(45, 73, 144); color: #ffffff; cursor:pointer;}
+#ssb-btn-2:hover{background:rgba(45, 73, 144, 0.9);}
+
+#ssb-btn-3{background: rgba(49,68,116); color: #ffffff; cursor:pointer;}
+#ssb-btn-3:hover{background:rgba(49,68,116,0.9);}
+
+#ssb-btn-4{background: rgba(37,53,95); color: #ffffff; cursor:pointer;}
+#ssb-btn-4:hover{background:rgba(37,53,95,0.9);}
+
+#ssb-btn-5{background: rgb(25, 38, 74); color: #ffffff; cursor:pointer;}
+#ssb-btn-5:hover{background:rgba(25, 38, 74, 0.9);}
+
+#ssb-btn-6{background: rgb(65, 150, 65);color: #ffffff; cursor:pointer; padding-right: 10px; border-radius: 0 0 0 5px;}
+#ssb-btn-6:hover{background:rgba(65, 150, 65, 0.9); }

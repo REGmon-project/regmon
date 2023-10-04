@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.row {
+  zoom: 1;
+}
+.row:before, .row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+.span5, .span7 {
+  width: auto;
+  float: left;
+}
+.span7, .span7 > span {
+  width: 100%;
+}
+
+
+#dropzone {
+    padding-top: 10px;
+    background: palegreen;
+    width: 210px;
+    height: 70px;
+    line-height: 10px;
+    text-align: center;
+    /*font-weight: bold;*/
+	border: 1px dashed #1A1;
+	
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	-moz-box-shadow:0 0 7px rgba(0,0,0,.4);
+	-webkit-box-shadow:0 0 7px rgba(0,0,0,.4);
+	box-shadow:0 0 7px rgba(0,0,0,.4);
+}
+#dropzone.in {
+    width: 400px;
+    height: 200px;
+    line-height: 30px;
+    font-size: larger;
+}
+#dropzone.hover {
+    background: lawngreen;
+}
+#dropzone.fade {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+.upload_files {
+	font-family: Arial;
+	font-size: 13px;
+}
+.fileupload-buttonbar {
+	white-space: nowrap;
+}
+.fileupload-buttonbar .fade,
+.files .fade {
+  display: none;
+}
+.upload_files span {
+	display:block;
+	font-size:10px;
+	line-height:10px;
+}
+
+
+@media (max-width: 979px) {
+  body {
+    width: auto;
+    padding: 10px;
+  }
+}

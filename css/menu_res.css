@@ -1,0 +1,504 @@
+/* Remove the blue Webkit background when element is tapped */
+a, button, li {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* +/- for collapse/expand bootstrap categories */
+.nav [data-toggle="collapse"]:before {
+	font-family: 'FontAwesome';
+	content:"\f068";/*minus*/
+	float:left;
+	padding: 5px 5px 0 2px;
+	/*font-size: 16px;*/
+	font-size: 0.8em;
+}
+.nav [data-toggle="collapse"].collapsed:before {
+	content:"\f067";/*plus*/
+}
+.nav ul ul { padding: 0 2px; }
+.nav ul ul ul { padding: 0 2px; }
+.nav ul ul ul ul { padding: 0 2px; }
+
+/* Global CSS that are applied for all screen sizes */
+.nav > ul, .anav ul {
+	/*max-width: 32em;*/ /*500px;*/ /*82.667em;*/ /*1240px;*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.5em;
+	font-weight: 300;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	text-align: left;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);}
+.nav > ul li, .anav li {
+	width: 100%;
+	padding: 10px 0;
+	list-style: none;
+	/*text-align: center;*/
+	border-left: 10px solid rgba(0, 0, 0, 0.2);
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav > ul li ul li {
+	border-left: 7px solid rgba(0, 0, 0, 0.2);
+}
+.nav > ul li ul li ul li {
+	border-left: 4px solid rgba(0, 0, 0, 0.2);
+}
+.nav > ul li div, .anav li div {
+}
+.nav > ul li .badge, .anav li .badge {
+	margin-top: -5px;
+	padding-right: 9px;
+	background: rgba(255, 255, 255, 0.2);
+}
+.nav > ul li .span_rs, .anav li .span_rs {
+	white-space: nowrap;
+	padding:0;
+}
+.nav > ul li .span_rs div, .anav li .span_rs div {
+	margin-left: 5px; /*10px*/
+}
+.nav > ul li .span_rs div.icheckbox_flat-yellow2s, .anav li .span_rs div.icheckbox_flat-yellow2s {
+	height: 23px;
+}
+.nav > ul li .span_rs div.icheckbox_polaris2, .anav li .span_rs div.icheckbox_polaris2 {
+	height: 21px;
+}
+.nav > ul li > span, .anav li > span {
+	display: block;
+	/*text-align: center;*/
+	color: rgba(249, 249, 249, 0.99);
+	font-weight: bold;
+	padding: 0;
+	padding-bottom:5px;
+	/*white-space: nowrap;*/
+	overflow: hidden;
+	cursor: pointer;
+}
+.nav > ul a, .anav a {
+	display: block;
+	width: auto;
+	/*height:35px;*/
+	color: rgba(249, 249, 249, .9);
+	text-decoration: none;
+	-webkit-transition: color .5s, background .5s, height .5s;
+	-moz-transition: color .5s, background .5s, height .5s;
+	-o-transition: color .5s, background .5s, height .5s;
+	-ms-transition: color .5s, background .5s, height .5s;
+	transition: color .5s, background .5s, height .5s;
+}
+.nav > ul li a > span, .anav li a > span {
+	display:block;
+    overflow: hidden;
+	/*height:35px;*/
+    border-radius: 5px;
+	/*margin-top:2px;*/
+	margin-bottom:2px;
+	padding:0 5px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
+	/*white-space: nowrap;*/
+	word-break:break-word;
+	word-wrap:break-word;
+	white-space:pre-wrap;
+	/* Making the background animation */
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	-ms-transition: background 0.5s;
+	transition: background 0.5s;
+ }
+/*.nav li a span span, .anav li a span span {
+	display: inline-block;
+	float: right;
+	width: 30px;
+	margin-right: -40px;
+	margin-bottom: -15px;
+	margin-top: 4px;
+	font-size: 18px;
+	border:0;
+    background: rgba(0, 0, 0, 0);
+}*/
+
+
+
+/*##########################################################################*/
+/* Hover effect for the whole navigation to make the hovered item stand out */
+/* --not work good with nested categories
+.no-touchevents .nav > ul:hover a, .no-touchevents .anav ul:hover a {
+	color: rgba(249, 249, 249, .5);
+}
+.no-touchevents .nav > ul:hover a:hover, .no-touchevents .anav ul:hover a:hover {
+	color: rgba(249, 249, 249, 0.99);
+	font-weight: bold;
+}*/
+/* Making the text animation */
+.no-touchevents .nav > ul a:hover > span, .no-touchevents .anav a:hover > span,
+.no-touchevents #A_Training_Menu.nav > ul a:hover > span,
+.no-touchevents #A_Requests_From_Trainers.nav > ul a:hover > span,
+.no-touchevents #A_Group_Requests.nav > ul a:hover > span {
+	font-weight:400;
+}
+/* We transition the background color */
+.no-touchevents .nav > ul li a > span:hover, .no-touchevents .nav > ul li a > span:active, .no-touchevents .nav > ul li a > span:focus,
+.no-touchevents .anav ul li a > span:hover, .no-touchevents .anav ul li a > span:active, .no-touchevents .anav ul li a > span:focus {
+	background: rgba(0, 0, 0, 0.3);
+}
+/* No Access */
+.nav > ul li a.no_access  {
+	color: rgba(249, 249, 249, .5);
+	background: rgba(0, 0, 0, 0.1);
+}
+.nav > ul li a.no_access  span {
+	color: rgba(249, 249, 249, .5);
+}
+.no-touchevents .nav > ul a.no_access  > span:hover{
+	color: rgba(249, 249, 249, .5);
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+.anav {} /*sto style_grid*/
+
+#A_Training_Menu.nav > ul li,
+#A_Requests_From_Trainers.nav > ul li,
+#A_Group_Requests.nav > ul li {
+    padding: 5px;
+    border-left: 0;
+    border-right: 0;
+}
+#A_Training_Menu.nav > ul li a,
+#A_Requests_From_Trainers.nav > ul li a,
+#A_Group_Requests.nav > ul li a {
+	color: #89867e;
+	/*font-weight: 400;*/
+}
+#A_Training_Menu.nav > ul li a > span,
+#A_Requests_From_Trainers.nav > ul li a > span,
+#A_Group_Requests.nav > ul li a > span {
+	border-radius: 5px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	background: #ffffff;
+}
+#A_Requests_From_Trainers.nav > ul li a > span.answer,
+#A_Group_Requests.nav > ul li a > span.answer {
+	background: #aaffff;
+}
+#A_Requests_From_Trainers.nav > ul li a > span.no_access,
+#A_Group_Requests.nav > ul li a > span.no_access {
+	color: #999999;
+	background: #f3f3f3;
+}
+#A_Training_Menu.nav > ul li td.training_act,
+#A_Requests_From_Trainers.nav > ul li td.req_act,
+#A_Group_Requests.nav > ul li td.req_act {
+	width:30px;
+	padding-left:2px;
+}
+#A_Training_Menu.nav > ul li .span_act {
+	color: #000000;
+    width: 33px;
+	white-space: nowrap;
+	opacity:0.7;
+}
+#A_Training_Menu.nav > ul li a.training_view .span_act {
+	background:#ffbf00 !important;
+	padding-left:3px;
+}
+#A_Training_Menu.nav > ul li a.training_edit .span_act {
+	background:#00b300 !important;
+}
+#A_Training_Menu.nav > ul li a.training_delete .span_act {
+	background:#d90000 !important;
+	padding-left:6px;
+}
+
+#A_Training_Menu span.popover_nowrap,
+#A_Requests_From_Trainers span.popover_nowrap,
+#A_Athlete_Forms_Select_Menu span.popover_nowrap,
+#A_Group_Requests span.popover_nowrap {
+	white-space: nowrap;
+	min-width: 240px;
+    display: inline-block;
+}
+#A_Group_Requests span.popover_nowrap hr{
+	margin: 5px;
+}
+
+.no-touchevents #A_Training_Menu.nav > ul:hover a:hover,
+.no-touchevents #A_Requests_From_Trainers.nav > ul:hover a:hover,
+.no-touchevents #A_Group_Requests.nav > ul:hover a:hover {
+	color: #000000;
+	font-weight: 400;
+}
+.no-touchevents #A_Requests_From_Trainers.nav > ul:hover a:hover > span.no_access,
+.no-touchevents #A_Group_Requests.nav > ul:hover a:hover > span.no_access {
+	color: #666666;
+	font-weight: 300;
+}
+.no-touchevents #A_Training_Menu.nav > ul li a > span:hover,
+.no-touchevents #A_Training_Menu.nav > ul li a > span:active,
+.no-touchevents #A_Training_Menu.nav > ul li a > span:focus,
+.no-touchevents #A_Requests_From_Trainers.nav > ul li a > span:hover,
+.no-touchevents #A_Requests_From_Trainers.nav > ul li a > span:active,
+.no-touchevents #A_Requests_From_Trainers.nav > ul li a > span:focus,
+.no-touchevents #A_Group_Requests.nav > ul li a > span:hover,
+.no-touchevents #A_Group_Requests.nav > ul li a > span:active,
+.no-touchevents #A_Group_Requests.nav > ul li a > span:focus {
+	background: rgba(200, 200, 200, 0.3);
+}
+.no-touchevents #A_Requests_From_Trainers.nav > ul li a > span.answer:hover,
+.no-touchevents #A_Group_Requests.nav > ul li a > span.answer:hover {
+	background: #00ffff;
+}
+.no-touchevents #A_Training_Menu.nav > ul li a > span.span_act:hover {
+	color: #ffffff;
+	opacity:1;
+}
+.no-touchevents #A_Training_Menu.nav > ul li a > span.create:hover {
+	color: #ffffff;
+	background: #0000b3;
+}
+
+.popover.confirmation .popover-content {
+	text-align: center;
+}
+#A_Training_Menu .popover.confirmation,
+#A_Requests_From_Trainers .popover.confirmation,
+#A_Group_Requests .popover.confirmation {
+	white-space:nowrap;
+}
+#A_Training_Menu .popover.confirmation a,
+#A_Requests_From_Trainers .popover.confirmation a,
+#A_Group_Requests .popover.confirmation a {
+	display: inline-block;
+	color: #ffffff;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+#A_Training_Menu .popover.confirmation a:hover,
+#A_Requests_From_Trainers .popover.confirmation a:hover,
+#A_Group_Requests .popover.confirmation a:hover {
+	color: #ffffff !important;
+	font-weight:normal !important;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+#C_Request_Access_From_Athletes .no_select .popover.confirmation  .popover-content { display:none; }
+
+
+.open_all, .close_all {
+	font-size:25px;
+	vertical-align:middle;
+	float:left;
+	margin-left: 2px;
+	cursor:pointer;
+}
+.open_all {	margin-right:-22px; }
+
+
+[data-toggle="buttons"] > .btn > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+    clip: rect(1px 1px 1px 1px);
+}
+
+#profile_edit .form-group {
+	position: relative;
+}
+#profile_edit label.error {
+    top: 5px;
+}
+
+/*jqgrid*/
+#group_data .ui-widget { font-family: inherit; } /*all in accordions*/
+
+#C_Request_Access_From_Athletes .ui-state-default.ui-th-column .ui-jqgrid-sortable { font-weight:bold; }
+#C_Group_Users .ui-state-default.ui-th-column  .ui-jqgrid-sortable { font-weight:bold; }
+#C_Forms .ui-state-default.ui-th-column .ui-jqgrid-sortable { font-weight:bold; }
+#C_Categories .ui-state-default.ui-th-column .ui-jqgrid-sortable { font-weight:bold; }
+#C_Location_Groups .ui-state-default.ui-th-column  .ui-jqgrid-sortable { font-weight:bold; }
+#C_Sports_Dropdowns .ui-state-default.ui-th-column  .ui-jqgrid-sortable { font-weight:bold; }
+
+/*#######################################################################################*/
+/*#######################################################################################*/
+/*#######################################################################################*/
+/*responsive*/
+
+#profile_edit { padding: 20px; }
+#profile_edit label { vertical-align: top; }
+
+#group_data #gbox_trainer_users .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_group_users .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_forms .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_categories .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_location_groups .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_sports .ui-jqgrid-view { font-size: 13px; }
+#group_data #gbox_dropdowns .ui-jqgrid-view { font-size: 13px; }
+
+@media (min-width: 1199px) {
+	#group_data #gbox_trainer_users .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_trainer_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_group_users .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_group_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_forms .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_categories .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_location_groups .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_sports .ui-jqgrid-view { font-size: 15px; }
+	#group_data #gbox_dropdowns .ui-jqgrid-view { font-size: 15px; }
+	#group_data #A_Requests_From_Trainers span.req:before { font-size: 23px; }
+	#group_data #A_Group_Requests span.req:before { font-size: 23px; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.nav > ul {font-size: 1.3em;}
+	.nav [data-toggle="collapse"]:before {font-size: 0.7em;}
+	.nav > ul li .span_rs div.icheckbox_flat-yellow2s {
+		height: 24px;
+	}
+	/*.nav li a span {height:30px;}
+	.nav a {height:30px;}*/
+	#A_Training_Menu.nav > ul li .span_act {width: 30px;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.nav > ul {font-size: 1.1em;}
+	.nav [data-toggle="collapse"]:before {font-size: 0.6em;}
+	.nav > ul li .span_rs div.icheckbox_flat-yellow2s {
+		height: 23px;
+	}
+	/*.nav li a span {height:27px;}
+	.nav a {height:27px;}*/
+	/*.nav li a span span {
+		margin-top: 3px;
+		padding-right: 3px;
+		font-size: 16px;
+	}*/
+	#group_data #A_Training_Menu.nav > ul li .span_act {width: 28px;}
+	#group_data #A_Training_Menu.nav > ul li a.training_view .span_act {padding-left:4px;}
+	#group_data #A_Training_Menu.nav > ul li a.training_delete .span_act {padding-left:6px;}
+	#group_data #A_Requests_From_Trainers span.req:before { font-size: 17px; }
+	#group_data #A_Group_Requests span.req:before { font-size: 17px; }
+}
+@media (min-width: 671px) and (max-width: 767px) {
+	#group_data #gbox_trainer_users .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_trainer_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_group_users .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_group_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_forms .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_categories .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_location_groups .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_sports .ui-jqgrid-view { font-size: 17px; }
+	#group_data #gbox_dropdowns .ui-jqgrid-view { font-size: 17px; }
+	#group_data #A_Requests_From_Trainers span.req:before { font-size: 23px; }
+	#group_data #A_Group_Requests span.req:before { font-size: 23px; }
+}
+@media (min-width: 616px) and (max-width: 670px) {
+	#group_data #gbox_trainer_users .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_trainer_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_group_users .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_group_users span.req:before { font-size: 20px !important; }
+	#group_data #gbox_forms .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_categories .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_location_groups .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_sports .ui-jqgrid-view { font-size: 16px; }
+	#group_data #gbox_dropdowns .ui-jqgrid-view { font-size: 16px; }
+	#group_data #A_Requests_From_Trainers span.req:before { font-size: 23px; }
+	#group_data #A_Group_Requests span.req:before { font-size: 23px; }
+}
+@media (min-width: 580px) and (max-width: 615px) {
+	#group_data #gbox_trainer_users .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_group_users .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_forms .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_categories .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_location_groups .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_sports .ui-jqgrid-view { font-size: 14px; }
+	#group_data #gbox_dropdowns .ui-jqgrid-view { font-size: 14px; }
+}
+@media (min-width: 520px) and (max-width: 615px) {
+	.nav > ul {font-size: 1.3em;}
+	.nav > ul li .span_rs div.icheckbox_flat-yellow2s {
+		height: 24px;
+	}
+	/*.nav li a span {height:30px;}
+	.nav a {height:30px;}*/
+	#A_Training_Menu.nav > ul li .span_act {width: 30px;}
+	#A_Training_Menu.nav > ul li a.training_delete .span_act {padding-left:5px;}
+}
+@media (min-width: 410px) and (max-width: 519px) {
+	.nav > ul {font-size: 1.1em;}
+	.nav > ul li .span_rs div.icheckbox_flat-yellow2s {
+		height: 21px;
+	}
+	/*.nav li a span {height:27px;}
+	.nav a {height:27px;}*/
+	/*.nav li a span span {
+		margin-top: 3px;
+		padding-right: 3px;
+		font-size: 16px;
+	}*/
+	#A_Training_Menu.nav > ul li .span_act {width: 28px;}
+	#A_Training_Menu.nav > ul li a.training_delete .span_act {padding-left:5px;}
+	#A_Requests_From_Trainers span.req:before { font-size: 17px; }
+	#A_Group_Requests span.req:before { font-size: 17px; }
+	#profile_edit { padding: 0; }
+}
+
+
+@media (max-width: 409px) {
+	.nav > ul {font-size: 1em;}
+	.nav > ul li .span_rs div.icheckbox_flat-yellow2s {
+		height: 21px;
+	}
+	/*.nav li a span {height:24px;}
+	.nav a {height:24px;}*/
+	/*.nav li a span span {
+		margin-top: 3px;
+		padding-right: 7px;
+		font-size: 15px;
+	}*/
+	#A_Training_Menu.nav > ul li .span_act {width: 28px;}
+	#A_Training_Menu.nav > ul li a.training_view .span_act {padding-left:4px;}
+	#A_Training_Menu.nav > ul li a.training_delete .span_act {padding-left:6px;}
+	#A_Requests_From_Trainers span.req:before { font-size: 15px; }
+	#A_Group_Requests span.req:before { font-size: 15px; }
+	#profile_edit { padding: 0; }
+}
+@media (max-width: 250px) {
+	#A_Training_Menu span.popover_nowrap,
+	#A_Requests_From_Trainers span.popover_nowrap,
+	#A_Group_Requests span.popover_nowrap {
+		white-space: normal;
+	}
+}
+
+
+/* ####### footer images #############################*/
+@media (max-width: 799px) {
+	.img_line {height:50px !important;}
+	.hr_img {height:50px !important;}
+	.header_img {height:50px !important;}
+	.footer_line {height:50px !important;}
+}
+@media (max-width: 559px) {
+	.img_line {height:30px !important;}
+	.hr_img {height:30px !important;}
+	.header_img {height:30px !important;}
+	.footer_line {height:30px !important;}
+}
+@media (max-width: 350px) {
+	.img_line {height:25px !important;}
+	.hr_img {height:25px !important;}
+	.header_img {height:25px !important;}
+	.footer_line {height:25px !important;}
+}
+@media (max-width: 280px) {
+	.img_line {height:20px !important;}
+	.hr_img {height:20px !important;}
+	.header_img {height:20px !important;}
+	.footer_line {height:20px !important;}
+}
+/* ####### footer images #############################*/

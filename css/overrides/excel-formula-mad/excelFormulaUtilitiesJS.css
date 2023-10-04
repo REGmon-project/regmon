@@ -1,0 +1,18 @@
+/*-----------FORMULA STYLES------------*/
+.formula_input { min-width:100%; max-width:100%; min-height:30px; resize:vertical; line-height: 20px; }
+.formula{
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	background-color:#f5fffa;
+	border:solid 1px #e4e4e4;
+	padding:5px 12px;
+	overflow:auto;
+}
+.formula_show_hide { cursor: pointer; }
+.formula .function { color:#069; }
+.formula .function_start, .formula .function_stop{ color:#ff0000; }
+.formula .tabbed { border-left:dotted 1px #a0a0a0; }
+.formula .quote_mark, .formula .text { color:#0000ff; }
+#formula_out { display:inline;white-space: nowrap; }
+/*-----------FORMULA STYLES------------*/
+.formula_in.has-error .form-control { border-color: red; border-width: 2px; }
+.formula_in.has-error .form-control-feedback { color: red; top: 18px; }

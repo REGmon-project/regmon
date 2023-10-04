@@ -1,0 +1,150 @@
+[
+    {
+        "name": "Flugzeug",
+        "path": "airplane.png"
+    },
+    {
+        "name": "Luftballons",
+        "path": "balloons.png"
+    },
+    {
+        "name": "Kamera",
+        "path": "camera.png"
+    },
+    {
+        "name": "Auto",
+        "path": "car.png"
+    },
+    {
+        "name": "Katze",
+        "path": "cat.png"
+    },
+    {
+        "name": "Stuhl",
+        "path": "chair.png"
+    },
+    {
+        "name": "Büroklammer",
+        "path": "clip.png"
+    },
+    {
+        "name": "Uhr",
+        "path": "clock.png"
+    },
+    {
+        "name": "Wolke",
+        "path": "cloud.png"
+    },
+    {
+        "name": "Rechner",
+        "path": "computer.png"
+    },
+    {
+        "name": "Umschlag",
+        "path": "envelope.png"
+    },
+    {
+        "name": "Auge",
+        "path": "eye.png"
+    },
+    {
+        "name": "Flagge",
+        "path": "flag.png"
+    },
+    {
+        "name": "Ordner",
+        "path": "folder.png"
+    },
+    {
+        "name": "Fuss",
+        "path": "foot.png"
+    },
+    {
+        "name": "Zeichnung",
+        "path": "graph.png"
+    },
+    {
+        "name": "Haus",
+        "path": "house.png"
+    },
+    {
+        "name": "Schlüssel",
+        "path": "key.png"
+    },
+    {
+        "name": "Blatt",
+        "path": "leaf.png"
+    },
+    {
+        "name": "Lampe",
+        "path": "light-bulb.png"
+    },
+    {
+        "name": "Schloss",
+        "path": "lock.png"
+    },
+    {
+        "name": "Lupe",
+        "path": "magnifying-glass.png"
+    },
+    {
+        "name": "Mann",
+        "path": "man.png"
+    },
+    {
+        "name": "Musiknote",
+        "path": "music-note.png"
+    },
+    {
+        "name": "Hosen",
+        "path": "pants.png"
+    },
+    {
+        "name": "Bleistift",
+        "path": "pencil.png"
+    },
+    {
+        "name": "Drucker",
+        "path": "printer.png"
+    },
+    {
+        "name": "Roboter",
+        "path": "robot.png"
+    },
+    {
+        "name": "Schere",
+        "path": "scissors.png"
+    },
+    {
+        "name": "Sonnenbrille",
+        "path": "sunglasses.png"
+    },
+    {
+        "name": "Etikett",
+        "path": "tag.png"
+    },
+    {
+        "name": "Baum",
+        "path": "tree.png"
+    },
+    {
+        "name": "Lastwagen",
+        "path": "truck.png"
+    },
+    {
+        "name": "T-Shirt",
+        "path": "t-shirt.png"
+    },
+    {
+        "name": "Regenschirm",
+        "path": "umbrella.png"
+    },
+    {
+        "name": "Frau",
+        "path": "woman.png"
+    },
+    {
+        "name": "Welt",
+        "path": "world.png"
+    }
+]

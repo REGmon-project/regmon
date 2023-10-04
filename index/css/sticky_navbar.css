@@ -1,0 +1,129 @@
+/* custom navbar */
+.navbar-custom {
+	margin-top: -8%;
+    min-height: 30px;
+    border: 0;
+    margin-bottom: 8%;
+}
+.navbar-custom #navbar { margin-right: 25px; }
+.navbar-custom .navbar-collapse {
+    padding-right: 0;
+}
+.navbar-custom .container-fluid { padding:0; }
+.navbar-custom .navbar-nav>li { margin:0 5px; }
+.navbar-custom .navbar-nav > li > ul > li a,
+.navbar-custom .navbar-nav > li > a,
+.navbar-custom .navbar-nav > li > a.nav_logout {
+    color: #fff;
+    background: #446f91;
+	font-weight: 600;
+	padding-left:20px;
+	padding-right:20px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 2px 0px #333333;
+	background-position: center; /*ripple efe*/
+	transition: background .8s ease; 
+	-moz-transition: background .8s ease; 
+	-webkit-transition: background .8s ease; 
+	-o-transition: background .8s ease; 
+}
+.navbar-custom .navbar-nav > li > ul > li a:hover,
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a.nav_logout:hover {
+	background: #00aeef radial-gradient(circle, transparent 1%, #00aeef 1%) center/15000%; /*ripple efe*/ /*background: #00aeef;*/
+    color: #fff;
+	box-shadow: 2px 2px 2px 0px #333333;
+}
+.navbar-custom .navbar-nav > li > a.nav_logout:hover {
+	background: #ff0000 radial-gradient(circle, transparent 1%, #ff0000 1%) center/15000%;
+}
+.navbar-custom .navbar-nav > li > ul > li a:active,
+.navbar-custom .navbar-nav > li > a:active,
+.navbar-custom .navbar-nav > li > a:active.nav_logout { /*ripple efe*/
+	background-color: #6eb9f7;
+	background-size: 100%;
+	transition: background 0s;
+}
+.navbar-custom .navbar-nav > li > a.nav_logout:active {
+	background-color: #ff6060;
+}
+
+/* dropdown */
+.navbar-custom .navbar-nav .dropdown-menu { 
+	background-color: #446f91; 
+	box-shadow: 1px 1px 3px 0px #333333;
+}
+.navbar-custom .navbar-nav .dropdown-menu>li>a  { color: #fff; font-weight: 600; }
+.navbar-custom .navbar-nav .dropdown-menu>li>a:hover, 
+.navbar-custom .navbar-nav .dropdown-menu>li>a:focus,
+.navbar-custom .navbar-nav .dropdown-menu>.active>a { 
+	color: #ffffff; 
+	background-color: #00aeef; 
+	background-image:none; 
+	box-shadow: 0px 0px 4px 2px #333333;;
+}
+.navbar-custom .navbar-nav .dropdown.open>a, 
+.navbar-custom .navbar-nav .dropdown.open>a:focus, 
+.navbar-custom .navbar-nav .dropdown.open>a:hover {
+	background: #00aeef;
+    border-color: #337ab7;
+}
+.navbar-custom .navbar-brand { color:#eeeeee; }
+.navbar-custom .navbar-toggle {	margin: -10px 25px 10px; background-color:#446f91; box-shadow: 1px 1px 2px 0px #333333; }
+.navbar-custom .navbar-toggle:hover { background-color:#00aeef; box-shadow: 2px 2px 2px 0px #333333; }
+.navbar-custom.fixed-theme .navbar-toggle {	margin: 6px; }
+.navbar-custom .icon-bar { background-color:#ffffff; }
+
+
+.navbar-custom.fixed-theme { 
+	margin-top:0px;
+	/*padding-right: 20px;*/
+	background-color:#ffffff; 
+	border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+.navbar-custom.fixed-theme #navbar { margin-top: 9px; }
+
+
+#nav-header-logo { display:none; margin-left:0; height:50px; }
+#nav-header-logo.fixed-theme { display:block; }
+
+#main_container { margin-top: -30px; }
+#main_container.fixed-theme { margin-top: 0; }
+
+#views.fixed-theme { padding-top: 80px; }
+
+
+/*.navbar-custom, .navbar-container, .navbar-header, #nav-header-logo, #navbar {
+    transition: 0.5s;
+    -webkit-transition:  0.5s;
+}
+*/
+.navbar-custom .navbar-nav>li>ul>li a { padding: 5px; }
+
+@media (max-width: 1015px) { /*930*/
+	.navbar-custom .navbar-nav>li>a {
+		padding: 5px 10px;
+	}
+}
+
+@media (max-width: 850px) {
+	.navbar-custom .navbar-nav>li>a {
+		font-size:14px;
+		padding: 5px;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-custom .navbar-nav>li>a {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+@media (max-width: 767px) {
+	#nav-header-logo.fixed-theme { margin-left: 15px; }
+	.navbar-custom.fixed-theme { padding-right: 0; }
+	.navbar-custom .navbar-header { margin-right: 0; }
+	.navbar-custom.fixed-theme .navbar-toggle { margin: 6px 25px; }
+	.navbar-custom #navbar { padding-right: 15px; margin-right: 0; }
+	.navbar-custom .navbar-nav>li>a { padding: 10px 20px; }
+}

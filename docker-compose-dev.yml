@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/web/development/Dockerfile
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_DATABASE=regmondb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - XDEBUG_MODE=debug
+      - XDEBUG_CONFIG=client_host=host.docker.internal client_port=9003
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    networks:
+      - internal
+    volumes:
+      - .:/var/www/public
+      - lib_vendor_data:/var/www/public/vendor/
+      - lib_node_data:/var/www/public/node_modules/
+      - ./extra/__docker_error.log:/var/log/apache2/error.log
+
+  db:
+    image: mysql:5.7
+    ports:
+      - "6603:3306"
+    environment:
+      - MYSQL_DATABASE=regmondb
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - internal
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8888:80
+    depends_on:
+      - db
+    environment:
+      MYSQL_USER: dbuser
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: db
+    networks:
+      - internal
+
+volumes:
+  mysql_data:
+    driver: local
+  lib_vendor_data:
+    driver: local
+  lib_node_data:
+    driver: local
+
+networks:
+  internal:
+    driver: bridge

@@ -1,0 +1,41 @@
+.fancybox-inner {
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;	
+}
+.fancybox-back {
+	background-image: url('fancybox_sprite.png');
+}
+/*#fancybox-loading, #fancybox-loading div {
+	display: none;
+}*/
+.fancybox-close {
+	top: -10px; /*-18px;*/
+	right: -10px; /*-18px;*/
+	z-index: 10000; /*8040;*/
+}
+
+.fancybox-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 10000;
+	background-position: 0 -36px;
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5) {
+
+	.fancybox-back {
+		background-image: url('fancybox_sprite@2x.png');
+		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+	#fancybox-loading div {
+		display: none;
+	}
+}

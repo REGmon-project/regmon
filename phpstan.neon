@@ -1,0 +1,46 @@
+parameters:
+    level: 9
+    paths:
+        - .
+    treatPhpDocTypesAsCertain: false
+    excludePaths:
+        analyse:
+            - login\visualCaptcha\*
+        analyseAndScan:
+            - vendor/*
+            - */__*
+    ignoreErrors:
+        # Global Variables
+        - message: '#Variable (\$DB_CONFIG|\$CONFIG|\$db|\$LANG|\$G_VER|\$G_Version|\$UID|\$USER|\$GROUP|\$ADMIN|\$LOCATION_ADMIN|\$GROUP_ADMIN|\$GROUP_ADMIN_2|\$THIS_LOCATION_ADMIN|\$THIS_GROUP_ADMIN|\$THIS_GROUP_ADMIN_2|\$THIS_GROUP_TRAINER|\$ATHLETE|\$TRAINER|\$LOCATION|\$USERNAME|\$SEC_check) might not be defined.#'
+
+        # All pages
+        - message: '#Cannot access property \$[a-zA-Z0-9_]+ on mixed.#'
+        - message: '#Cannot access( an | )offset[a-zA-Z0-9_…'' ]+on mixed.#'
+        - message: '#Cannot call method [a-zA-Z0-9_]+\(\) on mixed.#'
+
+        # messages per page
+        - messages: 
+            - '# on array\{\} in isset\(\) does not exist.#'
+            - '#Possibly invalid array key type \(array<int, string>\|string\).#'
+          path: _settings.regmon.php
+
+        - messages: 
+            - '#Static property Language::\$instance \(static\(Language\)\) does not accept Language.#'
+            - '#Method Language::getInstance\(\) has no return type specified.#'
+          path: php\class.language.php
+
+        - messages: 
+            - '#Call to function is_object\(\) with array will always evaluate to false.#'
+            - '#Call to an undefined method object::_open\(\).#'
+            - '#Cannot access offset \(int\|string\) on mixed.#'
+            - '#Parameter \#[0-9] \$[a-zA-Z0-9_]+ of function [a-zA-Z0-9_]+ expects resource, mixed given.#'
+          path: php\class.db.php
+
+        - message: '#Property LogLimiter::\$db has no type specified.#'
+          path: login\class.loglimiter.php
+
+        - message: '#Ternary operator condition is always false.#'
+          path: form.php
+
+        - message: '#Ternary operator condition is always *#'
+          path: results\inc.permissions.php

@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "version": "4.0.0",
+    "name": "regmon/regmon",
+    "description": "Regenerationsmanagement durch Athletenmonitoring",
+    "keywords": ["Regenerationsmanagement", "Athletenmonitoring", "regeneration", "management", "athlete", "monitoring"],
+    "homepage": "http://regman.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "madnetdev",
+            "email": "madnetdev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8.0"
+    },
+	"require-dev": {
+		"phpstan/phpstan": "1.*"
+	}
+}

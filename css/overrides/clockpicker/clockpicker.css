@@ -1,0 +1,21 @@
+.clockpicker-align-left.popover > .arrow {
+	left: 60px; /*25*/
+}
+.clockpicker-align-right.popover > .arrow {
+	left: auto;
+	right: 60px; /*25*/
+}
+.clockpicker-popover .popover-title {
+	padding: 2px;
+}
+.clockpicker-popover .popover-content {
+	padding: 2px; /*12*/
+}
+/*period*/
+.clockpicker-align-center.popover.period {
+	left: 25%;
+}
+.clockpicker-align-right.popover.period > .arrow {
+	left: auto;
+	right: 140px;
+}
