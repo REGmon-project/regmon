@@ -43,7 +43,7 @@ if ($SEC_check != $CONFIG['SEC_Page_Secret']) exit;
 					</li>
 				<?php } ?>
 					
-					<li><a href="index/ajax.page.regman_info.php" class="nav_link nav_profile fancybox fancybox.ajax"><i class="fa fa-info-circle" style="font-size:17px;"></i></a></li>
+					<li><a href="index/ajax.page.regmon_info.php" class="nav_link nav_profile fancybox fancybox.ajax"><i class="fa fa-info-circle" style="font-size:17px;"></i></a></li>
 
 					<li><a href="login/ajax.page.profile_edit.php" class="nav_link nav_profile fancybox fancybox.ajax"><i class="fa fa-user"></i> &nbsp; <?=$LANG->BUTTON_USER_ACCOUNT;?></a></li>
 					

@@ -259,7 +259,7 @@ if (isset($SEC_check_config)) {
 					$Main_Data_sql .= get_Extra_FormsSampleData_Init_SQL($datetime);
 
 					$Main_Data_sql .= "\n";
-					// actual data for specific forms
+					// notes sample data
 					$Main_Data_sql .= get_Extra_NotesSampleData_Init_SQL($datetime);
 
 					$Main_Data_sql .= "\n";

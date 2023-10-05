@@ -1,9 +1,9 @@
 {
   "name": "regmon",
-  "description": "",
-  "version": "4.0.0",
-  "keywords": [],
-  "author": "",
+  "description": "Athlete monitoring for practice and research",
+  "version": "1.0.0",
+  "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
+  "author": "madnetdev",
   "license": "ISC",
   "main": "",
   "scripts": {

@@ -9,7 +9,7 @@ array(
 
 	//all pages
     'APP_NAME'			=> 'REGmon',
-    'APP_INFO'			=> 'Regenerationsmanagement durch Athletenmonitoring',
+    'APP_INFO'			=> 'Athletenmonitoring für Sportpraxis und Wissenschaft',
     'HOMEPAGE'			=> 'Startseite',
     'PAGE_TOP'			=> 'Seitenanfang',
     'SAVE'				=> 'Speichern',
@@ -70,8 +70,8 @@ array(
 	'LOGIN_FAIL_TXT_8' 	=> 'Your IP will be unblocked in {Block_Minutes} minutes.',
 	
 	//register.php
-	'REGISTER' 				=> 'Registrieren',
-	'REGISTER_PAGE_TITLE'	=> 'Registrieren - REGmon',
+	'REGISTER' 				=> 'Registrierung',
+	'REGISTER_PAGE_TITLE'	=> 'Registrierung - REGmon',
 	'REGISTER_INFO'			=> 'Bitte geben Sie unten Ihre persönlichen Daten ein.',
 	'REGISTER_USERNAME' 	=> 'Benutzername',
 	'REGISTER_PASSWORD' 	=> 'Passwort',
@@ -149,7 +149,7 @@ array(
 
 	//######################################################
 	//index
-	'INDEX_PAGE_TITLE' 		=> 'Athletenmonitoring - REGmon',
+	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athletenmonitoring für Sportpraxis und Wissenschaft',
 	'INDEX_GROUP' 			=> 'Gruppe',
 	'INDEX_ATHLETE' 		=> 'Sportler*in',
 	'INDEX_VIEW_CALENDAR'	=> 'Kalender',
@@ -160,6 +160,14 @@ array(
 	'BUTTON_USER_ACCOUNT' 	=> 'Benutzerkonto',
     'BUTTON_LOGOUT'			=> 'Abmelden',
 	'BUTTON_ADMINISTRATION'	=> 'Verwaltung',
+	// info page  (ajax.page.regmon_info.php)
+	'INFO_PAGE_SUBTITLE' 	=> 'Athletenmonitoring<br>für Sportpraxis und Wissenschaft',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen Projekts "Regenerationsmanagement im Spitzensport" (REGman) entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2020 gefördert wurde.',
+	'INFO_PAGE_INFO_REGMON1'=> 'REGmon ist eine webbasierte Software für das Athletenmonitoring in der Sportpraxis und Wissenschaft.',
+	'INFO_PAGE_INFO_REGMON2'=> 'REGmon ist ein Open-Source-Projekt<br>und durch eine MIT-Lizenz lizensiert.',
+	'INFO_PAGE_INFO_OSF' 	=> 'REGman-Projektdokumentation im Open Science Framework',
+	'INFO_PAGE_INFO_WEBSITE'=> 'offizielle REGman-Website',
+	'INFO_PAGE_INFO_CEOS'	=> 'Das Projekt wurde von der CEOS solution GmbH (Bochum) unterstützt.',
 	//private group
 	'INDEX_PRIVATE_GROUP' 		=> 'Private Gruppe',
 	'INDEX_PRIVATE_GROUP_MARK'	=> '(privat)',
@@ -245,7 +253,7 @@ array(
 	'WARN_DROPDOWN_NOT_DELETE'	=> 'Warnung! Kann nicht löschen diese',
 	'WARN_DROPDOWN_NOT_CHANGE'	=> 'Warnung! Kann nicht ändern',
 
-	//VERWALTUNG  //admin - //benutzerkonten.php
+	//administration
 	'ADMIN_PAGE_TITLE'		=> 'Verwaltung - REGmon',
 	'ADMIN_LOCATIONS' 		=> 'Standorte',
 	'ADMIN_GROUPS' 			=> 'Gruppen',
@@ -344,7 +352,7 @@ array(
 	###################################################################
 
 	//FORMS
-	'FORMS_PAGE_TITLE' 			=> 'Formulars - REGmon',
+	'FORMS_PAGE_TITLE' 			=> 'Formulare - REGmon',
 	'FORM_PAGE'					=> 'Seite',
 	'FORM_BACKWARD'				=> 'rückwärts',
     'FORM_FORWARD'				=> 'vorwärts',
@@ -489,26 +497,9 @@ array(
 	'EXPORT_LOADING' 			=> 'Wird Geladen ...', //Loading...
 	'EXPORT_FILTER_NO_DATA' 	=> 'Keine Daten für die gewählten Filter vorhanden. Bitte ändern Sie die Filter.',
 
-	//import.php ------------check
-	'IMPORT' 				=> 'Import',
-    'IMPORT_DATA'			=> 'Daten importieren',
-    'IMPORT_SAVE_SELECTED'	=> 'Speichern<br>Ausgewählten',
-    'VIEW_DATA'				=> 'Daten ansehen',
-    'SELECT_FILES' 			=> 'Wählen Sie die Dateien...',
-    'SELECT_DROP' 			=> 'oder ziehen Sie die Dateien hier',
-    'SELECT_EXT' 			=> '(json, csv)', //not change
-    'FILES_UPLOAD' 			=> 'Dateien hochladen',
-    'FILE_DOWNLOAD' 		=> 'Herunterladen',
-    'FILE_DOWNLOAD_WAIT'	=> 'Vorbereiten der Datei zum herunterladen, bitte warten ...',
-    'FILE_DOWNLOAD_ERROR'	=> 'Herunterladen im Moment nicht möglich, bitte versuchen Sie es zum späteren Zeitpunkt erneut.',
-    'FILE_DELETE' 			=> 'Lösch akte',
-    'FILE_NOT_FOUND' 		=> 'Datei nicht gefunden',
-    'DELETE_CONFIRM' 		=> 'Löschvorgang bestätigen?',
-    'ERROR_DELETING'		=> 'Fehler beim Löschvorgang',
-
 	//forms_results.php, results.php
 	'RESULTS'					=> 'Ergebnisse',
-	'RESULTS_PAGE_TITLE' 		=> 'REGmon - Ergebnisse und Auswertung',
+	'RESULTS_PAGE_TITLE' 		=> 'Ergebnisse und Auswertung - REGmon',
 	'RESULTS_PAGE_Y_AXIS'		=> 'Ergebnisse Y-Achse',
 	'RESULTS_PAGE_HEADER'		=> 'Vorlage laden oder Zeitraum / Daten wählen',
 	'RESULTS_TAB_PERIOD'		=> 'Zeitraum',
@@ -606,7 +597,7 @@ array(
 <br>
 <br><b>Bitte warten Sie, bis ein Admin Ihr Konto aktivieren wird.</b>
 <br>
-<br>REGmon',
+<br>Ihr REGmon-Team',
 
 	//user email activate
     'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Ihr Konto wurde aktiviert : {Username}",
@@ -616,7 +607,7 @@ array(
 <br>
 <br>Benutzername: {Username}
 <br>
-<br>REGmon',
+<br>Ihr REGmon-Team',
 
 	//admin email new user
     'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "Neues {Profile_Title} Benutzerkonto : {Username}",
@@ -639,7 +630,7 @@ array(
 <br>
 <br>{Activate_Link} Kontoaktivierung </a>
 <br>
-<br>REGmon',
+<br>Ihr REGmon-Team',
 
 	//admin email new sport
 	'EMAIL_NEW_SPORTART_ADMIN_SUBJECT' => "Neue Sportart : {Sports}",
@@ -657,7 +648,7 @@ array(
 <br>Gruppe: {Group}
 <br>Profil: {Profile}
 <br>
-<br>REGmon",
+<br>Ihr REGmon-Team",
 
 	
     'HOME' 	=> 'Home'
