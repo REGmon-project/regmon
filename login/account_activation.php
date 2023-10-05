@@ -42,7 +42,11 @@ if ($db->numberRows() > 0)  {
 			// Email ##############################################
 			require($PATH_2_ROOT.'php/inc.email.php');
 
+			/** @var string $Email_Subject */
 			$Email_Subject = str_replace('{Username}', $user['uname'], $LANG->EMAIL_ACCOUNT_ACTIVATE_SUBJECT);
+			$Email_Subject = str_replace('{HTTP}', $CONFIG['HTTP'], $Email_Subject);
+			$Email_Subject = str_replace('{DOMAIN}', $CONFIG['DOMAIN'], $Email_Subject);
+			$Email_Subject = str_replace('{REGmon_Folder}', $CONFIG['REGmon_Folder'], $Email_Subject);
 
 			/** @var string $Email_Message */
 			$Email_Message = str_replace('{Username}', $user['uname'], $LANG->EMAIL_ACCOUNT_ACTIVATE_MESSSAGE);
@@ -80,7 +84,7 @@ require($PATH_2_ROOT.'php/inc.html_head.php');
 <div class="container">
 	<div class="row">
         <div class="col-md-12" style="text-align:center; padding-top:80px;">
-			<h1 style="color:#333"><?=$LANG->REGISTER;?>!</h1>
+			<!-- <h1 style="color:#333"><?=$LANG->REGISTER;?>!</h1> -->
 			<h3 style="color: #6C3"><?=$message;?></h3>
         </div>
 	</div>

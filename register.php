@@ -249,10 +249,10 @@ select.required.form-control { border-right: 3px solid rgba(255, 0, 0, 0.7); }
 				<div style="width:70%;margin:auto;">
 					<label><?=$LANG->REGISTER_SEX;?></label>
 					<ul class="data-list floated clearfix">
-						<li><input name="sex" type="radio" class="required check_radio" value="0"><label class="label_gender"> <?=$LANG->REGISTER_MALE;?></label></li>
-						<li><input name="sex" type="radio" class="required check_radio" value="1"><label class="label_gender"> <?=$LANG->REGISTER_FEMALE;?></label></li>
-						<li><input name="sex" type="radio" class="required check_radio" value="2"><label class="label_gender"> <?=$LANG->REGISTER_OTHER;?></label></li>
-						<li class="sex required" style="width:5px; height:44px;"></li>
+						<li><input name="sex" type="radio" class="check_radio" value="0"><label class="label_gender"> <?=$LANG->REGISTER_MALE;?></label></li>
+						<li><input name="sex" type="radio" class="check_radio" value="1"><label class="label_gender"> <?=$LANG->REGISTER_FEMALE;?></label></li>
+						<li><input name="sex" type="radio" class="check_radio" value="2"><label class="label_gender"> <?=$LANG->REGISTER_OTHER;?></label></li>
+						<li class="sex" style="width:5px; height:44px;"></li>
 					</ul>
 				</div>
 			</div>
@@ -333,7 +333,7 @@ select.required.form-control { border-right: 3px solid rgba(255, 0, 0, 0.7); }
 		
 		<div class="submit step" id="complete">
 			<i class="icon-check"></i>
-			<h1 style="color:#333"><?=$LANG->REGISTER_THANKS;?></h1>
+			<!-- <h1 style="color:#333"><?=$LANG->REGISTER_THANKS;?></h1> -->
 			<h3 style="color:#6C3"><?=$LANG->REGISTER_SUBMIT_WAIT;?></h3>
 			<button type="submit" id="submit" name="process" class="submit" style="display:none;"><?=$LANG->REGISTER_SUBMIT;?></button>
 		</div>

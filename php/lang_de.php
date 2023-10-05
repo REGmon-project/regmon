@@ -55,7 +55,7 @@ array(
 	//login.php
 	'LOGIN' 			=> 'Anmelden',
 	'LOGIN_PAGE_TITLE' 	=> 'Anmeldung - REGmon',
-	'LOGIN_HEADER' 		=> 'Log In',
+	'LOGIN_HEADER' 		=> 'Anmeldung',
 	'LOGIN_USERNAME' 	=> 'Benutzername',
 	'LOGIN_PASSWORD' 	=> 'Passwort',
 	'LOGIN_REGISTER'	=> 'Registrieren',
@@ -93,14 +93,14 @@ array(
 	'REGISTER_GROUP' 		=> 'Gruppe',
 	'REGISTER_PROFILE' 		=> 'Profiltyp',
 	'REGISTER_THANKS' 		=> 'Danke!',
-	'REGISTER_SUBMIT' 		=> 'Einreichen',
-	'REGISTER_SUBMIT_WAIT' 		=> 'Bitte warten Sie, während das Formular abgeschickt wird.',
-	'REGISTER_SUBMIT_SUCCESS'	=> 'Formular wurde erfolgreich abgegeben.',
-	'REGISTER_SUBMIT_WAIT_ACTIV'=> 'Bitte warten Sie, bis Ihr Konto aktiviert wird.',
-	'REGISTER_ACTIVATE_OK' 		=> 'Konto wurde aktiviert.',
-	'REGISTER_ACTIVATE_READY' 	=> 'Bereits aktivierten Konto.',
-	'REGISTER_ACTIVATE_CODE_ERROR'=> 'Falscher Aktivierungscode.',
-	'REGISTER_ACTIVATE_NO_USER' => 'Konto nicht existiert',
+	'REGISTER_SUBMIT' 		=> 'Absenden',
+	'REGISTER_SUBMIT_WAIT' 		=> 'Bitte warten Sie während die Registrierung verarbeitet wird.',
+	'REGISTER_SUBMIT_SUCCESS'	=> 'Die Registrierung war erfolgreich und eine Bestätigung per E-Mail wurde versendet.',
+	'REGISTER_SUBMIT_WAIT_ACTIV'=> 'Sobald ihr Konto aktiviert wurde, erhalten Sie eine weitere Bestätigung per E-Mail.',
+	'REGISTER_ACTIVATE_OK' 		=> 'Das Konto wurde aktiviert.',
+	'REGISTER_ACTIVATE_READY' 	=> 'Das Konto ist bereits aktiviert.',
+	'REGISTER_ACTIVATE_CODE_ERROR'=> 'Falscher Aktivierungscode',
+	'REGISTER_ACTIVATE_NO_USER' => 'Das Konto existiert nicht (mehr).',
 	'REGISTER_APPROVE_WAIT' 	=> 'Warte auf Genehmigung',
 	'REGISTER_APPROVE_PROPOSAL' => 'Vorschlag genehmigen',
 	'REGISTER_APPROVED' 		=> 'Genehmigt',
@@ -168,6 +168,7 @@ array(
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman-Projektdokumentation im Open Science Framework',
 	'INFO_PAGE_INFO_WEBSITE'=> 'offizielle REGman-Website',
 	'INFO_PAGE_INFO_CEOS'	=> 'Das Projekt wurde von der CEOS solution GmbH (Bochum) unterstützt.',
+	'INFO_PAGE_CONTACT'		=> 'Wenn Sie für die vorliegende Software-Instanz Hilfe benötigen, kontaktieren Sie bitte:',
 	//private group
 	'INDEX_PRIVATE_GROUP' 		=> 'Private Gruppe',
 	'INDEX_PRIVATE_GROUP_MARK'	=> '(privat)',
@@ -576,82 +577,77 @@ array(
 	//Email Templates ######################################################
 	//Please do not translate text inside curly brackets {notTranslatedText}
 
+	/* text elements
+	{HTTP}{DOMAIN}/{REGmon_Folder}
+	{Username},{Email},{Group},{Profile},{Location}
+	{Firstname},{Lastname},{Sport},{Body_Height},{Gender},{Telephone}
+	*/
+
 	//user email new user
-    'EMAIL_NEW_ACCOUNT_SUBJECT' => "Neuer {Profile_Title} Benutzerkonto : {Username}",
+    'EMAIL_NEW_ACCOUNT_SUBJECT' => "Bestätigung Ihrer Registrierung auf {HTTP}{DOMAIN}/{REGmon_Folder}",
     'EMAIL_NEW_ACCOUNT_MESSSAGE'=> 
-'Sie haben sich auf <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a> ein Benutzerkonto als {Profile} erstellt.
+"Guten Tag,
+<br>
+<br>Sie haben sich auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a> mit einem neuen Konto registriert.
 <br>
 <br>Benutzername: {Username}
-<br>
-<br>Nachname: {Firstname}
-<br>Vorname: {Lastname}
-<br>Sportart: {Sport}
-<br>Körperhöhe: {Body_Height}
-<br>Geschlecht: {Gender}
-<br>Email: {Email}
-<br>Mobiltelefon: {Telephone}
+<br>E-Mail: {Email}
 <br>
 <br>Standort: {Location}
 <br>Gruppe: {Group}
 <br>Profil: {Profile}
 <br>
-<br><b>Bitte warten Sie, bis ein Admin Ihr Konto aktivieren wird.</b>
-<br>
-<br>Ihr REGmon-Team',
-
-	//user email activate
-    'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Ihr Konto wurde aktiviert : {Username}",
-    'EMAIL_ACCOUNT_ACTIVATE_MESSSAGE'=> 
-'Ihr Konto wurde aktiviert.
-<br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>
-<br>
-<br>Benutzername: {Username}
-<br>
-<br>Ihr REGmon-Team',
-
-	//admin email new user
-    'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "Neues {Profile_Title} Benutzerkonto : {Username}",
-    'EMAIL_NEW_ACCOUNT_ADMIN_MESSSAGE'=> 
-'Es wurde ein neues Benutzerkonto auf <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a> erstellt.
-<br>
-<br>Benutzername: {Username}
-<br>
-<br>Nachname: {Firstname}
-<br>Vorname: {Lastname}
-<br>Sportart: {Sport}
-<br>Körperhöhe: {Body_Height}
-<br>Geschlecht: {Gender}
-<br>Email: {Email}
-<br>Mobiltelefon: {Telephone}
-<br>
-<br>Standort: {Location}
-<br>Gruppe: {Group}
-<br>Profil: {Profile}
-<br>
-<br>{Activate_Link} Kontoaktivierung </a>
-<br>
-<br>Ihr REGmon-Team',
-
-	//admin email new sport
-	'EMAIL_NEW_SPORTART_ADMIN_SUBJECT' => "Neue Sportart : {Sports}",
-	'EMAIL_NEW_SPORTART_ADMIN_MESSSAGE'=> 
-"Ein neuer Vorschlag für Sport braucht eine Genehmigung.
-<br>
-<br>Benutzername: {Username}
-<br>Nachname: {Firstname}
-<br>Vorname: {Lastname}
-<br>Sportart: {Sport}
-<br>Email: {Email}
-<br>Mobiltelefon: {Telephone}
-<br>
-<br>Standort: {Location}
-<br>Gruppe: {Group}
-<br>Profil: {Profile}
+<br><b>Ihr Konto ist vorerst inaktiv.</b>
+<br><b>Sie bekommen eine weitere E-Mail, sobald Ihr Konto aktiviert wurde.</b>
 <br>
 <br>Ihr REGmon-Team",
 
-	
-    'HOME' 	=> 'Home'
-	
+	//user email activate
+    'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Ihr Konto für {HTTP}{DOMAIN}/{REGmon_Folder} wurde aktiviert.",
+    'EMAIL_ACCOUNT_ACTIVATE_MESSSAGE'=> 
+"Guten Tag,
+<br>
+<br>Ihr Konto wurde aktiviert.
+<br>
+<br><a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a>
+<br>
+<br>Benutzername: {Username}
+<br>
+<br>Ihr REGmon-Team",
+
+	//admin email new user
+    'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "Neue Registrierung auf {HTTP}{DOMAIN}/{REGmon_Folder} für die Gruppe: {Group}",
+    'EMAIL_NEW_ACCOUNT_ADMIN_MESSSAGE'=> 
+"Guten Tag,
+<br>
+<br>Es wurde ein neues Konto auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a> erstellt.
+<br>
+<br>Benutzername: {Username}
+<br>E-Mail: {Email}
+<br>
+<br>Standort: {Location}
+<br>Gruppe: {Group}
+<br>Profil: {Profile}
+<br>
+<br>Klicken Sie hier, um das Konto zu aktivieren:
+<br>{Activate_Link} Kontoaktivierung </a>
+<br>
+<br>Ihr REGmon-Team",
+
+	//admin email new sport
+	'EMAIL_NEW_SPORTS_ADMIN_SUBJECT' => "Neuer Vorschlag für eine Sportart ({Sports}) auf {HTTP}{DOMAIN}/{REGmon_Folder}",
+	'EMAIL_NEW_SPORTS_ADMIN_MESSSAGE'=> 
+"Guten Tag,
+<br>
+<br>Es wurde ein neuer Vorschlag für eine noch nicht gelistete Sportart abgesendet.
+<br>
+<br>Benutzername: {Username}
+<br>E-Mail: {Email}
+<br>
+<br>Standort: {Location}
+<br>Gruppe: {Group}
+<br>Profil: {Profile}
+<br>
+<br>Ihr REGmon-Team"
 );
 ?>

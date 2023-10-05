@@ -118,9 +118,9 @@ if ($sport_new != '') {
 	foreach ($admin_rows as $admin) {
 		//Admin email for activation of new Sport
 		$profile = ($level_id>10?'<b>'.$profile.'</b>':$profile);
-		$Subject_admin = str_replace('{Sports}', $sport_new, $LANG->EMAIL_NEW_SPORTART_ADMIN_SUBJECT);
+		$Subject_admin = str_replace('{Sports}', $sport_new, $LANG->EMAIL_NEW_SPORTS_ADMIN_SUBJECT);
 		/** @var string $Message_admin */
-		$Message_admin = str_replace('{Username}', $_POST['uname'], $LANG->EMAIL_NEW_SPORTART_ADMIN_MESSSAGE);
+		$Message_admin = str_replace('{Username}', $_POST['uname'], $LANG->EMAIL_NEW_SPORTS_ADMIN_MESSSAGE);
 		$Message_admin = str_replace('{Lastname}', $_POST['lastname'], $Message_admin);
 		$Message_admin = str_replace('{Firstname}', $_POST['firstname'], $Message_admin);
 		$Message_admin = str_replace('{Sport}', $sport_to_admin, $Message_admin);
