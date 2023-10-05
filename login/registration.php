@@ -107,9 +107,7 @@ WHERE gr.status = 3 AND gr.private_key = ?", array($_POST['private_key']));
 	$values['modified'] = get_date_time_SQL('now');
 	$values['created'] = get_date_time_SQL('now');
 
-	//$activate_code = MD5($values['account'].$values['uname'].$values['passwd']);
 	$activate_code = hash_Secret($CONFIG['SEC_Encrypt_Secret'] . $values['account'] . $values['uname'] . $values['passwd'], $CONFIG['SEC_Encrypt_Secret']);
-
 	
 	//check if we have a new sport to activate
 	$values['sport'] = '';
@@ -181,8 +179,11 @@ WHERE gr.status = 3 AND gr.private_key = ?", array($_POST['private_key']));
 			$profile = $level[0] > 10 ? '<b>'.$profile.'</b>' : $profile;
 
 			$params_Subject = [
-				'{Username}' => $_POST['uname'],
-				'{Profile_Title}' => $profile_title,
+				'{HTTP}' => $CONFIG['HTTP'],
+				'{DOMAIN}' => $CONFIG['DOMAIN'],
+				'{REGmon_Folder}' => $CONFIG['REGmon_Folder'],
+				'{Group}' => $group_name,
+				'{Sport}' => $sport_to_user
 			];
 			$Subject = strtr($LANG->EMAIL_NEW_ACCOUNT_SUBJECT, $params_Subject);
 
@@ -192,7 +193,7 @@ WHERE gr.status = 3 AND gr.private_key = ?", array($_POST['private_key']));
 				'{Firstname}' => $_POST['firstname'],
 				'{Sport}' => $sport_to_user,
 				'{Body_Height}' => $_POST['body_height'],
-				'{Gender}' => ($_POST['sex']=='0' ? 'Männlich' : ($_POST['sex']=='1' ? 'Weiblich' : 'Divers')),
+				// '{Gender}' => ($_POST['sex']=='0' ? 'Männlich' : ($_POST['sex']=='1' ? 'Weiblich' : 'Divers')),
 				'{Email}' => $_POST['email'],
 				'{Telephone}' => $_POST['countryCode'].' '.$_POST['telephone'],
 				'{Location}' => $location_name,
@@ -259,8 +260,8 @@ require($PATH_2_ROOT.'php/inc.html_head.php');
 			<br>
 			<h3 style="color: #ff0000"><?=$register_ERROR;?></h3>
 		<?php } else { ?>
-			<h1 style="color:#333"><?=$LANG->REGISTER_THANKS;?></h1>
-			<br>
+			<!-- <h1 style="color:#333"><?=$LANG->REGISTER_THANKS;?></h1>
+			<br> -->
 			<h3 style="color: #6C3"><?=$LANG->REGISTER_SUBMIT_SUCCESS;?></h3>
 			<h3 style="color: #ffbf00"><?=$LANG->REGISTER_SUBMIT_WAIT_ACTIV;?></h3>
 			<?php /*<p>You will be redirect back in 5 seconds.</p>*/?>

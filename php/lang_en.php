@@ -94,13 +94,13 @@ array(
 	'REGISTER_PROFILE' 		=> 'Profile',
 	'REGISTER_THANKS' 		=> 'Thank you!',
 	'REGISTER_SUBMIT' 		=> 'Submit',
-	'REGISTER_SUBMIT_WAIT' 		=> 'Please wait while the form is submitted.',
-	'REGISTER_SUBMIT_SUCCESS'	=> 'Form submitted successfully.',
-	'REGISTER_SUBMIT_WAIT_ACTIV'=> 'Please wait for your account to be activated.',
+	'REGISTER_SUBMIT_WAIT' 		=> 'Please wait while the registration is being processed.',
+	'REGISTER_SUBMIT_SUCCESS'	=> 'The registration was successful and a confirmation email was sent.',
+	'REGISTER_SUBMIT_WAIT_ACTIV'=> 'As soon as your account has been activated, you will receive another confirmation email.',
 	'REGISTER_ACTIVATE_OK' 		=> 'Account has been activated.',
-	'REGISTER_ACTIVATE_READY' 	=> 'Already activated account.',
+	'REGISTER_ACTIVATE_READY' 	=> 'Account already activated.',
 	'REGISTER_ACTIVATE_CODE_ERROR'=> 'Wrong activation code.',
-	'REGISTER_ACTIVATE_NO_USER' => 'Account does not exist',
+	'REGISTER_ACTIVATE_NO_USER' => 'Account does not exist (any more).',
 	'REGISTER_APPROVE_WAIT' 	=> 'Waiting for approval', 
 	'REGISTER_APPROVE_PROPOSAL' => 'Approve proposal',
 	'REGISTER_APPROVED' 		=> 'Approved',
@@ -162,12 +162,13 @@ array(
 	'BUTTON_ADMINISTRATION'	=> 'Administration',
 	// info page (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>for practice and research',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport (REGman)", which has been funded by the Federal Institute of Sport Science in Germany.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
 	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based software for athlete monitoring in practice and research.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon is free to use, open source<br>and licensed under the MIT license.',
 	'INFO_PAGE_INFO_OSF' 	=> 'project page on Open Science Framework',
 	'INFO_PAGE_INFO_WEBSITE'=> 'official project page (only german)',
 	'INFO_PAGE_INFO_CEOS'	=> 'We acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.',
+	'INFO_PAGE_CONTACT'		=> 'If you need support for this instance of REGmon, please contact:',
 	//private group
 	'INDEX_PRIVATE_GROUP' 		=> 'Private Group',
 	'INDEX_PRIVATE_GROUP_MARK'	=> '(private)',
@@ -576,82 +577,78 @@ array(
 	//Email Templates ######################################################
 	//Please do not translate text inside curly brackets {notTranslatedText}
 
+	/* text elements
+	{HTTP}{DOMAIN}/{REGmon_Folder}
+	{Username},{Email},{Group},{Profile},{Location}
+	{Firstname},{Lastname},{Sport},{Body_Height},{Gender},{Telephone}
+	*/
+
 	//user email new user
-    'EMAIL_NEW_ACCOUNT_SUBJECT' => "New {Profile_Title} User Account : {Username}",
+    'EMAIL_NEW_ACCOUNT_SUBJECT' => "Confirmation of your registration ({HTTP}{DOMAIN}/{REGmon_Folder})",
     'EMAIL_NEW_ACCOUNT_MESSSAGE'=> 
-'A new {Profile} user account has been created for you. <br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>
+'Hello,
+<br>
+<br>you registered a new account for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>.
 <br>
 <br>Username: {Username}
-<br>
-<br>First Name: {Firstname}
-<br>Last Name: {Lastname}
-<br>Sport: {Sport}
-<br>Height: {Body_Height}
-<br>Gender: {Gender}
-<br>Email: {Email}
-<br>Telephone (Mobile): {Telephone}
+<br>E-Mail: {Email}
 <br>
 <br>Location: {Location}
 <br>Group: {Group}
 <br>Profile: {Profile}
 <br>
-<br><b>Please wait for your account to be activated.</b>
+<br><b>Your account is still inactive.</b>
+<br><b>You will receive an E-Mail as soon as your account has been activated.</b>
 <br>
 <br>REGmon-Team',
 
 	//user email activate
-    'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Your account has been activated : {Username}",
+    'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Your account has been activated ({HTTP}{DOMAIN}/{REGmon_Folder})",
     'EMAIL_ACCOUNT_ACTIVATE_MESSSAGE'=> 
-'Your account has been activated.
+'Hello,
+<br>
+<br>your account has been activated.
+<br>
 <br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>
 <br>
 <br>Username: {Username}
 <br>
 <br>REGmon-Team',
+	
 
 	//admin email new user
-    'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "New {Profile_Title} user account : {Username}",
+    'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "New registration for {HTTP}{DOMAIN}/{REGmon_Folder} (Group: {Group})",
     'EMAIL_NEW_ACCOUNT_ADMIN_MESSSAGE'=> 
-'A new {Profile} user account was created. <br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>
+'Hello,
+<br>
+<br>a new account has been registered for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>.
 <br>
 <br>Username: {Username}
-<br>
-<br>First name: {Firstname}
-<br>Last Name: {Lastname}
-<br>Sport: {Sport}
-<br>Height: {Body_Height}
-<br>Gender: {Gender}
-<br>Email: {Email}
-<br>Telephone (Mobile): {Telephone}
+<br>E-Mail: {Email}
 <br>
 <br>Location: {Location}
 <br>Group: {Group}
 <br>Profile: {Profile}
 <br>
-<br>{Activate_Link} Account activation </a>
+<br>Click here to active the account:
+<br>{Activate_Link} Activate Account </a>
 <br>
 <br>REGmon-Team',
 
 	//admin email new sport
-	'EMAIL_NEW_SPORTART_ADMIN_SUBJECT' => "New Sport : {Sports}",
-	'EMAIL_NEW_SPORTART_ADMIN_MESSSAGE'=> 
-"A new proposal for sport needs approval.
+	'EMAIL_NEW_SPORTS_ADMIN_SUBJECT' => "New sport user proposal ({Sports}) for {HTTP}{DOMAIN}/{REGmon_Folder}",
+	'EMAIL_NEW_SPORTS_ADMIN_MESSSAGE'=> 
+"Hello,
 <br>
-<br>Username: {Username}
-<br>First name: {Firstname}
-<br>Last Name: {Lastname}
-<br>Sport: {Sport}
-<br>Email: {Email}
-<br>Telephone (Mobile): {Telephone}
+<br>There is a new proposal for a sport.
 <br>
-<br>Location: {Location}
-<br>Group: {Group}
-<br>Profile: {Profile}
+<br>Benutzername: {Username}
+<br>E-Mail: {Email}
 <br>
-<br>REGmon-Team",
-
-	
-    'HOME' 	=> 'Home'
-	
+<br>Standort: {Location}
+<br>Gruppe: {Group}
+<br>Profil: {Profile}
+<br>
+<br>REGmon-Team"
 );
 ?>
