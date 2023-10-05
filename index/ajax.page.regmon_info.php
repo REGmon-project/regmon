@@ -34,7 +34,11 @@ a.support_email:hover {
 	</p>
 	<a href="https://github.com/REGmon-project/regmon/" class="support_email">
 		https://github.com/REGmon-project/regmon/<br>
-		(GitHub Repository)
+		(REGmon Open Source GitHub Repository)<br><br>
+	</a>
+	<a href="https://github.com/REGmon-project/regmon/" class="support_email">
+		https://regmon-project.github.io/<br>
+		(REGmon Open Source Project Documentation)<br>
 	</a>
 	<hr>
 	<p style="margin: 10px; font-size: 18px; text-align:center;">
@@ -55,7 +59,7 @@ a.support_email:hover {
 	</p>
 	<hr>
 	<p style="margin: 10px; font-size: 18px; text-align:center;">
-		Für die vorliegende Software-Instanz ist folgende Kontaktadresse hinterlegt:<br>
+		<?=$LANG->INFO_PAGE_CONTACT?><br>
 	</p>
 	<a href="mailto:<?=$CONFIG['EMAIL']['Support'];?>" class="support_email" target="_blank">
 		<?=$CONFIG['EMAIL']['Support'];?>
