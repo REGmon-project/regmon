@@ -1,7 +1,7 @@
 {
-  "name": "REGmon",
+  "name": "REGmon - Athlete Monitoring for Practice and Research",
   "short_name": "REGmon",
-  "description": "Athlete monitoring for practice and research",
+  "description": "Web-Application for Athlete Monitoring in Sport Practice and Research",
   "start_url": "index.php",
   "display": "standalone",
   "background_color": "#fdfdfd",
@@ -46,6 +46,11 @@
       "src": "img/icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "img/icons/icon-700x700.png",
+      "type": "image/png",
+      "sizes": "700x700"
     }
   ]
 }
