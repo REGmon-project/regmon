@@ -12,7 +12,7 @@ if ($SEC_check != $CONFIG['SEC_Page_Secret']) exit;
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<img id="nav-header-logo" src="img/regman-logo-250-50.png">
+				<img id="nav-header-logo" src="img/REGmon_Logo_<?=$LANG->language;?>_wb2_250-50.png">
 				<span id="dashboard_link2" class="fa fa-th"></span>				
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
