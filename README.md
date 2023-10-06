@@ -48,3 +48,6 @@ REGmon is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 # Acknowledgements
 REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport" ([OSF project page](https://osf.io/uz4af/)), which has been funded by the Federal Institute of Sport Science in Germany. Furthermore, we acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.
+
+# Contributing
+If you consider contributing to REGmon, read the CONTRIBUTING.md (under construction). Please note that this package is released with a Contributor Code of Conduct (under construction). By contributing to this project, you agree to abide by its terms.
