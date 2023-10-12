@@ -9,7 +9,7 @@ REGmon is a powerful web-based open-source application designed to empower athle
 
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/REGmon-project.github.io/blob/main/assets/img/regmon_screenshots_german.png" alt="REGmon screenshots" width="95%"/>
+		<img src="https://github.com/REGmon-project/REGmon-project.github.io/blob/main/assets/img/regmon_frontend_collection_en.png" alt="REGmon Frontend Screenshot Collection" width="95%"/>
 	</p>
 </picture>
 
