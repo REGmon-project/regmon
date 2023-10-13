@@ -22,7 +22,9 @@ services:
       - .:/var/www/public
       - lib_vendor_data:/var/www/public/vendor/
       - lib_node_data:/var/www/public/node_modules/
-      # - ./extra/__docker_error.log:/var/log/apache2/error.log
+      # uncomment in order to have a local copy of the apache error.log 
+      # warning: you need first to create the file __docker_error.log 
+      # - ./__docker_error.log:/var/log/apache2/error.log
 
   db:
     image: mysql:5.7
