@@ -1,15 +1,15 @@
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/REGmon-project.github.io/blob/main/assets/img/REGmon_Logo_en_wb1.png" alt="REGmon logo" width="65%"/>
+		<img src="https://github.com/REGmon-project/regmon/blob/main/img/REGmon_Logo_en_wb1.png" alt="REGmon logo" width="65%"/>
 	</p>
 </picture>
 
 # Introduction
-REGmon is a powerful web-based open-source application designed to empower athletes, coaches and other staff to easily collect, analyze and visualize data. Individual athlete monitoring approaches covering the daily training process can be implemented by using customizable forms, dashboards, analysis templates and user-friendly graphical feedback. Furthermore, REGmon can also be used by researchers to enable efficient and GDPR compliant data management in various scenarios and projects.
+REGmon is a powerful web-based open source application designed to empower athletes, coaches and other sport practitioners to easily collect, analyze and visualize data. Individual athlete monitoring approaches covering the daily training process can be implemented by using customizable forms, dashboards, analysis templates and user-friendly graphical feedback. Furthermore, REGmon can also be used by researchers to enable efficient and GDPR compliant data management in various scenarios and projects.
 
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/REGmon-project.github.io/blob/main/assets/img/regmon_frontend_collection_en.png" alt="REGmon Frontend Screenshot Collection" width="95%"/>
+		<img src="https://github.com/REGmon-project/regmon/blob/main/img/regmon_frontend_collection.png" alt="REGmon front-end screenshot collection" width="95%"/>
 	</p>
 </picture>
 
@@ -30,7 +30,7 @@ We recommend opting for the container-based installation method, which only requ
 * Docker Desktop
 
 ### Bare Metal Installation
-* Apache (2.4) or nginx or any other php-ready webserver
+* Apache (2.4) or nginx or any other php-ready web server
 * PHP (8.2)
 	* with extensions mbstring, zip, zlib, mysqli, pdo_mysql
 * MySQL (5.7)
@@ -39,7 +39,7 @@ We recommend opting for the container-based installation method, which only requ
 	* npm for installation of additional JS libraries
 
 # How to Use
-After installing REGmon, you can access the application via your web browser (e.g. Chrome, Safari, Firefox, etc.). If REGmon is set up on a web-server, you may access the web-application by typing the URL of your web-server adding the "Application Domain name" you have set during the installation process. If you want to test REGmon locally, you can access the application after running the docker image by typing ``localhost:8000`` in your web browser.
+After installing REGmon, you can access the application via your web browser (e.g. Chrome, Safari, Firefox, etc.). If REGmon is set up on a web server, you may access the web application by typing the URL of your web server adding the "Application Domain name" you have set during the installation process. If you want to test REGmon locally, you can access the application after running the docker image by typing ``localhost:8000`` in your web browser.
 
 Depending on the selected [configuration options](https://regmon-project.github.io/installation.html#configuration) there are several preconfigured profiles and sample data to test the app. For more detailed information about the usage of REGmon, please checkout out our [user guide](https://regmon-project.github.io/user_guide.html).
 
@@ -47,7 +47,7 @@ Depending on the selected [configuration options](https://regmon-project.github.
 REGmon is licensed under the [MIT License](https://opensource.org/licenses/MIT). You can find a copy of the license in the [LICENSE](LICENSE) file in the root of this repository.
 
 # Acknowledgements
-REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport" ([OSF project page](https://osf.io/uz4af/)), which has been funded by the Federal Institute of Sport Science in Germany. Furthermore, we acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.
+REGmon has been developed in and for the multicenter research program "REGman – Optimization of Training and Competition: Management of Regeneration in Elite Sports" ([OSF project page](https://osf.io/uz4af/)), which has been funded by the [Federal Institute of Sport Science in Germany](https://www.bisp.de). Furthermore, we acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.
 
-# Contributing
-If you consider contributing to REGmon, read the CONTRIBUTING.md (under construction). Please note that this package is released with a Contributor Code of Conduct (under construction). By contributing to this project, you agree to abide by its terms.
+# Contributing (under construction)
+<!-- If you consider contributing to REGmon, read the CONTRIBUTING.md (under construction). Please note that this package is released with a Contributor Code of Conduct (under construction). By contributing to this project, you agree to abide by its terms. -->

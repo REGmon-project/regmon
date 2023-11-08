@@ -1,10 +1,10 @@
 {
   "name": "regmon",
-  "description": "Athlete monitoring for practice and research",
-  "version": "1.0.0",
+  "description": "Athlete Monitoring in Sport Practice and Research",
+  "version": "4.0.0",
   "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
   "author": "madnetdev",
-  "license": "ISC",
+  "license": "MIT",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

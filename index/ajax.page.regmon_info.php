@@ -50,8 +50,12 @@ a.support_email:hover {
 	</a>
 	<a href="https://osf.io/uz4af/" class="support_email">
 		<?=$LANG->INFO_PAGE_INFO_OSF?><br>	
-		https://osf.io/uz4af/<br>
-		
+		https://osf.io/uz4af/<br><br>
+	</a>
+	</a>
+	<a href="https://www.bisp.de" class="support_email">
+		<?=$LANG->INFO_PAGE_INFO_BISP?><br>	
+		https://www.bisp.de<br>
 	</a>
 	<hr>
 	<p style="margin: 10px; font-size: 18px; text-align:center;">

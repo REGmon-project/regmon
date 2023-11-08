@@ -9,7 +9,7 @@ array(
 
 	//all pages
     'APP_NAME'			=> 'REGmon',
-    'APP_INFO'			=> 'Athletenmonitoring für Sportpraxis und Wissenschaft',
+    'APP_INFO'			=> 'Athletenmonitoring in Sportpraxis und Wissenschaft',
     'HOMEPAGE'			=> 'Startseite',
     'PAGE_TOP'			=> 'Seitenanfang',
     'SAVE'				=> 'Speichern',
@@ -133,23 +133,23 @@ array(
 	'PROFILE_LAST_IP' 			=> 'Letzte IP',
 	'PROFILE_NO_CHANGE_PASSWORD'=> 'Lassen Sie dieses Feld leer, wenn Sie das Passwort <b>nicht</b> ändern wollen.',
 	//User
-	'NAME_EXIST'			=> 'ERROR! <br>Dieser Name ist bereits vergeben. <br> Bitte anderen Namen verwenden.',
-	'WARN_USERNAME_EXIST' 	=> 'Warnung! Dieser Name ist bereits vergeben. <br> Bitte anderen Namen verwenden.',
-	'WARN_EMPTY_USERNAME' 	=> 'Warnung! leerer Benutzername',
-	'WARN_CONFIRM_PASSWORD' => 'Warnung! Passwort und Passwort bestätigen stimmt nicht überein',
-	'WARN_EMPTY_PASSWORD' 	=> 'Warnung! leeres Passwort',
-	'WARN_PASSWORD_CHARS' 	=> 'Warnung! Das Passwort muss mindestens 8 Zeichen lang sein',
+	'NAME_EXIST'			=> 'ERROR! <br>Dieser Name ist bereits vergeben. <br> Bitte einen anderen Namen verwenden.',
+	'WARN_USERNAME_EXIST' 	=> 'Warnung! Dieser Name ist bereits vergeben. <br> Bitte einen anderen Namen verwenden.',
+	'WARN_EMPTY_USERNAME' 	=> 'Warnung! Leerer Benutzername',
+	'WARN_CONFIRM_PASSWORD' => 'Warnung! Passwort und Passwort bestätigen stimmt nicht überein.',
+	'WARN_EMPTY_PASSWORD' 	=> 'Warnung! Leeres Passwort',
+	'WARN_PASSWORD_CHARS' 	=> 'Warnung! Das Passwort muss mindestens 8 Zeichen lang sein.',
 	'WARN_WEAK_PASSWORD' 	=> 'Achtung! Schwaches Passwort <br>(folgende Zeichen sind erforderlich: [a-z] + [A-Z] + [0-9])',
 	'WARN_INVALID_EMAIL' 	=> 'Warnung! Ungültige E-Mail-Adresse',
-	'WARN_CHANGE_MAIN_NAME' => 'Warnung! Sie können den Benutzernamen des Hauptkontos nicht ändern',
-	'WARN_DEACT_YOUR_ACC' 	=> 'Warnung! Sie können Ihr Konto nicht deaktivieren',
-	'WARN_DELETE_YOUR_ACC'  => 'Warnung! Sie können Ihr Konto nicht löschen',
+	'WARN_CHANGE_MAIN_NAME' => 'Warnung! Sie können den Benutzernamen des Hauptkontos nicht ändern.',
+	'WARN_DEACT_YOUR_ACC' 	=> 'Warnung! Sie können Ihr Konto nicht deaktivieren.',
+	'WARN_DELETE_YOUR_ACC'  => 'Warnung! Sie können Ihr Konto nicht löschen.',
 	//
  	'TRAINER_2_ATHLETES_ACCESS'  => 'Freigaben der Sportler',
 
 	//######################################################
 	//index
-	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athletenmonitoring für Sportpraxis und Wissenschaft',
+	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athletenmonitoring in Sportpraxis und Wissenschaft',
 	'INDEX_GROUP' 			=> 'Gruppe',
 	'INDEX_ATHLETE' 		=> 'Sportler*in',
 	'INDEX_VIEW_CALENDAR'	=> 'Kalender',
@@ -161,11 +161,12 @@ array(
     'BUTTON_LOGOUT'			=> 'Abmelden',
 	'BUTTON_ADMINISTRATION'	=> 'Verwaltung',
 	// info page  (ajax.page.regmon_info.php)
-	'INFO_PAGE_SUBTITLE' 	=> 'Athletenmonitoring<br>für Sportpraxis und Wissenschaft',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen Projekts "Regenerationsmanagement im Spitzensport" (REGman) entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2020 gefördert wurde.',
-	'INFO_PAGE_INFO_REGMON1'=> 'REGmon ist eine webbasierte Software für das Athletenmonitoring in der Sportpraxis und Wissenschaft.',
+	'INFO_PAGE_SUBTITLE' 	=> 'Athletenmonitoring<br>in Sportpraxis und Wissenschaft',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen Projekts "REGman - Optimierung von Training und Wettkampf: Regenerationsmanagement im Spitzensport" entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2020 gefördert wurde.',
+	'INFO_PAGE_INFO_REGMON1'=> 'REGmon ist eine webbasierte Software für das Athletenmonitoring in Sportpraxis und Wissenschaft.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon ist ein Open-Source-Projekt<br>und durch eine MIT-Lizenz lizensiert.',
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman-Projektdokumentation im Open Science Framework',
+	'INFO_PAGE_INFO_BISP' 	=> 'Bundesinstitut für Sportwissenschaft (BISp)',
 	'INFO_PAGE_INFO_WEBSITE'=> 'offizielle REGman-Website',
 	'INFO_PAGE_INFO_CEOS'	=> 'Das Projekt wurde von der CEOS solution GmbH (Bochum) unterstützt.',
 	'INFO_PAGE_CONTACT'		=> 'Wenn Sie für die vorliegende Software-Instanz Hilfe benötigen, kontaktieren Sie bitte:',
