@@ -9,7 +9,7 @@ array(
 
 	//all pages
     'APP_NAME'			=> 'REGmon',
-    'APP_INFO'			=> 'Athlete Monitoring for practice and research',
+    'APP_INFO'			=> 'Athlete Monitoring in Sport Practice and Research',
     'HOMEPAGE'			=> 'Homepage',
     'PAGE_TOP'			=> 'Page top',
     'SAVE'				=> 'Save',
@@ -76,7 +76,7 @@ array(
 	'REGISTER_USERNAME' 	=> 'Username',
 	'REGISTER_PASSWORD' 	=> 'Password',
 	'REGISTER_PASS_CONFIRM' => 'Confirm Password',
-	'REGISTER_EMAIL' 		=> 'E-mail',
+	'REGISTER_EMAIL' 		=> 'E-Mail',
 	'REGISTER_TELEPHONE' 	=> 'Telephone (Mobile)',
 	'REGISTER_LAST_NAME' 	=> 'Last name',
 	'REGISTER_FIRST_NAME' 	=> 'First name',
@@ -140,7 +140,7 @@ array(
 	'WARN_EMPTY_PASSWORD' 	=> 'Warning! Empty Password',
 	'WARN_PASSWORD_CHARS' 	=> 'Warning! The password must be at least 8 characters long',
 	'WARN_WEAK_PASSWORD' 	=> 'Warning! Weak Password <br>(required characters: [a-z] + [A-Z] + [0-9])',
-	'WARN_INVALID_EMAIL' 	=> 'Warning! Invalid E-mail address',
+	'WARN_INVALID_EMAIL' 	=> 'Warning! Invalid E-Mail address',
 	'WARN_CHANGE_MAIN_NAME' => 'Warning! You cannot change the username of the main account',
 	'WARN_DEACT_YOUR_ACC' 	=> 'Warning! You cannot deactivate your account',
 	'WARN_DELETE_YOUR_ACC'  => 'Warning! You cannot delete your account',
@@ -149,7 +149,7 @@ array(
 	
 	//######################################################
 	//index
-	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athlete Monitoring for practice and research',
+	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athlete Monitoring in Sport Practice and Research',
 	'INDEX_GROUP' 			=> 'Group',
 	'INDEX_ATHLETE' 		=> 'Athlete',
 	'INDEX_VIEW_CALENDAR'	=> 'Calendar',
@@ -161,11 +161,12 @@ array(
     'BUTTON_LOGOUT'			=> 'Logout',
 	'BUTTON_ADMINISTRATION'	=> 'Administration',
 	// info page (ajax.page.regmon_info.php)
-	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>for practice and research',
+	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>in Sport Practice and Research',
 	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
-	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based software for athlete monitoring in practice and research.',
+	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based application for athlete monitoring in sport practice and research.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon is free to use, open source<br>and licensed under the MIT license.',
 	'INFO_PAGE_INFO_OSF' 	=> 'project page on Open Science Framework',
+	'INFO_PAGE_INFO_BISP' 	=> 'Federal Institute of Sport Science in Germany',
 	'INFO_PAGE_INFO_WEBSITE'=> 'official project page (only german)',
 	'INFO_PAGE_INFO_CEOS'	=> 'We acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.',
 	'INFO_PAGE_CONTACT'		=> 'If you need support for this instance of REGmon, please contact:',

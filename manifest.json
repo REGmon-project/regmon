@@ -1,7 +1,7 @@
 {
-  "name": "REGmon - Athlete Monitoring for Sport Practice and Research",
+  "name": "REGmon - Athlete Monitoring in Sport Practice and Research",
   "short_name": "REGmon",
-  "description": "Web-Application for Athlete Monitoring in Sport Practice and Research",
+  "description": "REGmon is a web-based application for athlete monitoring in sport practice and research aiming at collecting, analyzing, and visualizing longitudinal data",
   "start_url": "index.php",
   "display": "standalone",
   "background_color": "#fdfdfd",

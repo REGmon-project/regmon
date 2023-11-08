@@ -2,7 +2,7 @@
     "private": true,
     "version": "1.0.0",
     "name": "regmon-project/regmon",
-    "description": "Athlete monitoring for practice and research",
+    "description": "Athlete Monitoring in Sport Practice and Research",
     "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
     "homepage": "https://github.com/REGmon-project/regmon",
     "license": "MIT",
