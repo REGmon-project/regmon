@@ -232,11 +232,11 @@ array(
 	'WARN_PRIVATE_KEY_EXIST'=> 'Warnung! Dieses (Privat Schlüssel) ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen (Privat Schlüssel).',
 	'WARN_PRIVATE_KEY_CHARS'=> 'Warnung! Das (Privat Schlüssel) muss mindestens 8 Zeichen lang sein',
 	//ajax.categories
-	'EMPTY_CATEGORY_NAME' 	=> 'Warnung! Leere Name',
+	'EMPTY_CATEGORY_NAME' 	=> 'Warnung! Leerer Name',
 	//ajax.forms2categories
 	'NO_FORM_SELECTED' 		=> 'Warnung! Kein Formular ausgewählt',
 	//ajax.forms
-	'EMPTY_FORM_NAME' 		=> 'Warnung! Leere Name',
+	'EMPTY_FORM_NAME' 		=> 'Warnung! Leerer Name',
 	'WARN_FORM_DELETE'		=> 'Warnung! Daten können nicht gelöscht werden, es existieren ({DATA_NUM}) Datenerfassung',
 	//ajax.sports
 	'EMPTY_SPORT_NAME' 		=> 'Warnung! Leere Sportart',
@@ -247,10 +247,10 @@ array(
 	'EMPTY_TAG_NAME' 		=> 'Warnung! Leerer Kennzeichen-Name (tag)',
 	'WARN_TAG_EXIST' 		=> 'Warnung! Dieses Kennzeichen (tag) ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen Namen.',
 	//ajax.dropdowns
-	'EMPTY_DROPDOWN_NAME' 	=> 'Warnung! Leere Dropdown name',
-	'WARN_DROPDOWN_NAME_EXIST'=> 'Warnung! Dieses Dropdown name ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen Namen.',
+	'EMPTY_DROPDOWN_NAME' 	=> 'Warnung! Leerer Dropdown-Name',
+	'WARN_DROPDOWN_NAME_EXIST'=> 'Warnung! Dieses Dropdown-Name ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen Namen.',
 	'EMPTY_DROPDOWN_OPTION' => 'Warnung! Leere Dropdown option',
-	'WARN_DROPDOWN_OPTION_EXIST'=> 'Warnung! Dieses Dropdown option ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen Namen.',
+	'WARN_DROPDOWN_OPTION_EXIST'=> 'Warnung! Dieses Dropdown-Option ist bereits vorhanden. <br> Bitte benutzen Sie einen anderen Namen.',
 	'WARN_DROPDOWN_DELETE' 	=> 'Warnung! Kann nicht löschen. <br> Habe ({OPTIONS_NUM}) Optionen.',
 	'WARN_DROPDOWN_NOT_DELETE'	=> 'Warnung! Kann nicht löschen diese',
 	'WARN_DROPDOWN_NOT_CHANGE'	=> 'Warnung! Kann nicht ändern',
@@ -398,7 +398,7 @@ array(
 	//Forms functions
 	'FORM_PAGE_ADD'				=> 'Neue Seite hinzufügen',
 	'FORM_ITEM_ADD'				=> 'Neues Element hinzufügen',
-	'FORM_ROW_ADD'				=> 'Neues Zeile hinzufügen',
+	'FORM_ROW_ADD'				=> 'Neue Zeile hinzufügen',
 	'FORM_ROW_DUPLICATE'		=> 'Zeile duplizieren',
 	'FORM_ROW_DELETE'			=> 'Zeile löschen',
 	//item types
@@ -484,8 +484,8 @@ array(
 	'EXPORT_BACK' 				=> 'Zurück',
 	'EXPORT_TABLE_CRITERIA' 	=> 'Datenabfrage Filter', //Ausgabeform Kriterien
 	'EXPORT_HEADER_USER_ID' 	=> 'Personen_ID',
-	'EXPORT_HEADER_FIRSTNAME' 	=> 'Name',
-	'EXPORT_HEADER_LASTNAME' 	=> 'Vorname',
+	'EXPORT_HEADER_FIRSTNAME' 	=> 'Vorname',
+	'EXPORT_HEADER_LASTNAME' 	=> 'Nachname',
 	'EXPORT_HEADER_GENDER' 		=> 'Geschlecht',
 	'EXPORT_HEADER_BIRTH_DATE' 	=> 'Geburtsdatum',
 	'EXPORT_HEADER_SPORT' 		=> 'Sportart',
