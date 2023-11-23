@@ -289,6 +289,10 @@ if (isset($SEC_check_config)) {
 					$Main_Data_sql .= "\n";
 					// result templates sample data
 					$Main_Data_sql .= get_ResultTemplates_Init_SQL($datetime);
+
+					$Main_Data_sql .= "\n";
+					// standard form templates data
+					$Main_Data_sql .= get_Extra_StandardFormTemplatesSample_Init_SQL($datetime);
 				}
 
 				//sports Data

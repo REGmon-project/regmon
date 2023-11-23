@@ -253,7 +253,7 @@ LANG = {
 		PAGE_TITLE 			: 'Seite Titel',
 		CENTER				: 'Zentriert',
 		FORM_ITEM_ADD		: 'Neues Element hinzufügen',
-		FORM_ROW_ADD		: 'Neues Zeile hinzufügen',
+		FORM_ROW_ADD		: 'Neue Zeile hinzufügen',
 		FORM_ROW_DUPLICATE	: 'Zeile duplizieren',
 		FORM_ROW_DELETE		: 'Zeile löschen',
 		ATHLETE_SELECT_SAVE : 'Formularauswahl gespeichert.',

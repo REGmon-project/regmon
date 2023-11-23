@@ -1363,9 +1363,9 @@ Highcharts_Options = {
 		resetZoom: LANG.DIAGRAM.RESET_ZOOM,
 		resetZoomTitle: LANG.DIAGRAM.RESET_ZOOM_LEVEL_1_1,
 		months: LANG.DIAGRAM.MONTHS_ARRAY,
-		weekdays: LANG.DIAGRAM.MONTHS_ARRAY,
+		weekdays: LANG.DIAGRAM.WEEKDAYS_ARRAY,
 		shortMonths: LANG.DIAGRAM.MONTHS_ARRAY,
-		shortWeekdays: LANG.DIAGRAM.MONTHS_ARRAY
+		shortWeekdays: LANG.DIAGRAM.WEEKDAYS_SHORT_ARRAY
 	},
 	credits: {
 		enabled: false,
@@ -1439,14 +1439,14 @@ Highcharts_Options = {
 			week:"Week from %A, %b %e, %Y",
 			month:"%B %Y",
 			year:"%Y"*/
-			millisecond:"%a, %e %b %Y, %H:%M:%S",
-			second:"%a, %e %b %Y, %H:%M:%S",
-			minute:"%a, %e %b %Y, %H:%M",
-			hour:"%a, %e %b %Y, %H:%M",
-			day:"%a, %e %b %Y, %H:%M",
-			week:"%a, %e %b %Y, %H:%M",
-			month:"%a, %e %b %Y, %H:%M",
-			year:"%a, %e %b %Y, %H:%M"
+			millisecond:"%A, %e. %b %Y, %H:%M:%S",
+			second:"%A, %e. %b %Y, %H:%M:%S",
+			minute:"%A, %e. %b %Y, %H:%M",
+			hour:"%A, %e. %b %Y, %H:%M",
+			day:"%A, %e. %b %Y, %H:%M",
+			week:"%A, %e. %b %Y, %H:%M",
+			month:"%A, %e. %b %Y, %H:%M",
+			year:"%A, %e. %b %Y, %H:%M"
 		}
 	},
 	plotOptions: {
@@ -1464,7 +1464,7 @@ Highcharts_Options = {
 		},
 		scatter: {
 			tooltip: {
-				pointFormat: 'x: {point.x:%a, %e %b %Y, %H:%M}<br> y: <b>{point.y}</b>'
+				pointFormat: 'x: {point.x:%A, %e. %b %Y, %H:%M}<br> y: <b>{point.y}</b>'
 			}
         }
         /*column: {
