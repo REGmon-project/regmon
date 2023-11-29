@@ -1,3 +1,3 @@
 <?php
-	$G_Version = "1.0.18";
+	$G_Version = "1.0.19";
 ?>
