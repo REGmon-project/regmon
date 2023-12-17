@@ -25,38 +25,41 @@ a.support_email:hover {
 		<?=$LANG->INFO_PAGE_SUBTITLE?><br>
 	</p>
 	<hr>
-	<p style="margin: 10px; font-size: 18px; text-align:center;">
+	<!-- <p style="margin: 10px; font-size: 18px; text-align:center;">
 		<?=$LANG->INFO_PAGE_INFO_REGMON1?><br>
 	</p>
-	<hr>
+	<hr> -->
 	<p style="margin: 10px; font-size: 18px; text-align:center;">
 		<?=$LANG->INFO_PAGE_INFO_REGMON2?><br>
 	</p>
-	<a href="https://github.com/REGmon-project/regmon/" class="support_email">
+	<a href="https://regmon-project.org/" class="support_email">
+		https://regmon-project.org/<br>
+	</a>
+	<!-- <a href="https://github.com/REGmon-project/regmon/" class="support_email">
 		https://github.com/REGmon-project/regmon/<br>
 		(REGmon Open Source GitHub Repository)<br><br>
-	</a>
-	<a href="https://github.com/REGmon-project/regmon/" class="support_email">
+	</a> -->
+	<!-- <a href="https://github.com/REGmon-project/regmon/" class="support_email">
 		https://regmon-project.github.io/<br>
 		(REGmon Open Source Project Documentation)<br>
-	</a>
+	</a> -->
 	<hr>
 	<p style="margin: 10px; font-size: 18px; text-align:center;">
 		<?=$LANG->INFO_PAGE_INFO_REGMAN?><br>
 	</p>
-	<a href="https://www.regman.org/" class="support_email">
+	<!-- <a href="https://www.regman.org/" class="support_email">
 		<?=$LANG->INFO_PAGE_INFO_WEBSITE?><br>
 		https://www.regman.org/<br><br>
-	</a>
+	</a> -->
 	<a href="https://osf.io/uz4af/" class="support_email">
 		<?=$LANG->INFO_PAGE_INFO_OSF?><br>	
-		https://osf.io/uz4af/<br><br>
+		https://osf.io/uz4af/<br>
 	</a>
 	</a>
-	<a href="https://www.bisp.de" class="support_email">
+	<!-- <a href="https://www.bisp.de" class="support_email">
 		<?=$LANG->INFO_PAGE_INFO_BISP?><br>	
 		https://www.bisp.de<br>
-	</a>
+	</a> -->
 	<hr>
 	<p style="margin: 10px; font-size: 18px; text-align:center;">
 		<?=$LANG->INFO_PAGE_INFO_CEOS?><br>
