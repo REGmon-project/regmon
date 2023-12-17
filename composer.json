@@ -1,6 +1,6 @@
 {
     "private": true,
-    "version": "1.0.0",
+    "version": "1.0.20",
     "name": "regmon-project/regmon",
     "description": "Athlete Monitoring in Sport Practice and Research",
     "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
