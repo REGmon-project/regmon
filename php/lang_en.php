@@ -162,7 +162,7 @@ array(
 	'BUTTON_ADMINISTRATION'	=> 'Administration',
 	// info page (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>in Sport Practice and Research',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "REGman – Optimization of Training and Competition: Management of Regeneration in Elite Sports" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Optimization of Training and Competition: Management of Regeneration in Elite Sports" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
 	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based application for athlete monitoring in sport practice and research.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon is free to use, open source<br>and licensed under the MIT license.',
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman project page on Open Science Framework (OSF)',

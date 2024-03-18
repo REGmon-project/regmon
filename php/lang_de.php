@@ -162,7 +162,7 @@ array(
 	'BUTTON_ADMINISTRATION'	=> 'Verwaltung',
 	// info page  (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athletenmonitoring<br>in Sportpraxis und Wissenschaft',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen Projekts "REGman - Optimierung von Training und Wettkampf: Regenerationsmanagement im Spitzensport" entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2020 gefördert wurde.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen des Projekts "Optimierung von Training und Wettkampf: Regenerationsmanagement im Spitzensport" (REGman) entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2021 gefördert wurde.',
 	'INFO_PAGE_INFO_REGMON1'=> 'REGmon ist eine webbasierte Software für das Athletenmonitoring in Sportpraxis und Wissenschaft.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon ist ein Open Source-Projekt<br>und durch eine MIT-Lizenz lizensiert.',
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman-Projektdokumentation im Open Science Framework (OSF)',

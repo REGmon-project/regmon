@@ -536,13 +536,11 @@ function get_FormTemplates_Init_SQL(string $datetime):string {
 
 function get_ResultTemplates_Init_SQL(string $datetime):string {
 
-	$currentTimestamp = strtotime($datetime);
+	// Get datetime one week earlier
+	$oneWeekEarlier = date('Y-m-d H:i:s', strtotime('-1 week'));
 
-	$oneWeekEarlierTimestamp = strtotime('-1 week', $currentTimestamp);
-	$twelveWeeksEarlierTimestamp = strtotime('-12 week', $currentTimestamp);
-
-	$oneWeekEarlier = date('Y-m-d H:i:s', $oneWeekEarlierTimestamp);
-	$twelveWeeksEarlier = date('Y-m-d H:i:s', $twelveWeeksEarlierTimestamp);
+	// Get datetime twelve weeks earlier
+	$twelveWeeksEarlier = date('Y-m-d H:i:s', strtotime('-12 weeks'));
 
 	return "" .
 		// result templates sample data
@@ -612,7 +610,8 @@ function get_Sports_Init_SQL_EN(string $datetime):string {
 		"(57, 7, NULL, 'Beachvolleyball', 1, '".$datetime."', '".$datetime."'),".
 		"(58, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."');";
 }
-
+		"(57, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."'),".
+		"(58, 3, NULL, 'Golf', 1, '".$datetime."', '".$datetime."');";
 function get_Sports_Init_SQL_DE(string $datetime):string {
 	return "" .
 		// sports sample data [german]
@@ -672,7 +671,8 @@ function get_Sports_Init_SQL_DE(string $datetime):string {
 		"(56, 7, NULL, 'Tischtennis', 1, '".$datetime."', '".$datetime."')," .
 		"(57, 7, NULL, 'Beachvolleyball', 1, '".$datetime."', '".$datetime."')," .
 		"(58, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."');";
-}
+		"(57, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."')," .
+		"(58, 3, NULL, 'Golf', 1, '".$datetime."', '".$datetime."');";
 
 function get_Extra_DropdownsSample_Init_SQL(string $datetime):string {
 	return "".

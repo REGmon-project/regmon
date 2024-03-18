@@ -2679,7 +2679,11 @@ math : {
         return Math.pow(number, power);
     },
 
-    //@@@@@MAD --removed functions --> PRODUCT, QUOTIENT, RADIANS, RAND, RANDBETWEEN, ROUND, ROUNDDOWN, ROUNDUP, SERIESSUM, SEC, SECH, SIGN, SIN, SINH, SQRT, SQRTPI, SUBTOTAL
+    //@@@@@MAD --removed functions --> PRODUCT, QUOTIENT, RADIANS, RAND, RANDBETWEEN, ROUNDDOWN, ROUNDUP, SERIESSUM, SEC, SECH, SIGN, SIN, SINH, SQRT, SQRTPI, SUBTOTAL
+    ROUND : function(number, digits) {
+        return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
+    },
+
     SUBTRACT : function(num1, num2){
         if(num1 === '' && num2 === ''){
             return '';
