@@ -610,8 +610,7 @@ function get_Sports_Init_SQL_EN(string $datetime):string {
 		"(57, 7, NULL, 'Beachvolleyball', 1, '".$datetime."', '".$datetime."'),".
 		"(58, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."');";
 }
-		"(57, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."'),".
-		"(58, 3, NULL, 'Golf', 1, '".$datetime."', '".$datetime."');";
+
 function get_Sports_Init_SQL_DE(string $datetime):string {
 	return "" .
 		// sports sample data [german]
