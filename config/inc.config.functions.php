@@ -670,9 +670,9 @@ function get_Sports_Init_SQL_DE(string $datetime):string {
 		"(55, 7, NULL, 'Tennis', 1, '".$datetime."', '".$datetime."')," .
 		"(56, 7, NULL, 'Tischtennis', 1, '".$datetime."', '".$datetime."')," .
 		"(57, 7, NULL, 'Beachvolleyball', 1, '".$datetime."', '".$datetime."')," .
-		"(58, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."');";
-		"(57, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."')," .
-		"(58, 3, NULL, 'Golf', 1, '".$datetime."', '".$datetime."');";
+		"(58, 7, NULL, 'Badminton', 1, '".$datetime."', '".$datetime."')," .
+		"(59, 3, NULL, 'Golf', 1, '".$datetime."', '".$datetime."');";
+}
 
 function get_Extra_DropdownsSample_Init_SQL(string $datetime):string {
 	return "".

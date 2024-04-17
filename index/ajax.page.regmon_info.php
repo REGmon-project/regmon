@@ -72,4 +72,8 @@ a.support_email:hover {
 		<?=$CONFIG['EMAIL']['Support'];?>
 	</a>
 	<hr>
+	<p style="margin: 10px; font-size: 18px; text-align:center;">
+		Version: <?=$G_Version;?>
+	</p>
+	<hr>
 </div>
