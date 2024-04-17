@@ -390,7 +390,8 @@ if ($db->numberRows() > 0)  {
 						$forms_n_fields[$form_id_last . '_S' . $save_form_id][0] .= ' (' . $SAVES_forms_names[$save_form_id] . ')'; //put save name
 
 						//check if base_form_id is selected else remove it from series
-						if (!$FORMS_DO[$form_id_last]) {
+						// TODO: check if this is doing the right thing or if it's the right place to do it
+						if ($FORMS_DO['saves'][$form_id_last]) {
 							unset($series[$user_id_last][$form_id_last]);
 							unset($forms_n_fields[$form_id_last]);
 						}
