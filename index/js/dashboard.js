@@ -153,6 +153,18 @@ function get_dash_data(get_data) {
 			if (date_from == '' || date_to == '') {
 				extra_opt_empty = true;
 			}
+
+			if (LANG.LANG_CURRENT == 'de') {
+				const german_date_regex = /^\d{2}\.\d{2}\.\d{4}$/;
+				if (german_date_regex.test(date_from)) {
+					var parts = date_from.split('.');
+					date_from = parts[2] + '-' + parts[1] + '-' + parts[0];
+				}
+				if (german_date_regex.test(date_to)) {
+					var parts = date_to.split('.');
+					date_to = parts[2] + '-' + parts[1] + '-' + parts[0];
+				}
+			}
 		}
 		else if (date_type == '1') {
 			var date_last = $('#dash_date_last').val();
@@ -243,7 +255,7 @@ function get_dash_content(dash) {
 	}
 	else if (dash_type=='results') {
 		const dd = (dash_options+'__2__0__0').split('__'); //avoid errors from old data
-		let dash_date_type = dd[1];
+		dash_date_type = dd[1];
 		if (dash_date_type == '0') {
 			dash_date_from = dd[2];
 			dash_date_to = dd[3];
@@ -255,6 +267,18 @@ function get_dash_content(dash) {
 		else if (dash_date_type == '2') {}
 		else {
 			dash_date_type = '2';
+		}
+	}
+
+	if (LANG.LANG_CURRENT == 'de') {
+		const us_date_regex = /^\d{4}\-\d{2}\-\d{2}$/;
+		if (typeof dash_date_from === 'string' && us_date_regex.test(dash_date_from)) {
+			var parts = dash_date_from.split('-');
+			dash_date_from = parts[2] + '.' + parts[1] + '.' + parts[0];
+		}
+		if (typeof dash_date_from === 'string' && us_date_regex.test(dash_date_to)) {
+			var parts = dash_date_to.split('-');
+			dash_date_to = parts[2] + '.' + parts[1] + '.' + parts[0];
 		}
 	}
 	
