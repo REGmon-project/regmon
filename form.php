@@ -85,8 +85,8 @@ if ($db->numberRows() > 0)  {
 	$forms_name = $row['name']; //external
 	$forms_name2 = $row['name2']; //internal
 	if ($PREVIEW) {
-		$form = (array)json_decode(($form_json ?? '{}'), true);
-		$form_names = (array)json_decode(($form_json_names ?? '{}'), true);
+		$form = (array)json_decode(($form_json === false ? '{}': $form_json), true);
+		$form_names = (array)json_decode(($form_json_names === false ? '{}' : $form_json_names), true);
 	}
 	else {
 		$form = (array)json_decode(($row['data_json'] ?? '{}'), true);
