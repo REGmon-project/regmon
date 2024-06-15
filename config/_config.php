@@ -31,17 +31,10 @@ $ENV_File_Sample = __DIR__ . '/' . $PATH_2_ROOT . '.env.sample';
 function get_DB_CONFIG__From_ENV_File(string $ENV_File):mixed {
 	$DB_CONFIG_arr = array();
 	//load Environment Variables 
-	$lines = file($ENV_File, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-	if (is_array($lines)) {
-		foreach ($lines as $line) {
-			if (strpos(trim($line), '#') === 0) continue;
-			list($name, $value) = explode('=', $line, 2);
-			$name = trim($name);
-			$value = trim($value);
-			//putenv(sprintf('%s=%s', $name, $value));
-			$DB_CONFIG_arr[$name] = $value;
-		}
-	}
+	$DB_CONFIG_arr["DB_Host"] = getenv("MYSQL_HOST");
+	$DB_CONFIG_arr["DB_Name"] = getenv("MYSQL_DATABASE");
+	$DB_CONFIG_arr["DB_User"] = getenv("MYSQL_USER");
+	$DB_CONFIG_arr["DB_Pass"] = trim(file_get_contents(getenv("MYSQL_PASSWORD_FILE")));	
 	return $DB_CONFIG_arr;
 }
 
