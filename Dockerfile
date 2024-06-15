@@ -14,8 +14,10 @@ RUN apt-get update \
 
 RUN docker-php-ext-install zip mysqli pdo_mysql
 
+RUN pecl config-set php_ini "${PHP_INI_DIR}/php.ini"
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
+COPY 90-xdebug.ini "${PHP_INI_DIR}/conf.d"
 
 RUN a2enmod rewrite \
  && sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf \
