@@ -34,7 +34,14 @@ function get_DB_CONFIG__From_ENV_File(string $ENV_File):mixed {
 	$DB_CONFIG_arr["DB_Host"] = getenv("MYSQL_HOST");
 	$DB_CONFIG_arr["DB_Name"] = getenv("MYSQL_DATABASE");
 	$DB_CONFIG_arr["DB_User"] = getenv("MYSQL_USER");
-	$DB_CONFIG_arr["DB_Pass"] = trim(file_get_contents(getenv("MYSQL_PASSWORD_FILE")));	
+	$file_path = getenv("MYSQL_PASSWORD_FILE");
+	$file_contents = "";
+	if ($file_path) {
+		$file_contents = file_get_contents($file_path);
+	}
+	if ($file_contents) {
+		$DB_CONFIG_arr["DB_Pass"] = trim($file_contents);
+	}
 	return $DB_CONFIG_arr;
 }
 

@@ -224,8 +224,14 @@ if (isset($SEC_check_config)) {
 				$Sports_Data = $_POST['Sports_Data'];
 				$datetime = date('Y-m-d H:i:s');
 				$extra_data = true;
-
-				$sql = file_get_contents("extra/migration/add_sample_data.sql");
+				
+				$file_path = "extra/migration/add_sample_data.sql";
+				$sql = file_get_contents($file_path);
+				if ($sql === false) {
+					$APP_Admin_User_Save_Error = 'Admin_User_Save : Fail with Error: ' . 'File not found: ' . $file_path;
+					$sql = "";
+				}
+				
 				$sql = str_replace("@PASSWORD@", hash_Password($password), $sql);
 				
 				//sports Data
