@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 26, 2023 at 07:37 PM
--- Server version: 5.7.38
--- PHP Version: 8.0.22
+-- Host: db
+-- Erstellungszeit: 07. Jun 2024 um 13:36
+-- Server-Version: 5.7.43
+-- PHP-Version: 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `regmondb`
+-- Datenbank: `regmondb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Tabellenstruktur für Tabelle `categories`
 --
 
 CREATE TABLE `categories` (
@@ -40,55 +40,11 @@ CREATE TABLE `categories` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notes`
---
-
-CREATE TABLE `notes` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `group_id` int(11) NOT NULL DEFAULT '0',
-  `isAllDay` tinyint(1) NOT NULL DEFAULT '1',
-  `showInGraph` tinyint(1) NOT NULL DEFAULT '0',
-  `name` varchar(64) DEFAULT NULL,
-  `notes` text,
-  `color` char(25) NOT NULL DEFAULT '',
-  `timestamp_start` datetime DEFAULT NULL,
-  `timestamp_end` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Indexes for table `notes`
---
-ALTER TABLE `notes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `notes`
---
-ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `config`
+-- Tabellenstruktur für Tabelle `config`
 --
 
 CREATE TABLE `config` (
@@ -98,22 +54,11 @@ CREATE TABLE `config` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `config`
---
-ALTER TABLE `config`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `config`
---
-ALTER TABLE `config`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dashboard`
+-- Tabellenstruktur für Tabelle `dashboard`
 --
 
 CREATE TABLE `dashboard` (
@@ -131,23 +76,11 @@ CREATE TABLE `dashboard` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `dashboard`
---
-ALTER TABLE `dashboard`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `dashboard`
---
-ALTER TABLE `dashboard`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dropdowns`
+-- Tabellenstruktur für Tabelle `dropdowns`
 --
 
 CREATE TABLE `dropdowns` (
@@ -160,22 +93,11 @@ CREATE TABLE `dropdowns` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `dropdowns`
---
-ALTER TABLE `dropdowns`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `dropdowns`
---
-ALTER TABLE `dropdowns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forms`
+-- Tabellenstruktur für Tabelle `forms`
 --
 
 CREATE TABLE `forms` (
@@ -192,22 +114,11 @@ CREATE TABLE `forms` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `forms`
---
-ALTER TABLE `forms`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `forms`
---
-ALTER TABLE `forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forms2categories`
+-- Tabellenstruktur für Tabelle `forms2categories`
 --
 
 CREATE TABLE `forms2categories` (
@@ -223,23 +134,12 @@ CREATE TABLE `forms2categories` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `forms2categories`
---
-ALTER TABLE `forms2categories`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `form_id` (`form_id`,`category_id`);
 
---
--- AUTO_INCREMENT for table `forms2categories`
---
-ALTER TABLE `forms2categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forms_data`
+-- Tabellenstruktur für Tabelle `forms_data`
 --
 
 CREATE TABLE `forms_data` (
@@ -257,24 +157,11 @@ CREATE TABLE `forms_data` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `forms_data`
---
-ALTER TABLE `forms_data`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`),
-  ADD KEY `user_id_2` (`user_id`,`form_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `forms_data`
---
-ALTER TABLE `forms_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `groups`
+-- Tabellenstruktur für Tabelle `groups`
 --
 
 CREATE TABLE `groups` (
@@ -291,22 +178,11 @@ CREATE TABLE `groups` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `groups`
---
-ALTER TABLE `groups`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `groups`
---
-ALTER TABLE `groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `locations`
+-- Tabellenstruktur für Tabelle `locations`
 --
 
 CREATE TABLE `locations` (
@@ -318,22 +194,12 @@ CREATE TABLE `locations` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `locations`
---
-ALTER TABLE `locations`
-  ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for table `locations`
---
-ALTER TABLE `locations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login_attempts`
+-- Tabellenstruktur für Tabelle `login_attempts`
 --
 
 CREATE TABLE `login_attempts` (
@@ -344,7 +210,7 @@ CREATE TABLE `login_attempts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login_blocks`
+-- Tabellenstruktur für Tabelle `login_blocks`
 --
 
 CREATE TABLE `login_blocks` (
@@ -355,7 +221,28 @@ CREATE TABLE `login_blocks` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sports`
+-- Tabellenstruktur für Tabelle `notes`
+--
+
+CREATE TABLE `notes` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL DEFAULT '0',
+  `isAllDay` tinyint(1) NOT NULL DEFAULT '1',
+  `showInGraph` tinyint(1) NOT NULL DEFAULT '0',
+  `name` varchar(64) DEFAULT NULL,
+  `notes` text,
+  `color` char(25) NOT NULL DEFAULT '',
+  `timestamp_start` datetime DEFAULT NULL,
+  `timestamp_end` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `sports`
 --
 
 CREATE TABLE `sports` (
@@ -368,22 +255,11 @@ CREATE TABLE `sports` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `sports`
---
-ALTER TABLE `sports`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `sports`
---
-ALTER TABLE `sports`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tags`
+-- Tabellenstruktur für Tabelle `tags`
 --
 
 CREATE TABLE `tags` (
@@ -396,22 +272,11 @@ CREATE TABLE `tags` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `tags`
---
-ALTER TABLE `tags`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for table `tags`
---
-ALTER TABLE `tags`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `templates_axis`
+-- Tabellenstruktur für Tabelle `templates_axis`
 --
 
 CREATE TABLE `templates_axis` (
@@ -427,30 +292,11 @@ CREATE TABLE `templates_axis` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `templates_axis`
---
-ALTER TABLE `templates_axis`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `templates_axis`
---
-ALTER TABLE `templates_axis`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Dumping data for table `templates_axis`
---
-
--- INSERT INTO `templates_axis` (`id`, `user_id`, `location_id`, `group_id`, `name`, `data_json`, `created`, `created_by`, `modified`, `modified_by`) VALUES
--- (1, 1, 1, 1, ' Auto Y-Axis', '{\"axis\":{\"id\":\"axis_\",\"name\":\"\",\"color\":\"\",\"min\":\"\",\"max\":\"\",\"pos\":\"false\",\"grid\":\"0\"}}', '2023-02-25 00:00:00', 'admin', '2023-02-25 00:00:00', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `templates_forms`
+-- Tabellenstruktur für Tabelle `templates_forms`
 --
 
 CREATE TABLE `templates_forms` (
@@ -467,23 +313,11 @@ CREATE TABLE `templates_forms` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `templates_forms`
---
-ALTER TABLE `templates_forms`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `templates_forms`
---
-ALTER TABLE `templates_forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `templates_results`
+-- Tabellenstruktur für Tabelle `templates_results`
 --
 
 CREATE TABLE `templates_results` (
@@ -499,23 +333,11 @@ CREATE TABLE `templates_results` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `templates_results`
---
-ALTER TABLE `templates_results`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`,`group_id`);
-
---
--- AUTO_INCREMENT for table `templates_results`
---
-ALTER TABLE `templates_results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Tabellenstruktur für Tabelle `users`
 --
 
 CREATE TABLE `users` (
@@ -544,23 +366,11 @@ CREATE TABLE `users` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 PACK_KEYS=1;
 
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `account` (`account`,`uname`);
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users2forms`
+-- Tabellenstruktur für Tabelle `users2forms`
 --
 
 CREATE TABLE `users2forms` (
@@ -576,23 +386,11 @@ CREATE TABLE `users2forms` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `users2forms`
---
-ALTER TABLE `users2forms`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_id` (`user_id`,`group_id`,`category_id`,`form_id`);
-
---
--- AUTO_INCREMENT for table `users2forms`
---
-ALTER TABLE `users2forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users2groups`
+-- Tabellenstruktur für Tabelle `users2groups`
 --
 
 CREATE TABLE `users2groups` (
@@ -607,23 +405,12 @@ CREATE TABLE `users2groups` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Indexes for table `users2groups`
---
-ALTER TABLE `users2groups`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_id` (`user_id`,`group_id`);
 
---
--- AUTO_INCREMENT for table `users2groups`
---
-ALTER TABLE `users2groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users2trainers`
+-- Tabellenstruktur für Tabelle `users2trainers`
 --
 
 CREATE TABLE `users2trainers` (
@@ -640,8 +427,133 @@ CREATE TABLE `users2trainers` (
   `modified_by` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+
+
 --
--- Indexes for table `users2trainers`
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `config`
+--
+ALTER TABLE `config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `dashboard`
+--
+ALTER TABLE `dashboard`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `dropdowns`
+--
+ALTER TABLE `dropdowns`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `forms`
+--
+ALTER TABLE `forms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `forms2categories`
+--
+ALTER TABLE `forms2categories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `form_id` (`form_id`,`category_id`);
+
+--
+-- Indizes für die Tabelle `forms_data`
+--
+ALTER TABLE `forms_data`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`),
+  ADD KEY `user_id_2` (`user_id`,`form_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `groups`
+--
+ALTER TABLE `groups`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `locations`
+--
+ALTER TABLE `locations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `notes`
+--
+ALTER TABLE `notes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `sports`
+--
+ALTER TABLE `sports`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `templates_axis`
+--
+ALTER TABLE `templates_axis`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `templates_forms`
+--
+ALTER TABLE `templates_forms`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `templates_results`
+--
+ALTER TABLE `templates_results`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `account` (`account`,`uname`);
+
+--
+-- Indizes für die Tabelle `users2forms`
+--
+ALTER TABLE `users2forms`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id` (`user_id`,`group_id`,`category_id`,`form_id`);
+
+--
+-- Indizes für die Tabelle `users2groups`
+--
+ALTER TABLE `users2groups`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `user_id` (`user_id`,`group_id`);
+
+--
+-- Indizes für die Tabelle `users2trainers`
 --
 ALTER TABLE `users2trainers`
   ADD PRIMARY KEY (`id`),
@@ -649,13 +561,122 @@ ALTER TABLE `users2trainers`
   ADD KEY `user_id_2` (`user_id`,`group_id`);
 
 --
--- AUTO_INCREMENT for table `users2trainers`
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `config`
+--
+ALTER TABLE `config`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `dashboard`
+--
+ALTER TABLE `dashboard`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `dropdowns`
+--
+ALTER TABLE `dropdowns`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `forms`
+--
+ALTER TABLE `forms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `forms2categories`
+--
+ALTER TABLE `forms2categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `forms_data`
+--
+ALTER TABLE `forms_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `groups`
+--
+ALTER TABLE `groups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `locations`
+--
+ALTER TABLE `locations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `notes`
+--
+ALTER TABLE `notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `sports`
+--
+ALTER TABLE `sports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `tags`
+--
+ALTER TABLE `tags`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `templates_axis`
+--
+ALTER TABLE `templates_axis`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `templates_forms`
+--
+ALTER TABLE `templates_forms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `templates_results`
+--
+ALTER TABLE `templates_results`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `users2forms`
+--
+ALTER TABLE `users2forms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `users2groups`
+--
+ALTER TABLE `users2groups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `users2trainers`
 --
 ALTER TABLE `users2trainers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
--- --------------------------------------------------------
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
