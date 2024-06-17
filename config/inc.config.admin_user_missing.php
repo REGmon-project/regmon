@@ -64,24 +64,6 @@ if (!isset($SEC_check_config) OR $SEC_check_config != 'APP_Admin_User_Missing') 
 
 						<hr style="margin:0 -5px 10px; border-top:5px double #ccc;">
 
-						<?=get_HTML_Radio_Check_Buttons__On_Off( //key, value, option_on, option_off, label, sub_label
-							'Extra_Location_Groups_Users', 
-							$Extra_Location_Groups_Users ?? '1', 
-							'YES', 
-							'NO', 
-							'Import Basic Data', 
-							'Location 1, Group 1 (public), Group 2 (private), Extra Admin Users, Trainer, Athlete 1/2'
-						);?>
-
-						<?=get_HTML_Radio_Check_Buttons__On_Off( //key, value, option_on, option_off, label, sub_label
-							'Extra_SampleData', 
-							$Extra_SampleData ?? '1', 
-							'YES', 
-							'NO', 
-							'Import more sample data', 
-							'dropdowns, categories, forms, forms data, etc.'
-						);?>
-
 						<?=get_HTML_Select( //key, value, options_arr, label, sub_label, placeholder
 							'Sports_Data', 
 							$Sports_Data ?? 'en', 

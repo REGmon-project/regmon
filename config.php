@@ -221,88 +221,25 @@ if (isset($SEC_check_config)) {
 			{
 				$password = $_POST['Admin_Password'];
 				$email = $_POST['Admin_Email'];
-				$Extra_Location_Groups_Users = (int)$_POST['Extra_Location_Groups_Users'];
-				$Extra_SampleData = (int)$_POST['Extra_SampleData'];
 				$Sports_Data = $_POST['Sports_Data'];
 				$datetime = date('Y-m-d H:i:s');
 				$extra_data = true;
-
-				$Main_Data_sql = '';
-
-				// add admin User
-				$Main_Data_sql .= get_Admin_User_Init_SQL($password, $email, $datetime);
-					
-				if ($Extra_Location_Groups_Users) {
-					$Main_Data_sql .= "\n";
-					// extra users
-					$Main_Data_sql .= get_Extra_Users_Init_SQL($password, $email, $datetime);
-
-					$Main_Data_sql .= "\n";
-					// location 1 and groups 1/2
-					$Main_Data_sql .= get_Extra_LocationGroupsSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// users2groups
-					$Main_Data_sql .= get_Extra_User2Groups_Init_SQL($datetime);
+				
+				$file_path = "extra/migration/add_sample_data.sql";
+				$sql = file_get_contents($file_path);
+				if ($sql === false) {
+					$APP_Admin_User_Save_Error = 'Admin_User_Save : Fail with Error: ' . 'File not found: ' . $file_path;
+					$sql = "";
 				}
-
-				if ($Extra_SampleData) {
-					// dropdowns sample data
-					$Main_Data_sql .= get_Extra_DropdownsSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// forms sample data
-					$Main_Data_sql .= get_Extra_FormsTagsSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// actual data for specific forms
-					$Main_Data_sql .= get_Extra_FormsSampleData_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// notes sample data
-					$Main_Data_sql .= get_Extra_NotesSampleData_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// categories sample data
-					$Main_Data_sql .= get_Extra_CategoriesSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// forms2categories
-					$Main_Data_sql .= get_Extra_Forms2Categories_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// users2trainers
-					$Main_Data_sql .= get_Extra_Users2Trainers_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// axis sample data
-					$Main_Data_sql .= get_Extra_AxisSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// dashboard sample data
-					$Main_Data_sql .= get_Extra_DashboardSample_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// form templates sample data
-					$Main_Data_sql .= get_FormTemplates_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// result templates sample data
-					$Main_Data_sql .= get_ResultTemplates_Init_SQL($datetime);
-
-					$Main_Data_sql .= "\n";
-					// standard form templates data
-					$Main_Data_sql .= get_Extra_StandardFormTemplatesSample_Init_SQL($datetime);
-				}
-
+				
+				$sql = str_replace("@PASSWORD@", hash_Password($password), $sql);
+				
 				//sports Data
 				if ($Sports_Data == 'en') {
-					$Main_Data_sql .= "\n";
-					$Main_Data_sql .= get_Sports_Init_SQL_EN($datetime);
+					$sql .= "\n".file_get_contents("extra/migration/add_sports_en.sql");
 				}
 				elseif ($Sports_Data == 'de') {
-					$Main_Data_sql .= "\n";
-					$Main_Data_sql .= get_Sports_Init_SQL_DE($datetime);
+					$sql .= "\n".file_get_contents("extra/migration/add_sports_de.sql"); 
 				}
 				
 				//echo '<pre>'.$Main_Data_sql; exit;
@@ -312,12 +249,22 @@ if (isset($SEC_check_config)) {
 				mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 				
 				$db_error = false;
+				$conn = mysqli_connect($DB_CONFIG['DB_Host'], $DB_CONFIG['DB_User'], $DB_CONFIG['DB_Pass'], $DB_CONFIG['DB_Name']);
+
 				try {
-					$conn = mysqli_connect($DB_CONFIG['DB_Host'], $DB_CONFIG['DB_User'], $DB_CONFIG['DB_Pass'], $DB_CONFIG['DB_Name']);
 					if ($conn) {
 						mysqli_query($conn, "SET NAMES 'UTF8'");
+
 						//execute multi query
-						mysqli_multi_query($conn, $Main_Data_sql);
+						if (mysqli_multi_query($conn, $sql)) {
+							do {
+								//store first result set
+								if ($result = mysqli_store_result($conn)) {
+									mysqli_free_result($result);
+								}
+							} while (mysqli_next_result($conn));
+							
+						}
 					}
 				}
 				catch( mysqli_sql_exception $e ) {

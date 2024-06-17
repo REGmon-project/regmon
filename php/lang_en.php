@@ -162,13 +162,13 @@ array(
 	'BUTTON_ADMINISTRATION'	=> 'Administration',
 	// info page (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>in Sport Practice and Research',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Recovery Management in Elite Sport" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Optimization of Training and Competition: Management of Regeneration in Elite Sports" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
 	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based application for athlete monitoring in sport practice and research.',
 	'INFO_PAGE_INFO_REGMON2'=> 'REGmon is free to use, open source<br>and licensed under the MIT license.',
-	'INFO_PAGE_INFO_OSF' 	=> 'project page on Open Science Framework',
+	'INFO_PAGE_INFO_OSF' 	=> 'REGman project page on Open Science Framework (OSF)',
 	'INFO_PAGE_INFO_BISP' 	=> 'Federal Institute of Sport Science in Germany',
-	'INFO_PAGE_INFO_WEBSITE'=> 'official project page (only german)',
-	'INFO_PAGE_INFO_CEOS'	=> 'We acknowledge the contribution from CEOS solution GmbH (Bochum, Germany) throughout the project.',
+	'INFO_PAGE_INFO_WEBSITE'=> 'official REGman project page (only german)',
+	'INFO_PAGE_INFO_CEOS'	=> 'We acknowledge the contribution from CEOS Solution GmbH (Bochum, Germany) throughout the project.',
 	'INFO_PAGE_CONTACT'		=> 'If you need support for this instance of REGmon, please contact:',
 	//private group
 	'INDEX_PRIVATE_GROUP' 		=> 'Private Group',

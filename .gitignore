@@ -37,10 +37,6 @@ Thumbs.db
 *.komodoproject
 *.code-workspace
 
-# ignore databases
-*.sql
-*.sqlite
-
 # ignore compiled files
 *.com
 *.class
@@ -86,6 +82,5 @@ draft-pdf.yml
 
 !_vendor.zip
 !_node_modules.zip
-!_regmondb_*.sql
 !.env.sample
 !.github

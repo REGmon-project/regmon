@@ -1,7 +1,7 @@
 {
   "name": "regmon",
   "description": "Athlete Monitoring in Sport Practice and Research",
-  "version": "4.0.0",
+  "version": "1.0.20",
   "keywords": ["athlete monitoring", "recovery management", "athlete", "monitoring"],
   "author": "madnetdev",
   "license": "MIT",
