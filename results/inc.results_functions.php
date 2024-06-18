@@ -208,8 +208,8 @@ function Formula__Get_ALPHA_id(string $data_or_calc, int $num, bool $second_pass
 		$prefix = ($data_or_calc == 'data' ? 'R' : 'B'); //put R or B only on first pass
 	}
 	//in case ALPHA_id is bigger than 26 letters (English Alphabet)
-	$extra_ALPHA_id = ($num >= 26 ? Formula__Get_ALPHA_id($data_or_calc, (($num / 26 >> 0) - 1), true) : '');
-	$ALPHA_id = substr('ABCDEFGHIJKLMNOPQRSTUVWXYZ', ($num % 26 >> 0), 1);
+	$extra_ALPHA_id = ($num >= 26 ? Formula__Get_ALPHA_id($data_or_calc, (int) ($num / 26) - 1, true) : '');
+	$ALPHA_id = substr('ABCDEFGHIJKLMNOPQRSTUVWXYZ', $num % 26, 1);
 	return $prefix . $extra_ALPHA_id . $ALPHA_id;
 }
 
