@@ -40,9 +40,9 @@ services:
     depends_on:
       - db
     environment:
-      MYSQL_USER: dbuser
+      MYSQL_USER: ${MYSQL_USER}
       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_pw 
-      PMA_HOST: db
+      PMA_HOST: ${MYSQL_HOST}
     secrets:
       - mysql_root_pw
 
