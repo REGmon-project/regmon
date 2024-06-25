@@ -11,32 +11,27 @@ switch ($action) {
 	//case 'group_add_edit': //we get as $_GET['act']
 	case 'add': // INSERT
 	case 'edit': // UPDATE
-		$values = array();			
-		foreach ($_POST as $key => $val) {
-			$key = trim((string)$key); 
-			$val = trim((string)$val); 
-			switch($key) {
-				case 'account': 
-				case 'uname': 
-				case 'passwd': 
-				case 'lastname': 
-				case 'firstname': 
-				case 'sport': 
-				case 'sex': 
-				case 'body_height': 
-				case 'email': 
-				case 'telephone': 
-				case 'level': 
-				case 'status':
-				case 'location_id':
-				case 'group_id':
+		$values = [];
+		$allowed_keys = [
+			'account', 'uname', 'passwd', 'lastname', 'firstname', 'sport', 
+			'sex', 'body_height', 'email', 'telephone', 'level', 'status', 
+			'location_id', 'group_id', 'birth_date'
+		];
+		$merged = array_merge($_POST, $_GET);
+		
+		$values = [];
+		foreach ($merged as $key => $val) {
+			$key = trim((string)$key);
+			$val = trim((string)$val);
+			
+			if (in_array($key, $allowed_keys)) {
+				if ($key === 'birth_date' && $val !== '') {
+					$values[$key] = get_date_SQL($val);
+				} elseif ($key !== 'birth_date') {
 					$values[$key] = $val;
-				  break;
-				case 'birth_date':	
-						if ($val != '') $values[$key] = get_date_SQL($val.'');
-				  break;
+				}
 			}
-		}		
+		}
 		
 		$status = isset($values['status']) ? $values['status'] : 1;
 		$level = isset($values['level']) ? $values['level'] : 10;
