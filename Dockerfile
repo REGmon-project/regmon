@@ -17,7 +17,6 @@ RUN docker-php-ext-install zip mysqli pdo_mysql
 RUN pecl config-set php_ini "${PHP_INI_DIR}/php.ini"
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
-COPY 90-xdebug.ini "${PHP_INI_DIR}/conf.d"
 
 RUN a2enmod rewrite \
  && sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf \
@@ -30,12 +29,10 @@ RUN curl -sS https://getcomposer.org/installer \
 
 WORKDIR /var/www/public
 
-# Copy list of PHP dependencies and install every dependency of this list
 COPY composer.json composer.json
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 RUN composer dump-autoload --no-scripts --no-dev --optimize
 
-# Copy list of node dependencies and install every dependency of this list
 COPY package.json package.json
 RUN npm install
 

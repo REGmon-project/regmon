@@ -13,6 +13,7 @@ services:
       - .:/var/www/public
       - regmon_lib_vendor_data:/var/www/public/vendor/
       - regmon_lib_node_data:/var/www/public/node_modules/
+      - ./cfg/php.${STAGE}.ini:/usr/local/etc/php/php.ini
       # uncomment in order to have a local copy of the apache error.log 
       # warning: you need first to create the file __docker_error.log 
       # - ./__docker_error.log:/var/log/apache2/error.log
@@ -28,6 +29,7 @@ services:
         client_host=host.docker.internal 
         client_port=9003
         start_with_request=yes
+      STAGE: ${STAGE}
     secrets:
       - mysql_pw
 
