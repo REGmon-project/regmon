@@ -233,6 +233,7 @@ if (isset($SEC_check_config)) {
 				}
 				
 				$sql = str_replace("@PASSWORD@", hash_Password($password), $sql);
+				$sql = str_replace("@EMAIL@", $email, $sql);
 				
 				//sports Data
 				if ($Sports_Data == 'en') {

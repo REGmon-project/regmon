@@ -829,13 +829,13 @@ INSERT INTO `templates_results` (`id`, `user_id`, `location_id`, `group_id`, `na
 --
 
 INSERT INTO `users` (`id`, `account`, `uname`, `passwd`, `location_id`, `group_id`, `lastname`, `firstname`, `birth_date`, `sport`, `sex`, `body_height`, `email`, `telephone`, `level`, `status`, `permissions`, `dashboard`, `lastlogin`, `logincount`, `last_ip`, `created`, `modified`) VALUES
-(1, 'admin', 'admin', '@PASSWORD@', 1, 1, 'profile', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, 99, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
-(2, 'user', 'LocationAdmin', '@PASSWORD@', 1, 1, 'Admin', 'Location', NULL, NULL, NULL, NULL, NULL, NULL, 50, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
-(3, 'user', 'GroupAdmin', '@PASSWORD@', 1, 1, 'Admin', 'Group', NULL, NULL, NULL, NULL, NULL, NULL, 45, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
-(4, 'user', 'GroupAdmin2', '@PASSWORD@', 1, 1, 'Admin (reduced)', 'Group', NULL, NULL, NULL, NULL, NULL, NULL, 40, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
-(5, 'user', 'Coach1', '@PASSWORD@', 1, 1, 'Coach', 'Testprofile', NULL, NULL, NULL, NULL, NULL, NULL, 30, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW()),
-(6, 'user', 'Athlete1', '@PASSWORD@', 1, 1, 'Athlete1', 'Testprofile', NULL, NULL, NULL, NULL, NULL, NULL, 10, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW()),
-(7, 'user', 'Athlete2', '@PASSWORD@', 1, 1, 'Athlete2', 'Testprofile', NULL, NULL, NULL, NULL, NULL, NULL, 10, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW());
+(1, 'admin', 'admin', '@PASSWORD@', 1, 1, 'profile', 'admin', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 99, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
+(2, 'user', 'LocationAdmin', '@PASSWORD@', 1, 1, 'Admin', 'Location', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 50, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
+(3, 'user', 'GroupAdmin', '@PASSWORD@', 1, 1, 'Admin', 'Group', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 45, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
+(4, 'user', 'GroupAdmin2', '@PASSWORD@', 1, 1, 'Admin (reduced)', 'Group', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 40, 1, NULL, 0, NULL, 0, NULL, NOW(), NOW()),
+(5, 'user', 'Coach1', '@PASSWORD@', 1, 1, 'Coach', 'Testprofile', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 30, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW()),
+(6, 'user', 'Athlete1', '@PASSWORD@', 1, 1, 'Athlete1', 'Testprofile', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 10, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW()),
+(7, 'user', 'Athlete2', '@PASSWORD@', 1, 1, 'Athlete2', 'Testprofile', NULL, NULL, NULL, NULL, '@EMAIL@', NULL, 10, 1, NULL, 1, NULL, 0, NULL, NOW(), NOW());
 
 
 --
