@@ -87,7 +87,7 @@ CREATE TABLE `dropdowns` (
   `id` int(11) NOT NULL,
   `parent_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(64) DEFAULT NULL,
-  `options` varchar(64) DEFAULT NULL,
+  `options` varchar(255) DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
