@@ -60,12 +60,6 @@ Thumbs.db
 *.key
 *.pem
 
-# ignore paper folders and files
-paper/
-paper.md
-paper.bib
-draft-pdf.yml
-
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------

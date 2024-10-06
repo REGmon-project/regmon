@@ -552,7 +552,7 @@ LANG = {
 		PERIOD_DYNAMIC	: 'dynamisch',
 		PERIOD_FROM		: 'Von',
 		PERIOD_TO		: 'Bis',
-		PERIOD_LAST		: 'The last',
+		PERIOD_LAST		: 'Vergangene(n)',
 		PERIOD_LAST_MINS	: 'Minuten',
 		PERIOD_LAST_HOURS	: 'Stunden',
 		PERIOD_LAST_DAYS	: 'Tage',
