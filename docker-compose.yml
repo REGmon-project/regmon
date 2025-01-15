@@ -4,15 +4,15 @@ services:
       context: .
       dockerfile: ./Dockerfile
     networks:
-      - reg-net
+      - br-net
     ports:
       - "8000:80"
     depends_on:
       - db
     volumes:
       - .:/var/www/public
-      - regmon_lib_vendor_data:/var/www/public/vendor/
-      - regmon_lib_node_data:/var/www/public/node_modules/
+      - /var/www/public/vendor/  # avoid erasing folder in container by bind mount .:/var/www/public
+      - /var/www/public/node_modules/  # avoid erasing folder in container by bindmount .:/var/www/public
       - ./cfg/php.${STAGE}.ini:/usr/local/etc/php/php.ini
       # uncomment in order to have a local copy of the apache error.log 
       # warning: you need first to create the file __docker_error.log 
@@ -36,7 +36,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     networks:
-      - reg-net
+      - br-net
     ports:
       - 8888:80
     depends_on:
@@ -49,13 +49,12 @@ services:
       - mysql_root_pw
 
   db:
-    image: mysql:latest
+    image: mysql:8.4
     networks:
-      - reg-net
-    ports:
-      - "6603:3306"
+      - br-net
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./extra/init_scripts:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE} 
       MYSQL_USER: ${MYSQL_USER}
@@ -68,13 +67,9 @@ services:
 volumes:
   mysql_data:
     driver: local
-  regmon_lib_vendor_data:
-    external: true
-  regmon_lib_node_data:
-    external: true
 
 networks:
-  reg-net:
+  br-net:
     driver: bridge
 
 secrets:
