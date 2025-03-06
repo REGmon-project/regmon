@@ -1,6 +1,6 @@
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/regmon/blob/main/img/REGmon_Logo_en_wb1.png" alt="REGmon logo" width="65%"/>
+		<img src="https://github.com/REGmon-project/regmon/blob/main/img/regmon-logo-transparent.png" alt="REGmon logo" width="65%"/>
 	</p>
 </picture>
 
