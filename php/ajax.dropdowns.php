@@ -37,7 +37,7 @@ switch ($action) {
 				exit;
 			}
 
-			$row = $db->fetchRow("SELECT id FROM dropdowns WHERE options=? $where_id", array($values['options']));
+			$row = $db->fetchRow("SELECT id FROM dropdowns WHERE parent_id = ? AND options = ?", array($ID, $values['options']));
 			if ($db->numberRows() > 0)  {
 				echo $LANG->WARN_DROPDOWN_OPTION_EXIST;
 				exit;
