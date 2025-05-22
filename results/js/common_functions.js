@@ -1882,7 +1882,7 @@ function Formula__Replace_Templates_with_ids(formula, id, data, rowspan_period, 
 		//get the period
 		const period = line.replace(num, '').trim();
 
-		if ($add__sub == '-') {
+		if (add_or_sub == '-') {
 			num = - num; //make negative
 		}
 
@@ -1898,12 +1898,12 @@ function Formula__Replace_Templates_with_ids(formula, id, data, rowspan_period, 
 				return 'Out of Period';
 			}
 		
-			if ($add__sub == '-') {
-				new_val = new_val - 1;
-			}
-			else if ($add__sub == '+') {
-				new_val = new_val + 1;	
-			}
+			// if (add_or_sub == '-') {
+			// 	new_val = new_val - 1;
+			// }
+			// else if (add_or_sub == '+') {
+			// 	new_val = new_val + 1;	
+			// }
 		
 			val = (data[id - 1][4] + parseInt(new_val));
 			
@@ -2008,21 +2008,26 @@ function Formula__Replace_Templates_with_ids(formula, id, data, rowspan_period, 
 				date.format('YYYY-MM-DD HH:mm:ss') <= end.format('YYYY-MM-DD HH:mm:ss'), 
 				date.format('YYYY-MM-DD HH:mm:ss') < end.format('YYYY-MM-DD HH:mm:ss'), DATE__is_in_Range(timestamp));*/
 			
-			
+			let index_i2 = index_i;
+
 			if (rowspan < 0) { //negative rowspan
 				index_i--;
 			} else {
 				index_i++;
 			}
-			
+
 			if (is_in_date_range) {
 				if (rowspan < 0) { //negative rowspan
-					new_rowspan--;
+					if (index_i2 < index) {
+						new_rowspan--;
+					}
 				} else {
-					new_rowspan++;
+					if (index_i2 > index) {
+						new_rowspan++;
+					}
 				}
 			}
-			else {
+			if (!is_in_date_range) {
 				break;
 			}
 		}
@@ -2036,11 +2041,11 @@ function Formula__Replace_Templates_with_ids(formula, id, data, rowspan_period, 
 		const column_name = p2;
 		//++++ #####################################################
 		if (column_name.indexOf('+') != -1) {
-			return Replace_Templates_with_ids(add_or_sub, column_name, id, data, rowspan_period, formula_Full_Period, user_excel);
+			return Replace_Templates_with_ids('+', column_name, id, data, rowspan_period, formula_Full_Period, user_excel);
 		}
 		//---- #####################################################
 		else if (column_name.indexOf('-') != -1) {
-			return Replace_Templates_with_ids(add_or_sub, column_name, id, data, rowspan_period, formula_Full_Period, user_excel);
+			return Replace_Templates_with_ids('-', column_name, id, data, rowspan_period, formula_Full_Period, user_excel);
 		}
 		//not + or - ###############################################
 		else {
