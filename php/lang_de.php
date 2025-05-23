@@ -8,7 +8,7 @@ array(
 	'LANG_GERMAN' 	=> 'Deutsch',
 
 	//all pages
-    'APP_NAME'			=> 'REGmon',
+    'APP_NAME'			=> 'REGMON',
     'APP_INFO'			=> 'Athletenmonitoring in Sportpraxis und Wissenschaft',
     'HOMEPAGE'			=> 'Startseite',
     'PAGE_TOP'			=> 'Seitenanfang',
@@ -54,7 +54,7 @@ array(
 
 	//login.php
 	'LOGIN' 			=> 'Anmelden',
-	'LOGIN_PAGE_TITLE' 	=> 'Anmeldung - REGmon',
+	'LOGIN_PAGE_TITLE' 	=> 'Anmeldung - REGMON',
 	'LOGIN_HEADER' 		=> 'Anmeldung',
 	'LOGIN_USERNAME' 	=> 'Benutzername',
 	'LOGIN_PASSWORD' 	=> 'Passwort',
@@ -71,7 +71,7 @@ array(
 	
 	//register.php
 	'REGISTER' 				=> 'Registrierung',
-	'REGISTER_PAGE_TITLE'	=> 'Registrierung - REGmon',
+	'REGISTER_PAGE_TITLE'	=> 'Registrierung - REGMON',
 	'REGISTER_INFO'			=> 'Bitte geben Sie unten Ihre persönlichen Daten ein.',
 	'REGISTER_USERNAME' 	=> 'Benutzername',
 	'REGISTER_PASSWORD' 	=> 'Passwort',
@@ -149,22 +149,22 @@ array(
 
 	//######################################################
 	//index
-	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athletenmonitoring in Sportpraxis und Wissenschaft',
+	'INDEX_PAGE_TITLE' 		=> 'REGMON - Athletenmonitoring in Sportpraxis und Wissenschaft',
 	'INDEX_GROUP' 			=> 'Gruppe',
 	'INDEX_ATHLETE' 		=> 'Sportler*in',
 	'INDEX_VIEW_CALENDAR'	=> 'Kalender',
 	'INDEX_VIEW_OPTIONS'	=> 'Optionen',
 	//nav
 	'BUTTON_RESULTS'		=> 'Ergebnisse',
-	'BUTTON_FORMS_RESULTS'	=> 'Formulare Ergebnisse',
+	'BUTTON_FORMS_RESULTS'	=> 'Formular-Vorlagen erstellen',
 	'BUTTON_USER_ACCOUNT' 	=> 'Benutzerkonto',
     'BUTTON_LOGOUT'			=> 'Abmelden',
 	'BUTTON_ADMINISTRATION'	=> 'Verwaltung',
 	// info page  (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athletenmonitoring<br>in Sportpraxis und Wissenschaft',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon wurde im Rahmen des Projekts "Optimierung von Training und Wettkampf: Regenerationsmanagement im Spitzensport" (REGman) entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2021 gefördert wurde.',
-	'INFO_PAGE_INFO_REGMON1'=> 'REGmon ist eine webbasierte Software für das Athletenmonitoring in Sportpraxis und Wissenschaft.',
-	'INFO_PAGE_INFO_REGMON2'=> 'REGmon ist ein Open Source-Projekt<br>und durch eine MIT-Lizenz lizensiert.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGMON wurde im Rahmen des Projekts "Optimierung von Training und Wettkampf: Regenerationsmanagement im Spitzensport" (REGman) entwickelt, das im Rahmen des WVL-Forschungsprogramms vom Bundesinstitut für Sportwissenschaft von 2012 bis 2021 gefördert wurde.',
+	'INFO_PAGE_INFO_REGMON1'=> 'REGMON ist eine webbasierte Software für das Athletenmonitoring in Sportpraxis und Wissenschaft.',
+	'INFO_PAGE_INFO_REGMON2'=> 'REGMON ist ein Open Source-Projekt<br>und durch eine MIT-Lizenz lizensiert.',
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman-Projektdokumentation im Open Science Framework (OSF)',
 	'INFO_PAGE_INFO_BISP' 	=> 'Bundesinstitut für Sportwissenschaft (BISp)',
 	'INFO_PAGE_INFO_WEBSITE'=> 'offizielle REGman-Website',
@@ -256,7 +256,7 @@ array(
 	'WARN_DROPDOWN_NOT_CHANGE'	=> 'Warnung! Kann nicht ändern',
 
 	//administration
-	'ADMIN_PAGE_TITLE'		=> 'Verwaltung - REGmon',
+	'ADMIN_PAGE_TITLE'		=> 'Verwaltung - REGMON',
 	'ADMIN_LOCATIONS' 		=> 'Standorte',
 	'ADMIN_GROUPS' 			=> 'Gruppen',
 	'ADMIN_USERS' 			=> 'Benutzerkonten',
@@ -354,7 +354,7 @@ array(
 	###################################################################
 
 	//FORMS
-	'FORMS_PAGE_TITLE' 			=> 'Formulare - REGmon',
+	'FORMS_PAGE_TITLE' 			=> 'Formulare - REGMON',
 	'FORM_PAGE'					=> 'Seite',
 	'FORM_BACKWARD'				=> 'rückwärts',
     'FORM_FORWARD'				=> 'vorwärts',
@@ -456,7 +456,7 @@ array(
 
 	//export.php
 	'EXPORT' 				=> 'Datenabfrage (Export)',
-	'EXPORT_PAGE_TITLE'		=> 'Datenabfrage und Export - REGmon',
+	'EXPORT_PAGE_TITLE'		=> 'Datenabfrage und Export - REGMON',
 	'EXPORT_ALL' 			=> 'Alle',
 	'EXPORT_PERSONAL'		=> 'Personenbezogene Kriterien',
 	'EXPORT_GENDER'			=> 'Geschlecht',
@@ -472,7 +472,7 @@ array(
 	'EXPORT_VIEW_FIELDS' 	=> 'Ansichtsfelder',
 	'EXPORT_ATHLETES' 		=> 'Sportler',
 	'EXPORT_NO_DATA_WITH_FILTER' => 'Keine Daten für die gewählten Filter vorhanden. Bitte ändern Sie die Filter.',
-	'EXPORT_FILENAME' 		=> '{DATE}_REGmon_Datenabfrage_{USERS_SELECTED}', //not change {text} inside brackets
+	'EXPORT_FILENAME' 		=> '{DATE}_REGMON_Datenabfrage_{USERS_SELECTED}', //not change {text} inside brackets
 	'EXPORT_DATA_TYPE'   	=> 'Ausgabeinhalt',
 	'EXPORT_DATA_RAW'   	=> 'Rohdaten',
 	'EXPORT_DATA_CALC'   	=> 'Berechnete Daten',
@@ -480,7 +480,7 @@ array(
 	//export_data.php
     'EXPORT_DATA'				=> 'Datenexport',
 	'EXPORT_TABLE' 				=> 'Datenabfrage (Export)',
-	'EXPORT_TABLE_PAGE_TITLE'	=> 'Datenabfrage und Export - REGmon',
+	'EXPORT_TABLE_PAGE_TITLE'	=> 'Datenabfrage und Export - REGMON',
 	'EXPORT_BACK' 				=> 'Zurück',
 	'EXPORT_TABLE_CRITERIA' 	=> 'Datenabfrage Filter', //Ausgabeform Kriterien
 	'EXPORT_HEADER_USER_ID' 	=> 'Personen_ID',
@@ -501,7 +501,7 @@ array(
 
 	//forms_results.php, results.php
 	'RESULTS'					=> 'Ergebnisse',
-	'RESULTS_PAGE_TITLE' 		=> 'Ergebnisse und Auswertung - REGmon',
+	'RESULTS_PAGE_TITLE' 		=> 'Ergebnisse und Auswertung - REGMON',
 	'RESULTS_PAGE_Y_AXIS'		=> 'Ergebnisse Y-Achse',
 	'RESULTS_PAGE_HEADER'		=> 'Vorlage laden oder Zeitraum / Daten wählen',
 	'RESULTS_TAB_PERIOD'		=> 'Zeitraum',
@@ -551,10 +551,10 @@ array(
 	'RESULTS_Y_AXIS_POSITION'	=> 'Position',
 	'RESULTS_Y_AXIS_POS_LEFT'	=> 'Links',
 	'RESULTS_Y_AXIS_POS_RIGHT'	=> 'Rechts',
-	'RESULTS_Y_AXIS_GRID_WIDTH' => 'Raster weite',
+	'RESULTS_Y_AXIS_GRID_WIDTH' => 'Rasterweite',
 	'RESULTS_Y_AXIS_MIN' 		=> 'Min',
 	'RESULTS_Y_AXIS_MAX' 		=> 'Max',
-	'RESULTS_Y_AXIS_DATA' 		=> 'DATEN',
+	'RESULTS_Y_AXIS_DATA' 		=> 'Daten',
 	'RESULTS_Y_AXIS_VALUE' 		=> 'Wert',
 	'RESULTS_Y_AXIS_VALUE_NAME' => 'Name',
 	'RESULTS_Y_AXIS_SAVE' 		=> 'Achse speichern',
@@ -567,8 +567,8 @@ array(
 	'PERMISSIONS_TRAINERS'		=> 'Trainers',
 	'PERMISSIONS_PRIVATE'		=> 'Privat',
 	
-	'DIAGRAM_FULLSCREEN_ON'		=> 'Vollbild auf',
-	'DIAGRAM_FULLSCREEN_OFF'	=> 'Vollbild aus',
+	'DIAGRAM_FULLSCREEN_ON'		=> 'Vollbild',
+	'DIAGRAM_FULLSCREEN_OFF'	=> 'Vollbild schließen',
 	
 	'DIAGRAM_HELP_TOOLTIP'		=> "- Markieren Sie mit gedrückter linker Maustaste einen Bereich (horizontal oder vertikal), um ihn zu vergrößern.
 - Halten Sie 'Alt' gedrückt, um die Grafik mit gedrückter linker Maustaste zu schwenken.
@@ -589,7 +589,7 @@ array(
     'EMAIL_NEW_ACCOUNT_MESSSAGE'=> 
 "Guten Tag,
 <br>
-<br>Sie haben sich auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a> mit einem neuen Konto registriert.
+<br>Sie haben sich auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{HTTP}{DOMAIN}/{REGmon_Folder}</a> mit einem neuen Konto registriert.
 <br>
 <br>Benutzername: {Username}
 <br>E-Mail: {Email}
@@ -601,7 +601,7 @@ array(
 <br><b>Ihr Konto ist vorerst inaktiv.</b>
 <br><b>Sie bekommen eine weitere E-Mail, sobald Ihr Konto aktiviert wurde.</b>
 <br>
-<br>Ihr REGmon-Team",
+<br>Ihr REGMON-Team",
 
 	//user email activate
     'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Ihr Konto für {HTTP}{DOMAIN}/{REGmon_Folder} wurde aktiviert.",
@@ -610,18 +610,18 @@ array(
 <br>
 <br>Ihr Konto wurde aktiviert.
 <br>
-<br><a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a>
+<br><a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{HTTP}{DOMAIN}/{REGmon_Folder}</a>
 <br>
 <br>Benutzername: {Username}
 <br>
-<br>Ihr REGmon-Team",
+<br>Ihr REGMON-Team",
 
 	//admin email new user
     'EMAIL_NEW_ACCOUNT_ADMIN_SUBJECT' => "Neue Registrierung auf {HTTP}{DOMAIN}/{REGmon_Folder} für die Gruppe: {Group}",
     'EMAIL_NEW_ACCOUNT_ADMIN_MESSSAGE'=> 
 "Guten Tag,
 <br>
-<br>Es wurde ein neues Konto auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{DOMAIN}/{REGmon_Folder}</a> erstellt.
+<br>Es wurde ein neues Konto auf <a href=\"{HTTP}{DOMAIN}/{REGmon_Folder}\" target=\"_blank\">{HTTP}{DOMAIN}/{REGmon_Folder}</a> erstellt.
 <br>
 <br>Benutzername: {Username}
 <br>E-Mail: {Email}
@@ -633,7 +633,7 @@ array(
 <br>Klicken Sie hier, um das Konto zu aktivieren:
 <br>{Activate_Link} Kontoaktivierung </a>
 <br>
-<br>Ihr REGmon-Team",
+<br>Ihr REGMON-Team",
 
 	//admin email new sport
 	'EMAIL_NEW_SPORTS_ADMIN_SUBJECT' => "Neuer Vorschlag für eine Sportart ({Sports}) auf {HTTP}{DOMAIN}/{REGmon_Folder}",
@@ -649,6 +649,6 @@ array(
 <br>Gruppe: {Group}
 <br>Profil: {Profile}
 <br>
-<br>Ihr REGmon-Team"
+<br>Ihr REGMON-Team"
 );
 ?>

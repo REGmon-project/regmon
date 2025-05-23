@@ -8,7 +8,7 @@ array(
 	'LANG_GERMAN' 	=> 'Deutsch',
 
 	//all pages
-    'APP_NAME'			=> 'REGmon',
+    'APP_NAME'			=> 'REGMON',
     'APP_INFO'			=> 'Athlete Monitoring in Sport Practice and Research',
     'HOMEPAGE'			=> 'Homepage',
     'PAGE_TOP'			=> 'Page top',
@@ -54,7 +54,7 @@ array(
 
 	//login.php
 	'LOGIN' 			=> 'Login',
-	'LOGIN_PAGE_TITLE' 	=> 'Login - REGmon',
+	'LOGIN_PAGE_TITLE' 	=> 'Login - REGMON',
 	'LOGIN_HEADER' 		=> 'Log In',
 	'LOGIN_USERNAME' 	=> 'Username',
 	'LOGIN_PASSWORD' 	=> 'Password ',
@@ -71,7 +71,7 @@ array(
 
 	//register.php
 	'REGISTER' 				=> 'Registration',
-	'REGISTER_PAGE_TITLE'	=> 'Registration - REGmon',
+	'REGISTER_PAGE_TITLE'	=> 'Registration - REGMON',
 	'REGISTER_INFO'			=> 'Please enter your personal information.',
 	'REGISTER_USERNAME' 	=> 'Username',
 	'REGISTER_PASSWORD' 	=> 'Password',
@@ -149,27 +149,27 @@ array(
 	
 	//######################################################
 	//index
-	'INDEX_PAGE_TITLE' 		=> 'REGmon - Athlete Monitoring in Sport Practice and Research',
+	'INDEX_PAGE_TITLE' 		=> 'REGMON - Athlete Monitoring in Sport Practice and Research',
 	'INDEX_GROUP' 			=> 'Group',
 	'INDEX_ATHLETE' 		=> 'Athlete',
 	'INDEX_VIEW_CALENDAR'	=> 'Calendar',
 	'INDEX_VIEW_OPTIONS'	=> 'Options',
 	//nav
 	'BUTTON_RESULTS'		=> 'Results',
-	'BUTTON_FORMS_RESULTS'	=> 'Forms Results',
+	'BUTTON_FORMS_RESULTS'	=> 'Create Form Templates',
 	'BUTTON_USER_ACCOUNT' 	=> 'User Account',
     'BUTTON_LOGOUT'			=> 'Logout',
 	'BUTTON_ADMINISTRATION'	=> 'Administration',
 	// info page (ajax.page.regmon_info.php)
 	'INFO_PAGE_SUBTITLE' 	=> 'Athlete Monitoring<br>in Sport Practice and Research',
-	'INFO_PAGE_INFO_REGMAN'	=> 'REGmon has been developed in and for the multicenter research program "Optimization of Training and Competition: Management of Regeneration in Elite Sports" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
-	'INFO_PAGE_INFO_REGMON1'=> 'REGmon is a web-based application for athlete monitoring in sport practice and research.',
-	'INFO_PAGE_INFO_REGMON2'=> 'REGmon is free to use, open source<br>and licensed under the MIT license.',
+	'INFO_PAGE_INFO_REGMAN'	=> 'REGMON has been developed in and for the multicenter research program "Optimization of Training and Competition: Management of Regeneration in Elite Sports" (REGman), which has been funded by the Federal Institute of Sport Science in Germany.',
+	'INFO_PAGE_INFO_REGMON1'=> 'REGMON is a web-based application for athlete monitoring in sport practice and research.',
+	'INFO_PAGE_INFO_REGMON2'=> 'REGMON is free to use, open source<br>and licensed under the MIT license.',
 	'INFO_PAGE_INFO_OSF' 	=> 'REGman project page on Open Science Framework (OSF)',
 	'INFO_PAGE_INFO_BISP' 	=> 'Federal Institute of Sport Science in Germany',
 	'INFO_PAGE_INFO_WEBSITE'=> 'official REGman project page (only german)',
 	'INFO_PAGE_INFO_CEOS'	=> 'We acknowledge the contribution from CEOS Solution GmbH (Bochum, Germany) throughout the project.',
-	'INFO_PAGE_CONTACT'		=> 'If you need support for this instance of REGmon, please contact:',
+	'INFO_PAGE_CONTACT'		=> 'If you need support for this instance of REGMON, please contact:',
 	//private group
 	'INDEX_PRIVATE_GROUP' 		=> 'Private Group',
 	'INDEX_PRIVATE_GROUP_MARK'	=> '(private)',
@@ -256,7 +256,7 @@ array(
 	'WARN_DROPDOWN_NOT_CHANGE'	=> 'Warning! Cannot change',
 		
 	//administration
-	'ADMIN_PAGE_TITLE'		=> 'Administration - REGmon',
+	'ADMIN_PAGE_TITLE'		=> 'Administration - REGMON',
 	'ADMIN_LOCATIONS' 		=> 'Locations',
 	'ADMIN_GROUPS' 			=> 'Groups',
 	'ADMIN_USERS' 			=> 'Users Accounts',
@@ -354,7 +354,7 @@ array(
 	###################################################################
 	
 	//FORMS
-	'FORMS_PAGE_TITLE' 			=> 'Forms - REGmon',
+	'FORMS_PAGE_TITLE' 			=> 'Forms - REGMON',
 	'FORM_PAGE'					=> 'Page',
     'FORM_BACKWARD'				=> 'Backward',
     'FORM_FORWARD'				=> 'Forward', 
@@ -456,7 +456,7 @@ array(
 
 	//export.php
 	'EXPORT' 				=> 'Data Request (Export)',
-	'EXPORT_PAGE_TITLE'		=> 'Data Request and Export - REGmon',
+	'EXPORT_PAGE_TITLE'		=> 'Data Request and Export - REGMON',
 	'EXPORT_ALL' 			=> 'All',
 	'EXPORT_PERSONAL'		=> 'Personal Criteria',
 	'EXPORT_GENDER'			=> 'Gender',
@@ -472,7 +472,7 @@ array(
 	'EXPORT_VIEW_FIELDS' 	=> 'View Fields',
 	'EXPORT_ATHLETES' 		=> 'Athletes',
 	'EXPORT_NO_DATA_WITH_FILTER' => 'No data available for the selected filters. Please, change the filters.',
-	'EXPORT_FILENAME' 		=> '{DATE}_REGmon_Export_{USERS_SELECTED}', //not change {text} inside brackets
+	'EXPORT_FILENAME' 		=> '{DATE}_REGMON_Export_{USERS_SELECTED}', //not change {text} inside brackets
 	'EXPORT_DATA_TYPE'   	=> 'Output Content',
 	'EXPORT_DATA_RAW'   	=> 'Raw Data',
 	'EXPORT_DATA_CALC'   	=> 'Calculated Data',
@@ -480,7 +480,7 @@ array(
 	//export_data.php
     'EXPORT_DATA'				=> 'Data Export',
 	'EXPORT_TABLE' 				=> 'Data Export',
-	'EXPORT_TABLE_PAGE_TITLE'	=> 'Data Request and Export - REGmon',
+	'EXPORT_TABLE_PAGE_TITLE'	=> 'Data Request and Export - REGMON',
 	'EXPORT_BACK' 				=> 'Return',
 	'EXPORT_TABLE_CRITERIA' 	=> 'Data Export Filters',
 	'EXPORT_HEADER_USER_ID' 	=> 'Person_ID',
@@ -501,7 +501,7 @@ array(
 
 	//forms_results.php, results.php
 	'RESULTS'					=> 'Results',
-	'RESULTS_PAGE_TITLE' 		=> 'Results and Analysis - REGmon',
+	'RESULTS_PAGE_TITLE' 		=> 'Results and Analysis - REGMON',
 	'RESULTS_PAGE_Y_AXIS'		=> 'Results Y-Axis',
 	'RESULTS_PAGE_HEADER'		=> 'Load Template or select Period / Data',
 	'RESULTS_TAB_PERIOD'		=> 'Period',
@@ -589,7 +589,7 @@ array(
     'EMAIL_NEW_ACCOUNT_MESSSAGE'=> 
 'Hello,
 <br>
-<br>you registered a new account for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>.
+<br>you registered a new account for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{HTTP}{DOMAIN}/{REGmon_Folder}</a>.
 <br>
 <br>Username: {Username}
 <br>E-Mail: {Email}
@@ -601,7 +601,7 @@ array(
 <br><b>Your account is still inactive.</b>
 <br><b>You will receive an E-Mail as soon as your account has been activated.</b>
 <br>
-<br>REGmon-Team',
+<br>REGMON-Team',
 
 	//user email activate
     'EMAIL_ACCOUNT_ACTIVATE_SUBJECT' => "Your account has been activated ({HTTP}{DOMAIN}/{REGmon_Folder})",
@@ -610,11 +610,11 @@ array(
 <br>
 <br>your account has been activated.
 <br>
-<br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>
+<br><a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{HTTP}{DOMAIN}/{REGmon_Folder}</a>
 <br>
 <br>Username: {Username}
 <br>
-<br>REGmon-Team',
+<br>REGMON-Team',
 	
 
 	//admin email new user
@@ -622,7 +622,7 @@ array(
     'EMAIL_NEW_ACCOUNT_ADMIN_MESSSAGE'=> 
 'Hello,
 <br>
-<br>a new account has been registered for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{DOMAIN}/{REGmon_Folder}</a>.
+<br>a new account has been registered for <a href="{HTTP}{DOMAIN}/{REGmon_Folder}" target="_blank">{HTTP}{DOMAIN}/{REGmon_Folder}</a>.
 <br>
 <br>Username: {Username}
 <br>E-Mail: {Email}
@@ -634,7 +634,7 @@ array(
 <br>Click here to active the account:
 <br>{Activate_Link} Activate Account </a>
 <br>
-<br>REGmon-Team',
+<br>REGMON-Team',
 
 	//admin email new sport
 	'EMAIL_NEW_SPORTS_ADMIN_SUBJECT' => "New sport user proposal ({Sports}) for {HTTP}{DOMAIN}/{REGmon_Folder}",
@@ -650,6 +650,6 @@ array(
 <br>Gruppe: {Group}
 <br>Profil: {Profile}
 <br>
-<br>REGmon-Team"
+<br>REGMON-Team"
 );
 ?>
