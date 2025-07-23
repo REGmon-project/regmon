@@ -25,10 +25,8 @@ $PATH_2_ROOT = '../';
 
 $CONFIG = array();
 $DB_CONFIG = array();
-$ENV_File = __DIR__ . '/' . $PATH_2_ROOT . '.env';
-$ENV_File_Sample = __DIR__ . '/' . $PATH_2_ROOT . '.env.sample';
 
-function get_DB_CONFIG__From_ENV_File(string $ENV_File):mixed {
+function get_DB_CONFIG__From_ENV():mixed {
 	$DB_CONFIG_arr = array();
 	//load Environment Variables 
 	$DB_CONFIG_arr["DB_Host"] = getenv("MYSQL_HOST");
@@ -81,19 +79,7 @@ function is_CONFIG_Option_Missing():bool {
 
 
 //get $DB_CONFIG from .env file ##################
-if (is_file($ENV_File)) { //.env file exists
-	if (is_readable($ENV_File)) { //.env file is readable
-		$DB_CONFIG = get_DB_CONFIG__From_ENV_File($ENV_File);
-	} else {
-		die("Permission Denied for reading the file " . $ENV_File);
-	}
-}
-else {
-	//die("Environment File '" . $ENV_File . "' is Missing.");
-	$SEC_check_config = 'ENV_File_Missing';
-	require(__DIR__ . '/' . $PATH_2_ROOT . 'config.php');
-	exit;
-}
+$DB_CONFIG = get_DB_CONFIG__From_ENV();
 //get $DB_CONFIG #################################
 
 
