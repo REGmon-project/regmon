@@ -10,13 +10,15 @@ services:
     depends_on:
       - db
     volumes:
-      - .:/var/www/public
+      - ./public:/var/www/public
       - /var/www/public/vendor/  # avoid erasing folder in container by bind mount .:/var/www/public
       - /var/www/public/node_modules/  # avoid erasing folder in container by bindmount .:/var/www/public
       - ./cfg/php.${STAGE}.ini:/usr/local/etc/php/php.ini
       # uncomment in order to have a local copy of the apache error.log 
       # warning: you need first to create the file __docker_error.log 
       # - ./__docker_error.log:/var/log/apache2/error.log
+    env_file:
+      - .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:

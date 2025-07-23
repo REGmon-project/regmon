@@ -1,7 +1,5 @@
-# Disable index view
-Options -Indexes
-
-# Hide a specific file
-<Files .env>
-    Require all denied
-</Files>
+# In public/.htaccess
+<FilesMatch "\.(env|git|txt|yml|yaml|md|log)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
