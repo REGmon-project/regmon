@@ -56,7 +56,7 @@ services:
       - br-net
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./extra/init_scripts:/docker-entrypoint-initdb.d
+      - ./entries:/docker-entrypoint-initdb.d
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE} 
       MYSQL_USER: ${MYSQL_USER}
