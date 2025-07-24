@@ -35,21 +35,6 @@ services:
     secrets:
       - mysql_pw
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    networks:
-      - br-net
-    ports:
-      - 8888:80
-    depends_on:
-      - db
-    environment:
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_pw 
-      PMA_HOST: ${MYSQL_HOST}
-    secrets:
-      - mysql_root_pw
-
   db:
     image: mysql:8.4
     networks:
