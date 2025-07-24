@@ -11,8 +11,8 @@ services:
       - db
     volumes:
       - ./public:/var/www/public
-      - /var/www/public/vendor/  # avoid erasing folder in container by bind mount .:/var/www/public
-      - /var/www/public/node_modules/  # avoid erasing folder in container by bindmount .:/var/www/public
+      - lib_vendor_data:/var/www/public/vendor/
+      - lib_node_data:/var/www/public/node_modules/
       - ./cfg/php.${STAGE}.ini:/usr/local/etc/php/php.ini
       # uncomment in order to have a local copy of the apache error.log 
       # warning: you need first to create the file __docker_error.log 
@@ -68,6 +68,10 @@ services:
 
 volumes:
   mysql_data:
+    driver: local
+  lib_vendor_data:
+    driver: local
+  lib_node_data:
     driver: local
 
 networks:
