@@ -440,9 +440,9 @@ LANG = {
 			INTERVAL_MIDDLE : 'Mitte',
 		},
 		//Intervals
-		BUTTON_CALC_RAW_DATA 		: 'Berechnung aus Rohdaten',
-		BUTTON_CALC_INTERVAL 		: 'Berechnung im Intervall',
-		BUTTON_CALC_INTERVAL_SINGLE : 'Berechnung im Intervall (Einzelsäule)',
+		BUTTON_CALC_RAW_DATA 		: 'Import aus Rohdaten (formular-/personenspezifisch)',
+		BUTTON_CALC_INTERVAL 		: 'Berechnung/Weiterverarbeitung (formularübergreifend/personenspezifisch)',
+		BUTTON_CALC_INTERVAL_SINGLE : 'Berechnung/Weiterverarbeitung (formular-/personenübergreifend)',
 		INTERVAL			: 'Intervall',
 		INTERVALS			: 'Intervalle',
 		INTERVAL_1_LINE_PER	: '1 Zelle pro',

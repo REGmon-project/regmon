@@ -440,9 +440,9 @@ LANG = {
 			INTERVAL_MIDDLE : 'Middle',
 		},
 		//Intervals
-		BUTTON_CALC_RAW_DATA 		: 'Calculation from Raw data',
-		BUTTON_CALC_INTERVAL 		: 'Calculation in the Interval',
-		BUTTON_CALC_INTERVAL_SINGLE : 'Calculation in the Interval (single column)',
+		BUTTON_CALC_RAW_DATA 		: 'Import raw data (form-/person-specific)',
+		BUTTON_CALC_INTERVAL 		: 'Calculation/Aggregation (cross-form/person-specific)',
+		BUTTON_CALC_INTERVAL_SINGLE : 'Calculation/Aggregation (cross-form/cross-person)',
 		INTERVAL			: 'Interval',
 		INTERVALS			: 'Intervals',
 		INTERVAL_1_LINE_PER	: '1 Line per',
