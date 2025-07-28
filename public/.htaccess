@@ -1,0 +1,5 @@
+# In public/.htaccess
+<FilesMatch "\.(env|git|txt|yml|yaml|md|log)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
