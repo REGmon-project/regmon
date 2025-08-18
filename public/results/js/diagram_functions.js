@@ -1308,7 +1308,7 @@ function Chart__Update() {
 	const today = moment().format('YYYYMMDD');
 
 	if (V_RESULTS_PAGE == 'FORMS_RESULTS') {
-		filename = LANG.DIAGRAM.EXPORT_FORMS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETES_NAMES}', V_Athlete_Name);
+		filename = LANG.DIAGRAM.EXPORT_FORMS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETE_NAME}', V_Athlete_Name);
 	}
 	else { //RESULTS
 		const athletes_names = Object.values(V_Selected__Athletes__ID_Name).join(', ');

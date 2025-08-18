@@ -440,7 +440,7 @@ LANG = {
 			INTERVAL_MIDDLE : 'Middle',
 		},
 		//Intervals
-		BUTTON_CALC_RAW_DATA 		: 'Import raw data (form-/person-specific)',
+		BUTTON_CALC_RAW_DATA 		: 'Import form data (form-/person-specific)',
 		BUTTON_CALC_INTERVAL 		: 'Calculation/Aggregation (cross-form/person-specific)',
 		BUTTON_CALC_INTERVAL_SINGLE : 'Calculation/Aggregation (cross-form/cross-person)',
 		INTERVAL			: 'Interval',

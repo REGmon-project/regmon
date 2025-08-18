@@ -270,7 +270,7 @@
             a.target = '_blank';
             a.download = name + '.' + extension;
             document.body.appendChild(a);
-            a.trigger("click");
+            a.click(); //trigger("click");
             a.remove();
 
         } 
