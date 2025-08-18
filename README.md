@@ -1,6 +1,6 @@
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/regmon/blob/main/img/regmon-logo-transparent.png" alt="REGMON logo" width="65%"/>
+		<img src="https://github.com/REGmon-project/regmon/blob/main/public/img/regmon-logo-transparent.png" alt="REGMON logo" width="65%"/>
 	</p>
 </picture>
 <hr>
@@ -30,7 +30,7 @@ REGMON is a powerful web-based open source application designed to empower athle
 
 <picture>
 	<p align="center">
-		<img src="https://github.com/REGmon-project/regmon/blob/main/img/regmon_frontend_collection.png" alt="REGMON front-end screenshot collection" width="95%"/>
+		<img src="https://github.com/REGmon-project/regmon/blob/main/public/img/regmon_frontend_collection.png" alt="REGMON front-end screenshot collection" width="95%"/>
 	</p>
 </picture>
 
