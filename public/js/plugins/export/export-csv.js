@@ -146,8 +146,10 @@
         //@@@@@MAD
         //return dataRows;
 
-		var stt = moment($('#t_date_from').val()+':00', 'YYYY-MM-DD HH:mm:ss').format("YYYY MM DD HH mm ss").split(' ');
-		var edt = moment($('#t_date_to').val()+':59', 'YYYY-MM-DD HH:mm:ss').format("YYYY MM DD HH mm ss").split(' ');
+		var format = (LANG.LANG_CURRENT == 'de') ? 'DD.MM.YYYY HH:mm:ss' : 'YYYY-MM-DD HH:mm:ss';
+        
+        var stt = moment($('#t_date_from').val()+':00', format).format("YYYY MM DD HH mm ss").split(' ');
+        var edt = moment($('#t_date_to').val()+':59', format).format("YYYY MM DD HH mm ss").split(' ')
 		var st = Date.UTC(stt[0],(stt[1]-1),stt[2], stt[3],stt[4],stt[5]);
 		var ed = Date.UTC(edt[0],(edt[1]-1),edt[2], edt[3],edt[4],edt[5]);
 
@@ -270,7 +272,7 @@
             a.target = '_blank';
             a.download = name + '.' + extension;
             document.body.appendChild(a);
-            a.trigger("click");
+            a.click(); //trigger("click");
             a.remove();
 
         } 

@@ -256,7 +256,7 @@ function export_array_to_excel(data, filename,  intervals = false, merges = [], 
 	
 	if (intervals) {
 		Object.keys(intervals).forEach(function(interval_id){
-			let interval_data = intervals[int_id];
+			let interval_data = intervals[interval_id];
 			build_sheet(LANG.RESULTS.INTERVAL+' '+interval_id, interval_data);
 		});
 	}

@@ -21,7 +21,7 @@ function Export_Table_Data(csv_xlsx) {
 			a.target = '_blank';
 			a.download = name + '.' + extension;
 			document.body.appendChild(a);
-			a.trigger("click");
+			a.click(); // trigger("click");
 			a.remove();
 		} 
 		else console.log('Error! Fall back to server side handling');
@@ -59,7 +59,7 @@ function Export_Table_Data(csv_xlsx) {
 		//each Athlete
 		Object.keys(data).forEach(function (ath_id) {
 			if (athletes != '') {
-				athletes += ',';
+				athletes += '_';
 			}
 			athletes += $('#Diagram__Athlete_Name_' + ath_id).val();		
 			
@@ -250,8 +250,8 @@ function Export_Table_Data(csv_xlsx) {
 
 		const data = V_USED_DATA;
 		const aths = {};
-		const arr = [];
-		const arr2 = [];
+		let arr = [];
+		let arr2 = [];
 		let athletes = '';
 
 		//each Athlete
@@ -260,7 +260,7 @@ function Export_Table_Data(csv_xlsx) {
 			let forms = {};
 
 			if (athletes != '') {
-				athletes += ',';
+				athletes += '_';
 			}
 			athletes += ath_name;			
 
@@ -465,10 +465,10 @@ function Export_Table_Data(csv_xlsx) {
 		let filename = '';
 
 		if (V_RESULTS_PAGE == 'FORMS_RESULTS') {
-			filename = LANG.DIAGRAM.EXPORT_FORMS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETES_NAMES}', athletes);
+			filename = LANG.DIAGRAM.EXPORT_FORMS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETE_NAME}', athletes);
 		}
 		else { //RESULTS
-			filename = LANG.DIAGRAM.EXPORT_RESULTS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETE_NAME}', athletes);
+			filename = LANG.DIAGRAM.EXPORT_RESULTS_FILE_NAME.replace('{TODAY}', today).replace('{ATHLETES_NAMES}', athletes);
 		}
 
 		return filename;
