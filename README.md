@@ -10,6 +10,10 @@
 </p>
 <hr>
 <p align="center">
+	Important Note: A comprehensive redevelopment (complete rebuild of the software in backend and frontend) is currently underway. The goal is to ensure connectivity in science and sports practice and to enable sustainable, open-source-driven development. The release of REGMON 2.0 will take place soon. The old version will be sunsetted shortly and replaced by the new edition. For further questions, please use the landing page contact form.
+</p>
+<hr>
+<p align="center">
 	Preprint: "REGmon: A web application for athlete monitoring in sport practice and research" <br>
 	https://sportrxiv.org/index.php/server/preprint/view/342
 </p>
