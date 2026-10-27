@@ -1,10 +1,10 @@
 <?php
+require_once(__DIR__ . '/../../_settings.regmon.php');
+require_once(__DIR__ . '/../inc.cookie_settings.php');
 require __DIR__ . '/Session.php';
 require __DIR__ . '/Captcha.php';
 
-ini_set('session.cookie_samesite', 'Lax');
-ini_set('session.cookie_secure', 'Off');
-ini_set('session.cookie_httponly', 'Off');
+configure_Login_Session();
 
 // Initialize Session
 session_cache_limiter();

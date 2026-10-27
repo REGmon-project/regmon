@@ -1,6 +1,7 @@
 <?php
 $PATH_2_ROOT = '../';
 require_once($PATH_2_ROOT.'_settings.regmon.php');
+require_once(__DIR__ . '/inc.cookie_settings.php');
 
 //secure ajax sub pages from direct call
 $SEC_check = $CONFIG['SEC_Page_Secret'];
@@ -13,9 +14,7 @@ $login = $PATH_2_ROOT.'login.php'; //login page
 $success = $PATH_2_ROOT; //index page
 
 
-ini_set('session.cookie_samesite', 'Lax');
-ini_set('session.cookie_secure', 'Off');
-ini_set('session.cookie_httponly', 'Off');
+configure_Login_Session();
 
 // Initialize Session
 session_cache_limiter();
@@ -84,6 +83,11 @@ if ($Captcha AND !$Blocked_IP) {
 
 			//Valid User --logged in and active
 			if ($USER["status"] == '1') {
+				// Replace the pre-login session ID after successful authentication.
+				if (!session_regenerate_id(true)) {
+					http_response_code(500);
+					exit('Login is temporarily unavailable.');
+				}
 
 				//global vars
 				$UID = $USER['id'];
@@ -113,14 +117,7 @@ if ($Captcha AND !$Blocked_IP) {
 				
 				unset($USER['passwd']);
 				
-				$cookie_options = array(
-					'expires' => 0,
-					'path' => '/'.$CONFIG['REGmon_Folder'],
-					//'domain' => null,
-					'secure' => false,
-					'httponly' => false,
-					'samesite' => 'Lax' // None || Lax || Strict
-				);
+				$cookie_options = get_Login_Cookie_Options();
 
 				setcookie ("UID", $UID, $cookie_options);
 				setcookie ("ACCOUNT", $ACCOUNT, $cookie_options);
@@ -128,12 +125,14 @@ if ($Captcha AND !$Blocked_IP) {
 				setcookie ("HASH", $HASH, $cookie_options);
 
 
+				// Dashboard preferences are read and written by JavaScript.
+				$ui_cookie_options = get_Login_Cookie_Options(0, false);
 				//Dashboard
 				if ($USER["dashboard"] == '1') {
-					setcookie ("DASHBOARD", '1', $cookie_options);
-					setcookie ("DASH_ON_LOGIN", '1', $cookie_options);
+					setcookie ("DASHBOARD", '1', $ui_cookie_options);
+					setcookie ("DASH_ON_LOGIN", '1', $ui_cookie_options);
 				} else {
-					setcookie ("DASHBOARD", '0', $cookie_options);
+					setcookie ("DASHBOARD", '0', $ui_cookie_options);
 				}
 
 				//level - user type
