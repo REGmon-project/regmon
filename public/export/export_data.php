@@ -630,6 +630,8 @@ require($PATH_2_ROOT.'php/inc.html_head.php');
 <!-- OTHER JS --> 
 <link type="text/css" rel="stylesheet" href="<?=$PATH_2_ROOT;?>node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="<?=$PATH_2_ROOT;?>node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?=$PATH_2_ROOT;?>node_modules/dompurify/dist/purify.min.js"></script>
+<script type="text/javascript" src="<?=$PATH_2_ROOT;?>js/bootstrap_security.js<?=$G_VER;?>"></script>
 
 <script type="text/javascript" src="<?=$PATH_2_ROOT;?>node_modules/moment/min/moment.min.js"></script>
 <?php if ($LANG->LANG_CURRENT != 'en') { ?>

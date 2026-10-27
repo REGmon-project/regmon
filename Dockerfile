@@ -35,7 +35,7 @@ COPY composer.json composer.json
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 RUN composer dump-autoload --no-scripts --no-dev --optimize
 
-COPY package.json package.json
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts --no-audit --no-fund
 
 USER ${USER}

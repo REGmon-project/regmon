@@ -11,7 +11,6 @@ extra/__docker_error.log
 # ignore dependency directories
 node_modules/
 dist/
-package-lock.json
 composer.lock
 
 # ignore composer vendor directory

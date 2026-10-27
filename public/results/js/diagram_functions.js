@@ -1417,7 +1417,7 @@ Highcharts_Options = {
 		//showLastLabel: true, //def:true
 	},
 	yAxis: {
-		title:'',
+		title: { text: '' },
 		//show the axis line and title when the axis has no data. Defaults to true
 		showEmpty: false //we want false
 		//min: 0,
@@ -1506,7 +1506,7 @@ if (V_RESULTS_PAGE == 'AXIS') {
 		categories: ['Wert']
 	};
 	Highcharts_Options.yAxis = {
-		title: ''
+		title: { text: '' }
 	};
 }
 

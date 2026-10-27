@@ -62,6 +62,8 @@ require('php/inc.html_head.php');
 
 <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
+<script type="text/javascript" src="js/bootstrap_security.js<?=$G_VER;?>"></script>
 
 <script type="text/javascript" src="node_modules/moment/min/moment.min.js"></script>
 <?php if ($LANG->LANG_CURRENT != 'en') { ?>
@@ -101,6 +103,8 @@ require('php/inc.html_head.php');
 <script src="node_modules/highcharts/highcharts.js"></script>
 <script src="node_modules/highcharts/modules/exporting.js"></script>
 <script src="node_modules/highcharts/modules/offline-exporting.js"></script>
+<script src="node_modules/jspdf/dist/jspdf.umd.min.js"></script>
+<script src="node_modules/svg2pdf.js/dist/svg2pdf.umd.min.js"></script>
 <script src="node_modules/highcharts/modules/no-data-to-display.js"></script>
 <script type="text/javascript" src="js/plugins/export/export-csv.js"></script>
 <?php /*http://sheetjs.com/demos/table.html*/?>

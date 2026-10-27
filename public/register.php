@@ -116,6 +116,8 @@ require('php/inc.html_head.php');
 <script type="text/javascript" src="node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
 
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
+<script type="text/javascript" src="js/bootstrap_security.js<?=$G_VER;?>"></script>
 
 <script type="text/javascript" src="js/lang_<?=$LANG->LANG_CURRENT;?>.js<?=$G_VER;?>"></script>
 <script type="text/javascript" src="js/common.js<?=$G_VER;?>"></script>

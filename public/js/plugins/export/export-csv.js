@@ -19,7 +19,7 @@
 
     'use strict';
 
-    var each = Highcharts.each,
+    var each = function (items, callback) { items.forEach(callback); },
         pick = Highcharts.pick,
         seriesTypes = Highcharts.seriesTypes,
         downloadAttrSupported = document.createElement('a').download !== undefined;
@@ -117,7 +117,7 @@
 
         // Add header row
         if (!xTitle) {
-            xTitle = xAxis.isDatetimeAxis ? 'DateTime' : 'Category';
+            xTitle = (xAxis.dateTime || xAxis.isDatetimeAxis) ? 'DateTime' : 'Category';
         }
         dataRows = [[xTitle].concat(names)];
 
@@ -126,7 +126,7 @@
 
             var category = row.name;
             if (!category) {
-                if (xAxis.isDatetimeAxis) {
+                if (xAxis.dateTime || xAxis.isDatetimeAxis) {
                     if (row.x instanceof Date) {
                         row.x = row.x.getTime();
                     }
@@ -233,7 +233,7 @@
                     html += '<' + tag + ' class="number">' + val + '</' + tag + '>';
 
                 } else {
-                    html += '<' + tag + '>' + (val === undefined ? '' : val) + '</' + tag + '>';
+                    html += '<' + tag + '>' + (val === undefined ? '' : String(val).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')) + '</' + tag + '>';
                 }
             }
 
@@ -272,6 +272,7 @@
             a.target = '_blank';
             a.download = name + '.' + extension;
             document.body.appendChild(a);
+            // HTMLAnchorElement uses its native click method.
             a.click(); //trigger("click");
             a.remove();
 

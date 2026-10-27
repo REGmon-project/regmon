@@ -186,7 +186,7 @@ function get_Form_Row_Item(string $type, int $row, mixed $item, string $Accordio
 		//required
 		$HTML_edit_required = ''.
 				$LANG->FORM_ITEM_REQUIRED.':<span class="span_required">*</span>'.
-				'<input type="checkbox"'.($is_required?' checked':'').' onchange="this.nextSibling.value=this.checked==true?1:0;">'.
+				'<input type="checkbox"'.($is_required?' checked':'').' data-regmon-sync-next-value="1">'.
 				'<input type="hidden" name="c_'.$id.'_required" value="'.($is_required?'1':'0').'" class="c_required">'.
 				'<hr class="separator">';
 
@@ -198,15 +198,8 @@ function get_Form_Row_Item(string $type, int $row, mixed $item, string $Accordio
 		$HTML_edit_color = ''.
 				'<div title="'.$LANG->FORM_ITEM_USE_COLOR.'">'.
 					$LANG->FORM_ITEM_USE_COLOR.': '.
-					'<input type="checkbox"'.($has_color?' checked':'').' onchange="this.nextSibling.value=this.checked==true?1:0;" class="c_'.$id.'_has_color_ck">'.
+					'<input type="checkbox"'.($has_color?' checked':'').' data-regmon-sync-next-value="1" data-regmon-toggle="color" class="c_'.$id.'_has_color_ck">'.
 					'<input type="hidden" name="c_'.$id.'_has_color" value="'.($has_color?'1':'0').'" class="c_has_color c_'.$id.'_has_color">'.
-					'<script>'.
-						'$(function(){'.
-							'$(".c_'.$id.'_has_color_ck").on("change",function(){'.
-								'$(".c_'.$id.'_color_a, .c_'.$id.'_color_b").prop("disabled",(this.checked?false:true));'.
-							'});'.
-						'});'.
-					'</script>'.
 					'<br>'.
 					'<select name="c_'.$id.'_color_a" class="c_color_a c_'.$id.'_color_a" '.($has_color?'':' disabled').'>'.
 						'<option value="0"'.($color_a=='0'?' selected':'').'>Red</option>'.
@@ -719,17 +712,8 @@ function get_Form_Row_Item(string $type, int $row, mixed $item, string $Accordio
 		$HTML_edit_name.
 		'<div>'.
 			$LANG->FORM_ITEM_TITLE.': '.
-			'<input type="checkbox"'.($has_title?' checked':'').' onchange="this.nextSibling.value=this.checked==true?1:0;" class="c_'.$id.'_has_title_ck">'.
+			'<input type="checkbox"'.($has_title?' checked':'').' data-regmon-sync-next-value="1" data-regmon-toggle="title" class="c_'.$id.'_has_title_ck">'.
 			'<input type="hidden" name="c_'.$id.'_has_title" value="'.($has_title?'1':'0').'" class="c_has_title c_'.$id.'_has_title"><br>'.
-			'<script>'.
-				'$(function(){'.
-					'$(".c_'.$id.'_has_title_ck").on("change",function(){'.
-						'$(".c_'.$id.'_title").prop("disabled",(this.checked?false:true));'.
-						'if(!this.checked){$(".btn_rd_align_'.$id.' label").addClass("disabled");}'.
-						'else{$(".btn_rd_align_'.$id.' label").removeClass("disabled");}'.
-					'});'.
-				'});'.
-			'</script>'.
 			'<input name="c_'.$id.'_title" type="text" value="'.$title.'" class="c_title c_'.$id.'_title"'.($has_title?'':' disabled').'><br>'.
 		'</div>'.
 		'<div class="btn-group btn_group_3 btn_rd_align_'.$id.'" data-toggle="buttons">'.

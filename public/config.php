@@ -322,6 +322,8 @@ require('php/inc.html_head.php');
 <!-- OTHER JS --> 
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
+<script type="text/javascript" src="js/bootstrap_security.js<?=$G_VER;?>"></script>
 
 <script type="text/javascript" src="node_modules/@kflorence/jquery-wizard/src/jquery.wizard.js"></script>
 <script type="text/javascript" src="node_modules/jquery-validation/dist/jquery.validate.js"></script>

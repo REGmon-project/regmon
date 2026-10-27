@@ -108,6 +108,8 @@ require('index/inc.groups_athletes_select.php');
 
 
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
+<script type="text/javascript" src="js/bootstrap_security.js<?=$G_VER;?>"></script>
 <script type="text/javascript" src="node_modules/bs-confirmation/bootstrap-confirmation.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
