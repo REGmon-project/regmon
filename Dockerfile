@@ -1,4 +1,6 @@
-FROM php:8.2-apache
+# PHP 8.2.35 fixes CVE-2026-109618 and CVE-2026-109619.
+# Update the version and multi-platform digest together for future security releases.
+FROM php:8.2.35-apache@sha256:1dcd13aa67697127a140a7d303ab955c923098c39d525ecd728f2e8afb4d1546
 
 ARG USER="regmon"
 ARG UID="1000"
