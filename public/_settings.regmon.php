@@ -79,11 +79,10 @@ if ($CONFIG_SES_enabled) {
 }
 
 
-// localhost config
-if (substr_count($_SERVER['HTTP_HOST'], 'localhost') OR  
-	substr_count($_SERVER['HTTP_HOST'], 'test')) 
+// Local conveniences require an explicitly configured development mode.
+// A request's Host header must never decide whether production protections apply.
+if (!$CONFIG['Production_Mode'])
 {
-	$CONFIG['Production_Mode'] = false;
 	$CONFIG['HTTP'] = 'http://';
 	$CONFIG['DOMAIN'] = $_SERVER['HTTP_HOST'];
 }

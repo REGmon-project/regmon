@@ -212,13 +212,25 @@ if (is_CONFIG_Option_Missing()) {
 
 
 
+// Docker's explicit stage takes precedence over the stored application setting.
+// Only development opts out of production; unknown stages stay in production.
+// Without STAGE, retain the configured Production_Mode for bare-metal installs.
+$runtime_stage = getenv('STAGE');
+if ($runtime_stage !== false && $runtime_stage !== '') {
+	$CONFIG['Production_Mode'] = ($runtime_stage !== 'development');
+}
+
+
 //secure ajax sub pages from direct call
 $SEC_check = $CONFIG['SEC_Page_Secret'];
 
 
 //Init DB Log ###########################################
-//set db log from the URL with page.php?dblog --not work for ajax calls
-if (!$CONFIG['DB_Debug'] and isset($_GET['dblog'])) {
+// Production never enables query logging, including a persisted DB_Debug flag.
+if ($CONFIG['Production_Mode']) {
+	$CONFIG['DB_Debug'] = false;
+}
+elseif (isset($_GET['dblog'])) {
 	$CONFIG['DB_Debug'] = true;
 }
 if ($CONFIG['DB_Debug']) {

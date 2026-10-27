@@ -24,7 +24,8 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD_FILE: /run/secrets/mysql_pw
-      XDEBUG_MODE: develop, debug
+      # Opt in locally with XDEBUG_MODE=develop,debug; requests cannot enable it.
+      XDEBUG_MODE: ${XDEBUG_MODE:-off}
       XDEBUG_CONFIG:
         client_host=host.docker.internal 
         client_port=9003
