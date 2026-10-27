@@ -55,6 +55,21 @@ Thumbs.db
 *.tar
 *.zip
 
+# Local credentials must be excluded by the shared rules, not only .git/info/exclude.
+.env
+.env.*
+secrets/
+
+# Generated backups; retain the maintained backup script.
+/backup/*
+!/backup/backup_script.sh
+backups/
+dumps/
+*.dump
+*.dump.*
+*.sql.bz2
+*.sql.xz
+
 # ignore private/secret files
 *.der
 *.key

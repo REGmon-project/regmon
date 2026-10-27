@@ -9,3 +9,23 @@ docker-compose-dev.yml
 .git/
 node_modules/
 vendor/
+
+# Local credentials, including nested environment and secret files.
+**/.env
+**/.env.*
+**/secrets/
+**/*.key
+**/*.pem
+**/*.der
+
+# Runtime logs and generated database backups; keep SQL migrations available.
+**/logs/
+**/*.log
+**/backup/
+**/backups/
+**/dumps/
+**/*.dump
+**/*.dump.*
+**/*.sql.gz
+**/*.sql.bz2
+**/*.sql.xz
